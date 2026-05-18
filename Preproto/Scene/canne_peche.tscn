@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c356745523kvv"]
+
+[ext_resource type="Script" uid="uid://cqmfd6lktadkx" path="res://Preproto/Script/canne_peche.gd" id="1_mik60"]
+[ext_resource type="Texture2D" uid="uid://c07x2gp4ukqmh" path="res://Preproto/Material/baton.png" id="2_1x3dl"]
+
+[node name="Canne_peche" type="CharacterBody2D" unique_id=1098822087]
+script = ExtResource("1_mik60")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=249492639]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(0.54358864, -1)
+scale = Vector2(0.10555556, 0.84466493)
+texture = ExtResource("2_1x3dl")
+offset = Vector2(4.3238983, -163.92062)

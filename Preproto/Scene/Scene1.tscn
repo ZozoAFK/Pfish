@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://c4wwmxtin4nc3"]
+
+[ext_resource type="PackedScene" uid="uid://c356745523kvv" path="res://Preproto/Scene/canne_peche.tscn" id="1_snyno"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_cmany"]
+
+[node name="Scene1" type="Node2D" unique_id=54507149]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=696315795]
+modulate = Color(0.08627451, 0.59607846, 0.9254902, 1)
+self_modulate = Color(0, 0.85882354, 1, 1)
+position = Vector2(548, 301.99997)
+scale = Vector2(1298.5, 780.5)
+mesh = SubResource("QuadMesh_cmany")
+
+[node name="Canne_peche" parent="." unique_id=1098822087 instance=ExtResource("1_snyno")]
+position = Vector2(584, 572)
