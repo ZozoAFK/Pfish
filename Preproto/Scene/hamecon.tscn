@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://uwp4jevb0b10"]
+
+[ext_resource type="Script" uid="uid://der4uq8retbbi" path="res://Preproto/Script/hamecon.gd" id="1_p80j0"]
+
+[sub_resource type="TorusMesh" id="TorusMesh_gb2xh"]
+
+[node name="Hamecon" type="CharacterBody2D" unique_id=1818444837]
+script = ExtResource("1_p80j0")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1148794132]
+position = Vector2(-103.75001, 70.375)
+scale = Vector2(18.749998, 145.50002)
+mesh = SubResource("TorusMesh_gb2xh")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1106509813]
+limit_left = 0
+limit_top = 0
+limit_right = 1100

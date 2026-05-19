@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://bnbptiq0ugpm3"]
 
-[ext_resource type="Script" uid="uid://b4sbmhfld8h07" path="res://Preproto/Script/fish.gd" id="1_fgjo1"]
+[ext_resource type="Script" uid="uid://g4l5rvqgnufk" path="res://Preproto/Script/poisson.gd" id="1_fgjo1"]
 [ext_resource type="Texture2D" uid="uid://cg56gop8ahjjb" path="res://Preproto/Material/fish.webp" id="2_p2lol"]
 
 [node name="poisson" type="CharacterBody2D" unique_id=1785689821]
 script = ExtResource("1_fgjo1")
 
 [node name="Fish" type="Sprite2D" parent="." unique_id=1687704337]
+position = Vector2(-191, -126.25)
+scale = Vector2(0.41411042, 0.40307328)
 texture = ExtResource("2_p2lol")
