@@ -12,28 +12,27 @@ var switch :bool = true
 var direction := Vector2.ZERO 
 var SPEED = 2
 
-
-
-func _physics_process(delta: float) -> void:
+func _process(delta: float) -> void:
 	#poisson en deplacement attente d etre attraper
 	if switch:
-		#print("attente")
-		#mouvement du poisson dans l eau lorsque hamecon dessant
-		global_position.x += SPEED
-		
-		if global_position.x >= limit_right.global_position.x :
-			SPEED = -SPEED
-			scale.x = -1
-			# a changer selon la taille de l image
-			position.x = position.x -200
-		elif global_position.x <= limit_left.global_position.x:
-			SPEED = -SPEED
-			scale.x = 1
-			# a changer selon la taille de l image
-			position.x = position.x +200
-	
+			#print("attente")
+			#mouvement du poisson dans l eau lorsque hamecon dessant
+			global_position.x += SPEED
+			
+			if global_position.x >= limit_right.global_position.x :
+				SPEED = -SPEED
+				scale.x = -1
+				# a changer selon la taille de l image
+				position.x = position.x -200
+			elif global_position.x <= limit_left.global_position.x:
+				SPEED = -SPEED
+				scale.x = 1
+				# a changer selon la taille de l image
+				position.x = position.x +200
+				
+func _physics_process(delta: float) -> void:
 	# poisson attrapper 
-	if not switch:
+	if  not switch:
 		if hamecon != null:
 			
 			look_at(hamecon.global_position)
@@ -61,4 +60,3 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 		if hamecon == null:
 			hamecon = body
 			#print("enter")
-			switch = false
