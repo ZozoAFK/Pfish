@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://cbtgwtlul620o"]
+
+[ext_resource type="PackedScene" uid="uid://uwp4jevb0b10" path="res://Preproto/Scene/hamecon.tscn" id="1_robv1"]
+[ext_resource type="PackedScene" uid="uid://bnbptiq0ugpm3" path="res://Preproto/Scene/poisson.tscn" id="2_svkt2"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_hmutp"]
+
+[sub_resource type="QuadMesh" id="QuadMesh_vvnnl"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_h8888"]
+
+[node name="TesteAsset" type="Node2D" unique_id=1531770534]
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="." unique_id=1275745709]
+modulate = Color(0, 0.47843137, 0, 1)
+position = Vector2(572, 109)
+scale = Vector2(1508, 250.5)
+mesh = SubResource("QuadMesh_hmutp")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1209682319]
+modulate = Color(0.08627451, 0.59607846, 0.9254902, 1)
+self_modulate = Color(0.08627451, 0.59607846, 0.9254902, 1)
+position = Vector2(548, 1846.5)
+scale = Vector2(1298.5, 3239)
+mesh = SubResource("QuadMesh_vvnnl")
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="." unique_id=264939012]
+modulate = Color(0.08627451, 0.59607846, 0.9254902, 1)
+position = Vector2(579.00006, 2246)
+scale = Vector2(1190.5, 2885.5)
+mesh = SubResource("PrismMesh_h8888")
+
+[node name="Hamecon" parent="." unique_id=1818444837 instance=ExtResource("1_robv1")]
+position = Vector2(619, 289)
+
+[node name="poisson" parent="." unique_id=234775178 instance=ExtResource("2_svkt2")]
+position = Vector2(903, 509)

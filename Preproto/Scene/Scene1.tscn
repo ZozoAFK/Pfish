@@ -33,7 +33,7 @@ scale = Vector2(1190.5, 2885.5)
 mesh = SubResource("PrismMesh_gqpds")
 
 [node name="Hamecon" parent="." unique_id=1818444837 instance=ExtResource("1_snyno")]
-position = Vector2(523, 346)
+position = Vector2(619, 289)
 
-[node name="poisson" parent="." unique_id=1785689821 instance=ExtResource("3_1tkie")]
-position = Vector2(905, 612)
+[node name="poisson" parent="." unique_id=234775178 instance=ExtResource("3_1tkie")]
+position = Vector2(903, 509)

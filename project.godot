@@ -39,6 +39,13 @@ LEFT={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="environnement"
+2d_physics/layer_2="hamecon_hitbox"
+2d_physics/layer_3="hamecon_attraper"
+2d_physics/layer_4="poisson"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"

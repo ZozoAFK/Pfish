@@ -3,10 +3,32 @@
 [ext_resource type="Script" uid="uid://g4l5rvqgnufk" path="res://Preproto/Script/poisson.gd" id="1_fgjo1"]
 [ext_resource type="Texture2D" uid="uid://cg56gop8ahjjb" path="res://Preproto/Material/fish.webp" id="2_p2lol"]
 
-[node name="poisson" type="CharacterBody2D" unique_id=1785689821]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fgjo1"]
+size = Vector2(210, 112)
+
+[node name="poisson" type="Node2D" unique_id=234775178]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=97212649]
+scale = Vector2(-1, 1)
+collision_layer = 8
+collision_mask = 4
 script = ExtResource("1_fgjo1")
 
-[node name="Fish" type="Sprite2D" parent="." unique_id=1687704337]
-position = Vector2(-191, -126.25)
-scale = Vector2(0.41411042, 0.40307328)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=567504263]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_fgjo1")
+
+[node name="Fish" type="Sprite2D" parent="Area2D" unique_id=66239979]
+position = Vector2(0, -3.8146973e-06)
+scale = Vector2(0.3220859, 0.26300234)
 texture = ExtResource("2_p2lol")
+
+[node name="Limit_left" type="Marker2D" parent="." unique_id=844844759]
+position = Vector2(-602, 0)
+gizmo_extents = 61.5
+
+[node name="Limit_right" type="Marker2D" parent="." unique_id=1712560216]
+position = Vector2(404, 0)
+gizmo_extents = 182.5
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

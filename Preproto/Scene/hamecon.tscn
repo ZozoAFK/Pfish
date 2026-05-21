@@ -1,18 +1,37 @@
 [gd_scene format=3 uid="uid://uwp4jevb0b10"]
 
 [ext_resource type="Script" uid="uid://der4uq8retbbi" path="res://Preproto/Script/hamecon.gd" id="1_p80j0"]
+[ext_resource type="Texture2D" uid="uid://bubodniig4ar2" path="res://icon.svg" id="2_fwu0w"]
 
-[sub_resource type="TorusMesh" id="TorusMesh_gb2xh"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gwbjw"]
+size = Vector2(39, 60)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fwu0w"]
+size = Vector2(46, 68)
 
 [node name="Hamecon" type="CharacterBody2D" unique_id=1818444837]
+collision_layer = 4
+collision_mask = 8
 script = ExtResource("1_p80j0")
 
-[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1148794132]
-position = Vector2(-103.75001, 70.375)
-scale = Vector2(18.749998, 145.50002)
-mesh = SubResource("TorusMesh_gb2xh")
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=111675821]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(18, 69.00001)
+scale = Vector2(0.359375, 0.5234375)
+texture = ExtResource("2_fwu0w")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1106509813]
 limit_left = 0
 limit_top = 0
 limit_right = 1100
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=750304541]
+position = Vector2(17.5, 70)
+shape = SubResource("RectangleShape2D_gwbjw")
+
+[node name="hitbox" type="Area2D" parent="." unique_id=1706890514]
+position = Vector2(18, 69)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=1350783171]
+shape = SubResource("RectangleShape2D_fwu0w")

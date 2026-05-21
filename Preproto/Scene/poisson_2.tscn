@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://c04p0bli4eusa"]
+
+[ext_resource type="Script" uid="uid://dgagrurvjlwl3" path="res://Preproto/Script/poisson_2.gd" id="1_nlq36"]
+[ext_resource type="Texture2D" uid="uid://cg56gop8ahjjb" path="res://Preproto/Material/fish.webp" id="2_3lj3n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yvw6h"]
+size = Vector2(287.5, 217)
+
+[node name="Poisson_2" type="CharacterBody2D" unique_id=1695130040]
+script = ExtResource("1_nlq36")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=964945425]
+position = Vector2(-1.3750114, -20.812506)
+scale = Vector2(0.44593555, 0.50975174)
+texture = ExtResource("2_3lj3n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1550659155]
+position = Vector2(-2.75, -19.5)
+shape = SubResource("RectangleShape2D_yvw6h")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=108627967]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2134455132]
+
+[node name="Limite_right" type="Marker2D" parent="." unique_id=564008876]
+position = Vector2(500, 3)
+gizmo_extents = 1000.0
+
+[node name="Limite_left" type="Marker2D" parent="." unique_id=796417214]
+position = Vector2(-501, 2)
+gizmo_extents = 749.9
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

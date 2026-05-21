@@ -1,4 +1,4 @@
-extends Area2D
+extends CharacterBody2D
 
 var hamecon : Hamecon = null
 
@@ -8,7 +8,7 @@ var hamecon : Hamecon = null
 
 var switch :bool = true
 
-var velocity := Vector2.ZERO 
+
 var direction := Vector2.ZERO 
 var SPEED = 2
 
@@ -20,6 +20,7 @@ func _physics_process(delta: float) -> void:
 		#print("attente")
 		#mouvement du poisson dans l eau lorsque hamecon dessant
 		global_position.x += SPEED
+		
 		if global_position.x >= limit_right.global_position.x :
 			SPEED = -SPEED
 			scale.x = -1
@@ -51,13 +52,11 @@ func _physics_process(delta: float) -> void:
 				velocity.x = move_toward(velocity.x,0,SPEED)
 				velocity.y = move_toward(velocity.y,0,SPEED)
 				
-
-	
-			
+		move_and_slide()
 
 
-#attention peut etre un probleme lorsqu on on dupliquera les poisson
-func _on_body_entered(body: Node2D) -> void:
+
+func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is Hamecon:
 		if hamecon == null:
 			hamecon = body
