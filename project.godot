@@ -21,6 +21,12 @@ window/size/viewport_width=1900
 window/size/viewport_height=875
 window/size/resizable=false
 
+[file_customization]
+
+folder_colors={
+"res://pierre_test_asset/ASSET/": "purple"
+}
+
 [input]
 
 SPACE={

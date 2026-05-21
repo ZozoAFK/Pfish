@@ -2,8 +2,13 @@
 
 [ext_resource type="PackedScene" uid="uid://uwp4jevb0b10" path="res://Preproto/Scene/hamecon.tscn" id="1_robv1"]
 [ext_resource type="PackedScene" uid="uid://bnbptiq0ugpm3" path="res://Preproto/Scene/poisson.tscn" id="2_svkt2"]
+[ext_resource type="Texture2D" uid="uid://b1pnpi2m5i1w3" path="res://pierre_test_asset/ASSET/OBSTACLES  DECHETS.png" id="3_hmutp"]
 
 [node name="TesteAsset" type="Node2D" unique_id=1531770534]
+
+[node name="ObstaclesDechets" type="Sprite2D" parent="." unique_id=997030300]
+position = Vector2(550, 2222)
+texture = ExtResource("3_hmutp")
 
 [node name="Hamecon" parent="." unique_id=1818444837 instance=ExtResource("1_robv1")]
 position = Vector2(619, 289)
