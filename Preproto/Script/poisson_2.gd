@@ -22,7 +22,7 @@ func _process(delta: float) -> void:
 			if global_position.x >= limit_right.global_position.x :
 				SPEED = -SPEED
 				scale.x = -1
-				# a changer selon la taille de l image
+				# a changer selon6 la taille de l image
 				position.x = position.x -200
 			elif global_position.x <= limit_left.global_position.x:
 				SPEED = -SPEED
