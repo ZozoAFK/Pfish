@@ -37,7 +37,7 @@ func _physics_process(delta: float) -> void:
 			
 			look_at(hamecon.global_position)
 			#deplacement de l ennemis en ligne droite vers le player 
-			var ennemy_to_player = (hamecon.global_position-global_position)
+			var ennemy_to_player = (hamecon.global_position)
 			#ce if permet d eviter qu un enemie reste coller et fait perdre tout c est vie 
 			direction = ennemy_to_player.normalized()
 			print("look")

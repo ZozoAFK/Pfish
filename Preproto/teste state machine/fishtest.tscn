@@ -1,3 +1,6 @@
 [gd_scene format=3 uid="uid://ccor6ujrux4r2"]
 
+[ext_resource type="Script" uid="uid://mlq3s7g4eyoh" path="res://Preproto/teste state machine/enemy.gd" id="1_7sg1q"]
+
 [node name="Fishtest" type="CharacterBody2D" unique_id=200845875]
+script = ExtResource("1_7sg1q")

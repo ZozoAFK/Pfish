@@ -1,11 +1,36 @@
 extends Node2D
 
+@export var initial_state : State
 
-# Called when the node enters the scene tree for the first time.
+var current_state : State
+var state : Dictionary = {} 
+
 func _ready() -> void:
-	pass # Replace with function body.
+	for child in get_children():
+		if child is State : 
+			state[child.name.to_lower()] = child
+			child.Transitioned.connect(on_child_transition)
+	
+	if initial_state:
+		initial_state.Enter()
+		current_state = initial_state
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _physics_process(delta: float) -> void:
+	if current_state:
+		current_state.Physics_Update(delta)
+		
+
+func on_child_transition (state, new_state_name):
+	if state != current_state:
+		return
+	
+	var new_state = state.get(new_state_name.to_lower())
+	if !new_state:
+		return
+	
+	if current_state:
+		current_state.exit()
+	new_state.enter()
+	
+	current_state=new_state

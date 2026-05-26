@@ -1,5 +1,5 @@
 extends CharacterBody2D
-class_name Hamecon
+class_name  Hamecon
 
 var SPEED = 300.0
 var JUMP_VELOCITY = 200.0
