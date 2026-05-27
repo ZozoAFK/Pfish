@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cb21rdpxstbwb"]
+
+[ext_resource type="Script" uid="uid://biupycgb7vau4" path="res://Proto/Script/poisson.gd" id="1_0r5lc"]
+[ext_resource type="Texture2D" uid="uid://cg56gop8ahjjb" path="res://Preproto/Material/fish.webp" id="2_ctowt"]
+
+[node name="Poisson" type="Node2D" unique_id=485619004]
+script = ExtResource("1_0r5lc")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1915444190]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("2_ctowt")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1336916640]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=138060575]

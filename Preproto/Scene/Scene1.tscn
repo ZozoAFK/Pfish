@@ -36,4 +36,4 @@ mesh = SubResource("PrismMesh_gqpds")
 position = Vector2(619, 289)
 
 [node name="poisson" parent="." unique_id=234775178 instance=ExtResource("3_1tkie")]
-position = Vector2(903, 509)
+position = Vector2(646, 523)
