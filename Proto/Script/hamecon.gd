@@ -15,7 +15,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func down (delta):
-	# desente du hamecon
+	# descente du hamecon
 	if not(Input.is_action_just_pressed("SPACE")):
 		velocity.y = Speed_down
 

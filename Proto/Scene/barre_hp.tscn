@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dleex1aqhy5s1"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_oi77q"]
+
+[node name="BarreHP" type="Node2D" unique_id=77477878]
+
+[node name="HPRouge" type="MeshInstance2D" parent="." unique_id=875280752]
+modulate = Color(0.33, 0.33, 0.33, 1)
+position = Vector2(172.87502, 38.125)
+scale = Vector2(350, 26.029)
+mesh = SubResource("BoxMesh_oi77q")
+
+[node name="HPGris" type="MeshInstance2D" parent="." unique_id=882792381]
+modulate = Color(0.32340002, 0.66, 0.32340002, 1)
+position = Vector2(172.87502, 38.125)
+scale = Vector2(346.25003, 25.749998)
+mesh = SubResource("BoxMesh_oi77q")
+
+[node name="HPVert" type="MeshInstance2D" parent="." unique_id=912424037]
+modulate = Color(0, 0.76862746, 0, 1)
+position = Vector2(172.87502, 38.125)
+scale = Vector2(346.25003, 25.749998)
+mesh = SubResource("BoxMesh_oi77q")
