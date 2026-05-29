@@ -6,32 +6,34 @@
 [node name="BarreHP" type="Node2D" unique_id=77477878]
 script = ExtResource("1_o22lk")
 
-[node name="HPGris" type="TextureProgressBar" parent="." unique_id=375072032]
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1003244368]
+
+[node name="HPGris" type="TextureProgressBar" parent="CanvasLayer" unique_id=375072032]
 modulate = Color(0.52156866, 0.52156866, 0.52156866, 1)
 self_modulate = Color(0.5294118, 0.5294118, 0.5294118, 1)
-offset_left = 196.0
-offset_top = 43.0
-offset_right = 196.0
-offset_bottom = 43.0
+offset_left = 17.0
+offset_top = 19.0
+offset_right = 1937.0
+offset_bottom = 1099.0
 scale = Vector2(0.188, 0.025)
 texture_progress = ExtResource("2_q7nm8")
 
-[node name="HPClair" type="TextureProgressBar" parent="." unique_id=1749270231]
+[node name="HPClair" type="TextureProgressBar" parent="CanvasLayer" unique_id=1749270231]
 modulate = Color(0.32156864, 0.7019608, 0.3137255, 1)
 self_modulate = Color(0.43529412, 0.7411765, 0.40784314, 1)
-offset_left = 196.0
-offset_top = 43.0
-offset_right = 196.0
-offset_bottom = 43.0
+offset_left = 17.0
+offset_top = 19.0
+offset_right = 1937.0
+offset_bottom = 1099.0
 scale = Vector2(0.18776041, 0.024740733)
 texture_progress = ExtResource("2_q7nm8")
 
-[node name="HPVert" type="TextureProgressBar" parent="." unique_id=305399314]
+[node name="HPVert" type="TextureProgressBar" parent="CanvasLayer" unique_id=305399314]
 modulate = Color(0.0461666, 1, 0.029999971, 1)
 self_modulate = Color(0.083333254, 1, 0, 1)
-offset_left = 196.0
-offset_top = 43.0
-offset_right = 196.0
-offset_bottom = 43.0
+offset_left = 17.0
+offset_top = 19.0
+offset_right = 1937.0
+offset_bottom = 1099.0
 scale = Vector2(0.188, 0.025)
 texture_progress = ExtResource("2_q7nm8")

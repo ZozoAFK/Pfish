@@ -1,14 +1,15 @@
 extends Node2D
 
 # On récupère les composants de votre scène en utilisant leurs noms exacts
-@onready var hp_gris: TextureProgressBar = $HPGris
-@onready var hp_clair: TextureProgressBar = $HPClair
-@onready var hp_vert: TextureProgressBar = $HPVert
+@onready var hp_gris: TextureProgressBar = $CanvasLayer/HPGris
+@onready var hp_clair: TextureProgressBar = $CanvasLayer/HPClair
+@onready var hp_vert: TextureProgressBar = $CanvasLayer/HPVert
 
 func _Static(_delta: float) -> void:
 	# 1. Bloquer la position : on force X à rester à sa place (ex: 20 pixels du bord gauche)
 	# et Y à sa hauteur initiale.
-	global_position.y = 20 
+	global_position.y = 10
+	
 	
 
 func _ready() -> void:
