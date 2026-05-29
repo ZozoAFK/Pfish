@@ -1,23 +1,37 @@
 [gd_scene format=3 uid="uid://dleex1aqhy5s1"]
 
-[sub_resource type="BoxMesh" id="BoxMesh_oi77q"]
+[ext_resource type="Script" uid="uid://cu5vicu1ek55a" path="res://Proto/Script/barre_hp.gd" id="1_o22lk"]
+[ext_resource type="Texture2D" uid="uid://bbfxt556vpc0f" path="res://Proto/Scene/HP_Sprite.png" id="2_q7nm8"]
 
 [node name="BarreHP" type="Node2D" unique_id=77477878]
+script = ExtResource("1_o22lk")
 
-[node name="HPRouge" type="MeshInstance2D" parent="." unique_id=875280752]
-modulate = Color(0.33, 0.33, 0.33, 1)
-position = Vector2(172.87502, 38.125)
-scale = Vector2(350, 26.029)
-mesh = SubResource("BoxMesh_oi77q")
+[node name="HPGris" type="TextureProgressBar" parent="." unique_id=375072032]
+modulate = Color(0.52156866, 0.52156866, 0.52156866, 1)
+self_modulate = Color(0.5294118, 0.5294118, 0.5294118, 1)
+offset_left = 196.0
+offset_top = 43.0
+offset_right = 196.0
+offset_bottom = 43.0
+scale = Vector2(0.188, 0.025)
+texture_progress = ExtResource("2_q7nm8")
 
-[node name="HPGris" type="MeshInstance2D" parent="." unique_id=882792381]
-modulate = Color(0.32340002, 0.66, 0.32340002, 1)
-position = Vector2(172.87502, 38.125)
-scale = Vector2(346.25003, 25.749998)
-mesh = SubResource("BoxMesh_oi77q")
+[node name="HPClair" type="TextureProgressBar" parent="." unique_id=1749270231]
+modulate = Color(0.32156864, 0.7019608, 0.3137255, 1)
+self_modulate = Color(0.43529412, 0.7411765, 0.40784314, 1)
+offset_left = 196.0
+offset_top = 43.0
+offset_right = 196.0
+offset_bottom = 43.0
+scale = Vector2(0.18776041, 0.024740733)
+texture_progress = ExtResource("2_q7nm8")
 
-[node name="HPVert" type="MeshInstance2D" parent="." unique_id=912424037]
-modulate = Color(0, 0.76862746, 0, 1)
-position = Vector2(172.87502, 38.125)
-scale = Vector2(346.25003, 25.749998)
-mesh = SubResource("BoxMesh_oi77q")
+[node name="HPVert" type="TextureProgressBar" parent="." unique_id=305399314]
+modulate = Color(0.0461666, 1, 0.029999971, 1)
+self_modulate = Color(0.083333254, 1, 0, 1)
+offset_left = 196.0
+offset_top = 43.0
+offset_right = 196.0
+offset_bottom = 43.0
+scale = Vector2(0.188, 0.025)
+texture_progress = ExtResource("2_q7nm8")

@@ -22,7 +22,7 @@ scale = Vector2(671.49994, 845.5)
 mesh = SubResource("PrismMesh_cd8ja")
 
 [node name="Hamecon" parent="." unique_id=689676632 instance=ExtResource("1_tyl2u")]
-position = Vector2(119, 247)
+position = Vector2(152, 249)
 
 [node name="Poisson" parent="." unique_id=485619004 instance=ExtResource("2_x5aal")]
 position = Vector2(200, 500)
