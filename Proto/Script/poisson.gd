@@ -42,7 +42,7 @@ func _process(delta):
 			_poursuivre(delta)
 		State.COMBAT:
 
-			if not(can_dash) and :
+			if not(can_dash) :
 				begin_dash(delta)
 			elif endurance == 0:
 				recharge_endurance.start(time_endurance)
@@ -98,27 +98,27 @@ func _dash (tableau, position_depard, delta):
 	dure_dash = true 
 	tableau.shuffle()
 	temps_entre_dash.start()
-	temps_du_dash.start(time_dash)
-	if tableau[0] == "gauche" and dure_dash: 
-		look_at(Vector2(direction_x - 1, direction_y))
-		position = lerp(position_depard ,position_depard * dash_speed , acc)
-	if tableau[0] == "bas_gauche" and dure_dash: 
-		look_at(Vector2(direction_x - 1, direction_y-1))
-		position = lerp(position_depard ,position_depard * dash_speed , acc)
-	if tableau[0] == "bas" and dure_dash: 
-		look_at(Vector2(direction_x , direction_y-1))
-		position = lerp(position_depard ,position_depard * dash_speed , acc)
-	if tableau[0] == "bas_droite" and dure_dash: 
-		look_at(Vector2(direction_x + 1, direction_y-1))
-		position = lerp(position_depard ,position_depard * dash_speed , acc)
-	if tableau[0] == "droite" and dure_dash: 
-		look_at(Vector2(direction_x + 1, direction_y))
-		position = lerp(position_depard ,position_depard * dash_speed , acc)
+	temps_du_dash.start()
+	#if tableau[0] == "gauche" and dure_dash: 
+		#look_at(Vector2(direction_x - 1, direction_y))
+		#position = lerp(position_depard ,position_depard * dash_speed , acc)
+	#if tableau[0] == "bas_gauche" and dure_dash: 
+		#look_at(Vector2(direction_x - 1, direction_y-1))
+		#position = lerp(position_depard ,position_depard * dash_speed , acc)
+	#if tableau[0] == "bas" and dure_dash: 
+		#look_at(Vector2(direction_x , direction_y-1))
+		#position = lerp(position_depard ,position_depard * dash_speed , acc)
+	#if tableau[0] == "bas_droite" and dure_dash: 
+		#look_at(Vector2(direction_x + 1, direction_y-1))
+		#position = lerp(position_depard ,position_depard * dash_speed , acc)
+	#if tableau[0] == "droite" and dure_dash: 
+		#look_at(Vector2(direction_x + 1, direction_y))
+		#position = lerp(position_depard ,position_depard * dash_speed , acc)
 
 
 
 func begin_dash (delta)->bool:
-	if(endurance > 0):
+	if(endurance != 0):
 		can_dash = true
 		position_depard = position
 		return true
