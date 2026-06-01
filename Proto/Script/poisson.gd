@@ -1,7 +1,7 @@
 extends Node2D
 
 enum State { RONDE, POURSUITE, COMBAT }
-var etat_actuel = State.RONDE
+var etat_actuel = State.COMBAT
 
 @export var vitesse = 100.0
 @export var point_1 = Vector2(500, 500)  # destination en mode ronde
@@ -14,10 +14,10 @@ var etat_actuel = State.RONDE
 var tableau : Array = ["gauche" , "bas_gauche" ,  "bas" , "bas_droite" , "droite"] 
 var dure_dash = false  #switch qui limite la duree du dash 
 var endurance = max_endurance #dash durant le gameplay
-var can_dash = true #switch qui definit si on peut dash ou pas (avec pour timer le temps entre deux dash)
-
+var can_dash = false #switch qui definit si on peut dash ou pas (avec pour timer le temps entre deux dash)
+var position_depard 
 @export var max_endurance = 3 # nombre de dash maximum que le poisson a  
-@export var dash_speed = 500 #vitesse du dash 
+@export var dash_speed = 5 #vitesse du dash 
 @export var time_min = 0 #temps minimum entre deux dash 
 @export var time_max = 5 #temps maximum entre deux dash
 @export var time_endurance = 5 #temps pour recupere l'endurance lorsqu on n en a plus 
@@ -28,17 +28,28 @@ var switch_ronde = true
 var joueur : Node2D = null
 var player : Player = null
 
+
+
 func _ready():
 	joueur = $"../Hamecon"  # adapte le chemin
 
 func _process(delta):
+	print(position)
 	match etat_actuel:
 		State.RONDE:
 			_faire_ronde(delta)
 		State.POURSUITE:
 			_poursuivre(delta)
 		State.COMBAT:
-			pass 
+
+			if not(can_dash) and :
+				begin_dash(delta)
+			elif endurance == 0:
+				recharge_endurance.start(time_endurance)
+			if can_dash :
+				_dash (tableau,position_depard,delta)
+			#end_dash()
+			
 
 
 func _faire_ronde(delta):
@@ -71,7 +82,6 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			etat_actuel = State.POURSUITE
 			player = body
 			print("found")
-
 #hamecon sort de l'AREA 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body is Player : 
@@ -80,28 +90,40 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 			player = null
 			print("lose")
 
+var acc = 0.5
+func _dash (tableau, position_depard, delta):
+	var direction_x = position.x
+	var direction_y = position.y 
+		 
+	dure_dash = true 
+	tableau.shuffle()
+	temps_entre_dash.start()
+	temps_du_dash.start(time_dash)
+	if tableau[0] == "gauche" and dure_dash: 
+		look_at(Vector2(direction_x - 1, direction_y))
+		position = lerp(position_depard ,position_depard * dash_speed , acc)
+	if tableau[0] == "bas_gauche" and dure_dash: 
+		look_at(Vector2(direction_x - 1, direction_y-1))
+		position = lerp(position_depard ,position_depard * dash_speed , acc)
+	if tableau[0] == "bas" and dure_dash: 
+		look_at(Vector2(direction_x , direction_y-1))
+		position = lerp(position_depard ,position_depard * dash_speed , acc)
+	if tableau[0] == "bas_droite" and dure_dash: 
+		look_at(Vector2(direction_x + 1, direction_y-1))
+		position = lerp(position_depard ,position_depard * dash_speed , acc)
+	if tableau[0] == "droite" and dure_dash: 
+		look_at(Vector2(direction_x + 1, direction_y))
+		position = lerp(position_depard ,position_depard * dash_speed , acc)
 
-func dash (tableau):
-	if can_dash and endurance !=0:
-		var direction_x = position.x
-		var direction_y = position.y  
-		can_dash = false 
-		dure_dash = true 
-		tableau.shuffle()
-		temps_entre_dash.start(randi_range(time_min,time_max))
-		temps_du_dash.start()
-		if tableau == "gauche" and dure_dash: 
-			look_at(Vector2(direction_x - 1, direction_y))
-		if tableau == "bas_gauche" and dure_dash: 
-			look_at(Vector2(direction_x - 1, direction_y-1))
-		if tableau == "bas" and dure_dash: 
-			look_at(Vector2(direction_x , direction_y-1))
-		if tableau == "bas_droite" and dure_dash: 
-			look_at(Vector2(direction_x + 1, direction_y-1))
-		if tableau == "droite" and dure_dash: 
-			look_at(Vector2(direction_x + 1, direction_y))
-	elif endurance == 0: 
-		recharge_endurance.start()
+
+
+func begin_dash (delta)->bool:
+	if(endurance > 0):
+		can_dash = true
+		position_depard = position
+		return true
+	return false
+	
 
 
 func _on_recharge_endurance_timeout() -> void:
@@ -109,7 +131,6 @@ func _on_recharge_endurance_timeout() -> void:
 
 func _on_temps_du_dash_timeout() -> void:
 	dure_dash= false
-	endurance -= 1
 	
-func _on_temps_entre_dash_timeout() -> void:
-	can_dash = true
+func _on_temps_entre_dash_timeout(delta : float) -> void:
+	can_dash = false

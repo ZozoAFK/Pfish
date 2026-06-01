@@ -8,6 +8,15 @@ size = Vector2(223, 108)
 
 [node name="Poisson" type="Node2D" unique_id=485619004]
 script = ExtResource("1_0r5lc")
+vitesse = null
+point_1 = null
+point_2 = null
+max_endurance = null
+dash_speed = null
+time_min = null
+time_max = null
+time_endurance = null
+time_dash = null
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1915444190]
 scale = Vector2(0.25, 0.25)
