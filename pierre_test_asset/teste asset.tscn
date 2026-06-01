@@ -4,6 +4,44 @@
 [ext_resource type="PackedScene" uid="uid://bnbptiq0ugpm3" path="res://Preproto/Scene/poisson.tscn" id="2_svkt2"]
 [ext_resource type="Texture2D" uid="uid://byj1jqg14675s" path="res://pierre_test_asset/OBSTACLES  DECHETS (9).png" id="3_hmutp"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hmutp"]
+size = Vector2(133, 1377)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vvnnl"]
+size = Vector2(197.5, 1097)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h8888"]
+radius = 88.0
+height = 510.59253
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xmqg0"]
+radius = 125.0
+height = 416.21973
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mnrvj"]
+size = Vector2(325.5, 3395)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pxeqs"]
+size = Vector2(277.5, 4068.5)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_d1jbs"]
+radius = 227.00488
+height = 1073.0664
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_banek"]
+radius = 144.0
+height = 348.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hbicm"]
+size = Vector2(138, 248.875)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_13bot"]
+size = Vector2(61.5, 1015)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hwaxo"]
+radius = 92.0
+height = 442.0
+
 [node name="TesteAsset" type="Node2D" unique_id=1531770534]
 
 [node name="ObstaclesDechets" type="Sprite2D" parent="." unique_id=997030300]
@@ -14,9 +52,58 @@ scale = Vector2(0.60369694, 0.9581172)
 position = Vector2(903, 509)
 
 [node name="ObstaclesDechets(9)2" type="Sprite2D" parent="." unique_id=509683169]
-position = Vector2(539.62494, 5806.6245)
-scale = Vector2(0.6141373, 0.9342063)
+position = Vector2(527.8125, 5806.813)
+scale = Vector2(0.60210884, 0.93407553)
 texture = ExtResource("3_hmutp")
 
 [node name="Hamecon" parent="." unique_id=1818444837 instance=ExtResource("1_robv1")]
 position = Vector2(619, 289)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1450522179]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=274367454]
+position = Vector2(4.5, 1022.5)
+shape = SubResource("RectangleShape2D_hmutp")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1633066548]
+position = Vector2(1129.75, 864.5)
+shape = SubResource("RectangleShape2D_vvnnl")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=2114936085]
+position = Vector2(40, 1933)
+rotation = -0.2268928
+shape = SubResource("CapsuleShape2D_h8888")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1558468772]
+position = Vector2(153.99997, 1967)
+rotation = 0.7120943
+shape = SubResource("CapsuleShape2D_xmqg0")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=1717293820]
+position = Vector2(-102.25, 3730.5)
+shape = SubResource("RectangleShape2D_mnrvj")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" unique_id=1463488008]
+position = Vector2(1168.25, 3431.75)
+shape = SubResource("RectangleShape2D_pxeqs")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D" unique_id=242137575]
+position = Vector2(1089.9999, 3604)
+rotation = 0.49916416
+shape = SubResource("CapsuleShape2D_d1jbs")
+
+[node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D" unique_id=180210164]
+position = Vector2(901, 4072)
+shape = SubResource("CapsuleShape2D_banek")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D" unique_id=635545977]
+position = Vector2(1019, 4288)
+shape = SubResource("RectangleShape2D_hbicm")
+
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D" unique_id=861841072]
+position = Vector2(1000.25, 4897.5)
+shape = SubResource("RectangleShape2D_13bot")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D" unique_id=2106231281]
+position = Vector2(960, 4949)
+shape = SubResource("CapsuleShape2D_hwaxo")
