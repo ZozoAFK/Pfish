@@ -4,11 +4,12 @@ extends Node2D
 @onready var hp_gris: TextureProgressBar = $CanvasLayer/HPGris
 @onready var hp_clair: TextureProgressBar = $CanvasLayer/HPClair
 @onready var hp_vert: TextureProgressBar = $CanvasLayer/HPVert
-
+@export var pv_max = 100
 func _Static(_delta: float) -> void:
 	# 1. Bloquer la position : on force X à rester à sa place (ex: 20 pixels du bord gauche)
 	# et Y à sa hauteur initiale.
 	global_position.y = 10
+	pass
 	
 	
 
