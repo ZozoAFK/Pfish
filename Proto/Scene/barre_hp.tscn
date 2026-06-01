@@ -16,6 +16,7 @@ offset_top = 19.0
 offset_right = 1937.0
 offset_bottom = 1099.0
 scale = Vector2(0.188, 0.025)
+step = 0.01
 texture_progress = ExtResource("2_q7nm8")
 
 [node name="HPClair" type="TextureProgressBar" parent="CanvasLayer" unique_id=1749270231]
@@ -26,6 +27,7 @@ offset_top = 19.0
 offset_right = 1937.0
 offset_bottom = 1099.0
 scale = Vector2(0.18776041, 0.024740733)
+step = 0.01
 texture_progress = ExtResource("2_q7nm8")
 
 [node name="HPVert" type="TextureProgressBar" parent="CanvasLayer" unique_id=305399314]
@@ -36,4 +38,5 @@ offset_top = 19.0
 offset_right = 1937.0
 offset_bottom = 1099.0
 scale = Vector2(0.188, 0.025)
+step = 0.01
 texture_progress = ExtResource("2_q7nm8")
