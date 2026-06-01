@@ -1,12 +1,27 @@
 extends Node2D
 
-enum State { RONDE, POURSUITE }
+enum State { RONDE, POURSUITE, COMBAT }
 var etat_actuel = State.RONDE
 
 @export var vitesse = 100.0
-var point_right = Vector2(500, 500)  # destination en mode ronde
-var point_left = Vector2(100, 500)  # destination en mode ronde
-var distance_detection = 150.0
+@export var point_1 = Vector2(500, 500)  # destination en mode ronde
+@export var point_2 = Vector2(100, 500)  # destination en mode ronde
+
+#variable dash
+@onready var recharge_endurance : Timer = $Recharge_endurance #temps pour recharger l'endurance  
+@onready var temps_du_dash : Timer = $Temps_du_dash # duree du dash 
+@onready var temps_entre_dash : Timer = $Temps_entre_dash # duree entre deux dash different 
+var tableau : Array = ["gauche" , "bas_gauche" ,  "bas" , "bas_droite" , "droite"] 
+var dure_dash = false  #switch qui limite la duree du dash 
+var endurance = max_endurance #dash durant le gameplay
+var can_dash = true #switch qui definit si on peut dash ou pas (avec pour timer le temps entre deux dash)
+
+@export var max_endurance = 3 # nombre de dash maximum que le poisson a  
+@export var dash_speed = 500 #vitesse du dash 
+@export var time_min = 0 #temps minimum entre deux dash 
+@export var time_max = 5 #temps maximum entre deux dash
+@export var time_endurance = 5 #temps pour recupere l'endurance lorsqu on n en a plus 
+@export var time_dash = 5 #durée d'un dash 
 
 #parametre fixe
 var switch_ronde = true
@@ -22,35 +37,34 @@ func _process(delta):
 			_faire_ronde(delta)
 		State.POURSUITE:
 			_poursuivre(delta)
+		State.COMBAT:
+			pass 
 
-			
-	print(etat_actuel)
 
 func _faire_ronde(delta):
-	print("rond")
 	# Mouvement vers la droite
 	if switch_ronde :
-		look_at(point_right)
-		var direction = (point_right - position).normalized()
-		position += direction * vitesse * delta
+		look_at(point_1)
+		var direction = (point_1 - position).normalized()
+		position +=direction * vitesse * delta
 		#condition de rotation 
-		if position >= point_right:
+		if position >= point_1:
 			switch_ronde=false
 	# Mouvement vers la gauche
 	if not(switch_ronde) : 
-		look_at(point_left)
-		var direction = (point_left - position).normalized()
+		look_at(point_2)
+		var direction = (point_2 - position).normalized()
 		position += direction * vitesse * delta
 		#condition de rotation
-		if position <= point_left:
+		if position <= point_2:
 			switch_ronde=true
-		
+
 func _poursuivre(delta):
 	look_at(joueur.position)
 	var direction = (joueur.position - position).normalized()
 	position += direction * vitesse * delta
-	
 
+#hamecon entre de l'AREA 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body is Player :
 		if player == null :
@@ -58,10 +72,44 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 			player = body
 			print("found")
 
+#hamecon sort de l'AREA 
 func _on_area_2d_body_exited(body: Node2D) -> void:
 	if body is Player : 
 		if player == body :
 			etat_actuel = State.RONDE
 			player = null
-			
 			print("lose")
+
+
+func dash (tableau):
+	if can_dash and endurance !=0:
+		var direction_x = position.x
+		var direction_y = position.y  
+		can_dash = false 
+		dure_dash = true 
+		tableau.shuffle()
+		temps_entre_dash.start(randi_range(time_min,time_max))
+		temps_du_dash.start()
+		if tableau == "gauche" and dure_dash: 
+			look_at(Vector2(direction_x - 1, direction_y))
+		if tableau == "bas_gauche" and dure_dash: 
+			look_at(Vector2(direction_x - 1, direction_y-1))
+		if tableau == "bas" and dure_dash: 
+			look_at(Vector2(direction_x , direction_y-1))
+		if tableau == "bas_droite" and dure_dash: 
+			look_at(Vector2(direction_x + 1, direction_y-1))
+		if tableau == "droite" and dure_dash: 
+			look_at(Vector2(direction_x + 1, direction_y))
+	elif endurance == 0: 
+		recharge_endurance.start()
+
+
+func _on_recharge_endurance_timeout() -> void:
+	endurance = max_endurance
+
+func _on_temps_du_dash_timeout() -> void:
+	dure_dash= false
+	endurance -= 1
+	
+func _on_temps_entre_dash_timeout() -> void:
+	can_dash = true

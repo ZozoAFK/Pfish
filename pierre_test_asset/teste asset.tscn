@@ -1,17 +1,21 @@
 [gd_scene format=3 uid="uid://cbtgwtlul620o"]
 
-[ext_resource type="Texture2D" uid="uid://dh4xt8titw38n" path="res://pierre_test_asset/ASSET/LD PFISH.png" id="1_hmutp"]
 [ext_resource type="PackedScene" uid="uid://uwp4jevb0b10" path="res://Preproto/Scene/hamecon.tscn" id="1_robv1"]
 [ext_resource type="PackedScene" uid="uid://bnbptiq0ugpm3" path="res://Preproto/Scene/poisson.tscn" id="2_svkt2"]
+[ext_resource type="Texture2D" uid="uid://cuwmik23kcdax" path="res://pierre_test_asset/OBSTACLES  DECHETS (5).png" id="3_hmutp"]
 
 [node name="TesteAsset" type="Node2D" unique_id=1531770534]
 
 [node name="ObstaclesDechets" type="Sprite2D" parent="." unique_id=997030300]
-position = Vector2(555, 5208)
-texture = ExtResource("1_hmutp")
+position = Vector2(786, 5376)
 
 [node name="Hamecon" parent="." unique_id=1818444837 instance=ExtResource("1_robv1")]
 position = Vector2(619, 289)
 
 [node name="poisson" parent="." unique_id=234775178 instance=ExtResource("2_svkt2")]
 position = Vector2(903, 509)
+
+[node name="ObstaclesDechets(5)" type="Sprite2D" parent="." unique_id=522651843]
+position = Vector2(519.125, 6091.375)
+scale = Vector2(0.64084363, 0.97986573)
+texture = ExtResource("3_hmutp")

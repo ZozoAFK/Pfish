@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cg56gop8ahjjb" path="res://Preproto/Material/fish.webp" id="2_ctowt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ctowt"]
-size = Vector2(175.5, 104)
+size = Vector2(223, 108)
 
 [node name="Poisson" type="Node2D" unique_id=485619004]
 script = ExtResource("1_0r5lc")
@@ -18,8 +18,19 @@ collision_layer = 8
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=138060575]
-position = Vector2(143.25, 0)
+position = Vector2(158, 1)
 shape = SubResource("RectangleShape2D_ctowt")
+
+[node name="Recharge_endurance" type="Timer" parent="." unique_id=1365496377]
+wait_time = 5.0
+
+[node name="Temps_du_dash" type="Timer" parent="." unique_id=2135012246]
+wait_time = 0.5
+
+[node name="Temps_entre_dash" type="Timer" parent="." unique_id=1307637331]
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="timeout" from="Recharge_endurance" to="." method="_on_recharge_endurance_timeout"]
+[connection signal="timeout" from="Temps_du_dash" to="." method="_on_temps_du_dash_timeout"]
+[connection signal="timeout" from="Temps_entre_dash" to="." method="_on_temps_entre_dash_timeout"]
