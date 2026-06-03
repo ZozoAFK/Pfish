@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://ck40p12sluo60"]
+
+[ext_resource type="Script" path="res://fish.gd" id="1_r7e72"]
+[ext_resource type="Texture2D" uid="uid://dpd3ysbn2i1xh" path="res://fish.png" id="2_e7gdg"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_umbcw"]
+radius = 24.0
+height = 110.0
+
+[node name="Fish" type="CharacterBody2D" unique_id=1014845878]
+script = ExtResource("1_r7e72")
+waypoints = Array[Vector2]([Vector2(100, 300), Vector2(400, 300)])
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=457894007]
+position = Vector2(363.99988, 70.99988)
+scale = Vector2(0.2959375, 0.22416666)
+texture = ExtResource("2_e7gdg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1499095222]
+position = Vector2(418, 282)
+shape = SubResource("CapsuleShape2D_umbcw")
