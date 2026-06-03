@@ -121,8 +121,6 @@ func _dash (tableau, position_depard, delta):
 		look_at(Vector2(droite_bas_limite.position))
 		position = position.move_toward(droite_bas_limite.position, dash_speed * acc * delta)
 
-
-
 func begin_dash (delta)->bool:
 	if(endurance != 0):
 		can_dash = true
@@ -131,8 +129,6 @@ func begin_dash (delta)->bool:
 	else :
 		recharge_endurance.start(time_endurance)
 		return false
-	
-
 
 func _on_recharge_endurance_timeout() -> void:
 	endurance = max_endurance
