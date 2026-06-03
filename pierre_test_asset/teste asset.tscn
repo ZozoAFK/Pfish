@@ -294,7 +294,7 @@ height = 260.0
 size = Vector2(255, 1097)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_hmutp"]
-size = Vector2(301, 1377)
+size = Vector2(301, 1809)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pxeqs"]
 size = Vector2(277.5, 10085.25)
@@ -304,6 +304,9 @@ size = Vector2(325.5, 9388)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1qesw"]
 size = Vector2(1074.5, 263)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d1jbs"]
+size = Vector2(1375.5, 171)
 
 [node name="TesteAsset" type="Node2D" unique_id=1531770534]
 
@@ -321,6 +324,8 @@ texture = ExtResource("3_hmutp")
 
 [node name="Hamecon" parent="." unique_id=1818444837 instance=ExtResource("1_robv1")]
 position = Vector2(619, 289)
+collision_layer = 2
+collision_mask = 1
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1450522179]
 collision_mask = 2
@@ -707,7 +712,7 @@ shape = SubResource("RectangleShape2D_vvnnl")
 debug_color = Color(0.99215686, 0, 0.24313726, 0.41960785)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=274367454]
-position = Vector2(-79.5, 1022.5)
+position = Vector2(-79.5, 1238.5)
 shape = SubResource("RectangleShape2D_hmutp")
 debug_color = Color(0.97799724, 0.12749928, 0.19954932, 0.41960785)
 
@@ -725,3 +730,8 @@ debug_color = Color(0.9992406, 0, 0.13277727, 0.41960785)
 position = Vector2(509.75, 11377.5)
 shape = SubResource("RectangleShape2D_1qesw")
 debug_color = Color(0.9761241, 0.1563108, 0, 0.41960785)
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D2" unique_id=703931867]
+position = Vector2(544.75, 247)
+shape = SubResource("RectangleShape2D_d1jbs")
+debug_color = Color(1, 0.004213414, 0.08783569, 0.41960785)
