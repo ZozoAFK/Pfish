@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cfs36gjvjh1ml"]
 
 [ext_resource type="Texture2D" uid="uid://byj1jqg14675s" path="res://pierre_test_asset/OBSTACLES  DECHETS (9).png" id="1_atkr3"]
-[ext_resource type="PackedScene" uid="uid://uwp4jevb0b10" path="res://Preproto/Scene/hamecon.tscn" id="2_bugel"]
+[ext_resource type="PackedScene" uid="uid://dxgagnxjrsaci" path="res://Proto/Scene/Hamecon.tscn" id="1_tyl2u"]
 [ext_resource type="PackedScene" path="res://Proto/Scene/ronde-fish.tscn" id="3_cd8ja"]
 [ext_resource type="PackedScene" uid="uid://bnbptiq0ugpm3" path="res://Preproto/Scene/poisson.tscn" id="4_w3ikg"]
 
@@ -316,10 +316,8 @@ position = Vector2(527.8125, 5806.813)
 scale = Vector2(0.60210884, 0.93407553)
 texture = ExtResource("1_atkr3")
 
-[node name="Hamecon2" parent="." unique_id=1818444837 instance=ExtResource("2_bugel")]
-position = Vector2(619, 289)
-collision_layer = 2
-collision_mask = 1
+[node name="Hamecon" parent="." unique_id=689676632 instance=ExtResource("1_tyl2u")]
+position = Vector2(582, 399)
 
 [node name="Fish" parent="." unique_id=1014845878 instance=ExtResource("3_cd8ja")]
 position = Vector2(248, 360)
