@@ -13,6 +13,8 @@ size = Vector2(372.5, 29.375)
 [node name="Fish" type="CharacterBody2D" unique_id=1014845878]
 script = ExtResource("1_r7e72")
 waypoints = Array[Vector2]([Vector2(100, 300), Vector2(400, 300)])
+speed = null
+ping_pong = null
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=457894007]
 scale = Vector2(0.1, 0.1)
@@ -30,29 +32,5 @@ collision_mask = 2
 position = Vector2(240, -4.6875)
 shape = SubResource("RectangleShape2D_b3wvt")
 
-[node name="gauche_bas_limite" type="Marker2D" parent="." unique_id=2107956384]
-position = Vector2(-100, 100)
-
-[node name="bas_limite" type="Marker2D" parent="." unique_id=958733548]
-position = Vector2(0, 200)
-
-[node name="droite_bas_limite" type="Marker2D" parent="." unique_id=1511197311]
-position = Vector2(100, 100)
-
-[node name="droite_limite" type="Marker2D" parent="." unique_id=962132849]
-position = Vector2(200, 0)
-
-[node name="recharge_endurance" type="Timer" parent="." unique_id=1589475397]
-
-[node name="temps_du_dash" type="Timer" parent="." unique_id=1217252329]
-
-[node name="temps_entre_dash" type="Timer" parent="." unique_id=894417557]
-
-[node name="gauche_limite" type="Marker2D" parent="." unique_id=443857140]
-position = Vector2(-200, 0)
-
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
-[connection signal="timeout" from="recharge_endurance" to="." method="_on_recharge_endurance_timeout"]
-[connection signal="timeout" from="temps_du_dash" to="." method="_on_temps_du_dash_timeout"]
-[connection signal="timeout" from="temps_entre_dash" to="." method="_on_temps_entre_dash_timeout"]
