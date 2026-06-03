@@ -21,9 +21,7 @@ var direction
 enum State { RONDE, POURSUITE, COMBAT }
 var etat_actuel = State.COMBAT
 
- 
-var valeur_x = 200
-var valeur_y = 200
+
 
 var joueur : Node2D = null
 var player : Player = null
@@ -61,7 +59,6 @@ func _physics_process(delta: float) -> void:
 		State.POURSUITE:
 			_poursuivre(delta)
 		State.COMBAT:
-			print(position)
 			print(direction)
 			if not(can_dash) :
 				begin_dash(delta)
@@ -119,6 +116,8 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 
 var acc = 0.5
 func _dash (tableau, position_depard, delta):
+	var direction_x = position.x
+	var direction_y = position.y
 
 	if not(dure_dash):
 		temps_entre_dash.start()
@@ -127,25 +126,25 @@ func _dash (tableau, position_depard, delta):
 	dure_dash = true 
 	
 	if tableau[0] == "gauche" and dure_dash: 
-		direction = Vector2(position.x + valeur_x , position.y)
-		look_at(Vector2(direction))
-		velocity = velocity.move_toward( direction * dash_speed, acc)
+		look_at(Vector2(gauche_limite.position))
+		direction = Vector2(gauche_limite.position)
+		velocity = lerp(velocity , direction * dash_speed, acc)
 	if tableau[0] == "bas_gauche" and dure_dash: 
-		direction = Vector2(position.x + (valeur_x/2) , position.y +(valeur_y/2) )
-		look_at(Vector2(direction))
-		velocity = velocity.move_toward( direction * dash_speed, acc)
+		look_at(Vector2(gauche_bas_limite.position))
+		direction = Vector2(gauche_bas_limite.position)
+		velocity = lerp(velocity , direction * dash_speed, acc)
 	if tableau[0] == "bas" and dure_dash: 
-		direction = Vector2(position.x  , position.y + valeur_y )
-		look_at(Vector2(direction))
-		velocity = velocity.move_toward( direction * dash_speed, acc)
+		look_at(Vector2(bas_limite.position))
+		direction = Vector2(bas_limite.position)
+		velocity = lerp(velocity , direction * dash_speed, acc)
 	if tableau[0] == "bas_droite" and dure_dash: 
-		direction = Vector2(position.x +(valeur_x/2) , position.y + (valeur_y/2) )
-		look_at(Vector2(direction))
-		velocity = velocity.move_toward( direction * dash_speed, acc)
+		look_at(Vector2(droite_bas_limite.position))
+		direction = Vector2(droite_bas_limite.position)
+		velocity = lerp(velocity , direction * dash_speed, acc)
 	if tableau[0] == "droite" and dure_dash: 
-		direction = Vector2(position.x  + valeur_x , position.y  )
-		look_at(Vector2(direction))
-		velocity = velocity.move_toward( direction * dash_speed, acc)
+		look_at(Vector2(droite_limite.position))
+		direction = Vector2(droite_limite.position)
+		velocity = lerp(velocity , direction * dash_speed, acc)
 
 func begin_dash (delta)->bool:
 	if(endurance != 0):
