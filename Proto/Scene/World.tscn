@@ -319,7 +319,7 @@ texture = ExtResource("1_atkr3")
 position = Vector2(582, 399)
 
 [node name="Fish" parent="." unique_id=1014845878 instance=ExtResource("3_cd8ja")]
-position = Vector2(248, 360)
+position = Vector2(491, 769)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2090796918 groups=["danger"]]
 collision_mask = 2
