@@ -30,5 +30,24 @@ collision_mask = 2
 position = Vector2(374, -4)
 shape = SubResource("RectangleShape2D_b3wvt")
 
+[node name="gauche_limite" type="Marker2D" parent="." unique_id=443857140]
+
+[node name="gauche_bas_limite" type="Marker2D" parent="." unique_id=2107956384]
+
+[node name="bas_limite" type="Marker2D" parent="." unique_id=958733548]
+
+[node name="droite_bas_limite" type="Marker2D" parent="." unique_id=1511197311]
+
+[node name="droite_limite" type="Marker2D" parent="." unique_id=962132849]
+
+[node name="recharge_endurance" type="Timer" parent="." unique_id=1589475397]
+
+[node name="temps_du_dash" type="Timer" parent="." unique_id=1217252329]
+
+[node name="temps_entre_dash" type="Timer" parent="." unique_id=894417557]
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="timeout" from="recharge_endurance" to="." method="_on_recharge_endurance_timeout"]
+[connection signal="timeout" from="temps_du_dash" to="." method="_on_temps_du_dash_timeout"]
+[connection signal="timeout" from="temps_entre_dash" to="." method="_on_temps_entre_dash_timeout"]
