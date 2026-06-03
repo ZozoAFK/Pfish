@@ -3,7 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://byj1jqg14675s" path="res://pierre_test_asset/OBSTACLES  DECHETS (9).png" id="1_atkr3"]
 [ext_resource type="PackedScene" uid="uid://uwp4jevb0b10" path="res://Preproto/Scene/hamecon.tscn" id="2_bugel"]
 [ext_resource type="PackedScene" path="res://Proto/Scene/ronde-fish.tscn" id="3_cd8ja"]
-[ext_resource type="PackedScene" uid="uid://bnbptiq0ugpm3" path="res://Preproto/Scene/poisson.tscn" id="4_w3ikg"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wy8eu"]
 radius = 88.0
@@ -323,9 +322,6 @@ collision_mask = 1
 
 [node name="Fish" parent="." unique_id=1014845878 instance=ExtResource("3_cd8ja")]
 position = Vector2(248, 360)
-
-[node name="poisson" parent="." unique_id=234775178 instance=ExtResource("4_w3ikg")]
-position = Vector2(903, 509)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2090796918]
 collision_mask = 2
