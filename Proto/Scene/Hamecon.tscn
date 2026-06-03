@@ -7,6 +7,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_emdyq"]
 size = Vector2(129.5, 128.5)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_5ny1p"]
+radius = 8.5440035
+
 [node name="Hamecon" type="CharacterBody2D" unique_id=689676632]
 collision_layer = 2
 collision_mask = 9
@@ -30,4 +33,11 @@ shape = SubResource("RectangleShape2D_emdyq")
 wait_time = 1.5
 one_shot = true
 
+[node name="ZoneAccroche" type="Area2D" parent="." unique_id=1414730346]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZoneAccroche" unique_id=2010259249]
+position = Vector2(0, 42)
+shape = SubResource("CircleShape2D_5ny1p")
+
 [connection signal="joueur_touche" from="." to="Camera2D/BarreHP" method="_on_hamecon_joueur_touche"]
+[connection signal="body_entered" from="ZoneAccroche" to="." method="_on_zone_accroche_body_entered"]

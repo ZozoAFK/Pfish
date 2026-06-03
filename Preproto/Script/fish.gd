@@ -42,7 +42,12 @@ var _direction: int  = 1   # utilisé seulement en ping-pong
 
 
 func _ready() -> void:
-	joueur = $"../Hamecon.tscn" # adapte le chemin
+	# On cherche le nœud "Hamecon" qui est au même niveau (frère) dans l'arbre
+	joueur = $"../Hamecon" 
+	
+	if joueur == null:
+		push_error("Le nœud Hamecon n'a pas été trouvé ! Vérifiez le chemin.")
+		
 	if waypoints.is_empty():
 		push_warning("Fish '" + name + "' : aucun waypoint défini !")
 		return
