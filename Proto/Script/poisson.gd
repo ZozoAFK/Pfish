@@ -1,13 +1,19 @@
 extends Node2D
 
 enum State { RONDE, POURSUITE, COMBAT }
-var etat_actuel = State.COMBAT
+var etat_actuel = State.RONDE
 
 @export var vitesse = 100.0
 @export var point_1 = Vector2(500, 500)  # destination en mode ronde
 @export var point_2 = Vector2(100, 500)  # destination en mode ronde
 
 #variable dash
+@onready var droite_limite =$Droite
+@onready var droite_bas_limite =$Droite_Bas
+@onready var bas_limite =$Bas
+@onready var gauche_bas_limite =$Gauche_Bas
+@onready var gauche_limite =$Gauche
+
 @onready var recharge_endurance : Timer = $Recharge_endurance #temps pour recharger l'endurance  
 @onready var temps_du_dash : Timer = $Temps_du_dash # duree du dash 
 @onready var temps_entre_dash : Timer = $Temps_entre_dash # duree entre deux dash different 
@@ -17,7 +23,7 @@ var endurance = max_endurance #dash durant le gameplay
 var can_dash = false #switch qui definit si on peut dash ou pas (avec pour timer le temps entre deux dash)
 var position_depard 
 @export var max_endurance = 3 # nombre de dash maximum que le poisson a  
-@export var dash_speed = 5 #vitesse du dash 
+@export var dash_speed = 300 #vitesse du dash 
 @export var time_min = 0 #temps minimum entre deux dash 
 @export var time_max = 5 #temps maximum entre deux dash
 @export var time_endurance = 5 #temps pour recupere l'endurance lorsqu on n en a plus 
@@ -44,11 +50,8 @@ func _process(delta):
 
 			if not(can_dash) :
 				begin_dash(delta)
-			elif endurance == 0:
-				recharge_endurance.start(time_endurance)
 			if can_dash :
 				_dash (tableau,position_depard,delta)
-			#end_dash()
 			
 
 
@@ -61,6 +64,7 @@ func _faire_ronde(delta):
 		#condition de rotation 
 		if position >= point_1:
 			switch_ronde=false
+			
 	# Mouvement vers la gauche
 	if not(switch_ronde) : 
 		look_at(point_2)
@@ -93,27 +97,29 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 var acc = 0.5
 func _dash (tableau, position_depard, delta):
 	var direction_x = position.x
-	var direction_y = position.y 
-		 
+	var direction_y = position.y
+
+	if not(dure_dash):
+		temps_entre_dash.start()
+		tableau.shuffle()
+		temps_du_dash.start()
 	dure_dash = true 
-	tableau.shuffle()
-	temps_entre_dash.start()
-	temps_du_dash.start()
-	#if tableau[0] == "gauche" and dure_dash: 
-		#look_at(Vector2(direction_x - 1, direction_y))
-		#position = lerp(position_depard ,position_depard * dash_speed , acc)
-	#if tableau[0] == "bas_gauche" and dure_dash: 
-		#look_at(Vector2(direction_x - 1, direction_y-1))
-		#position = lerp(position_depard ,position_depard * dash_speed , acc)
-	#if tableau[0] == "bas" and dure_dash: 
-		#look_at(Vector2(direction_x , direction_y-1))
-		#position = lerp(position_depard ,position_depard * dash_speed , acc)
-	#if tableau[0] == "bas_droite" and dure_dash: 
-		#look_at(Vector2(direction_x + 1, direction_y-1))
-		#position = lerp(position_depard ,position_depard * dash_speed , acc)
-	#if tableau[0] == "droite" and dure_dash: 
-		#look_at(Vector2(direction_x + 1, direction_y))
-		#position = lerp(position_depard ,position_depard * dash_speed , acc)
+	
+	if tableau[0] == "gauche" and dure_dash: 
+		look_at(Vector2(gauche_limite.position))
+		position = position.move_toward(gauche_limite.position, dash_speed * acc*delta)
+	if tableau[0] == "bas_gauche" and dure_dash: 
+		look_at(Vector2(gauche_bas_limite.position))
+		position = position.move_toward(gauche_bas_limite  .position, dash_speed * acc * delta)
+	if tableau[0] == "bas" and dure_dash: 
+		look_at(Vector2(bas_limite.position))
+		position = position.move_toward(bas_limite.position, dash_speed * acc * delta)
+	if tableau[0] == "bas_droite" and dure_dash: 
+		look_at(Vector2(droite_limite.position))
+		position = position.move_toward(droite_limite.position, dash_speed * acc * delta)
+	if tableau[0] == "droite" and dure_dash: 
+		look_at(Vector2(droite_bas_limite.position))
+		position = position.move_toward(droite_bas_limite.position, dash_speed * acc * delta)
 
 
 
@@ -122,7 +128,9 @@ func begin_dash (delta)->bool:
 		can_dash = true
 		position_depard = position
 		return true
-	return false
+	else :
+		recharge_endurance.start(time_endurance)
+		return false
 	
 
 
