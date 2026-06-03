@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byj1jqg14675s"
-path="res://.godot/imported/OBSTACLES  DECHETS (9).png-97c81d62fff853188cb87d00be7f8ea9.ctex"
+uid="uid://42ypjlb4kbeg"
+path="res://.godot/imported/POISSON-3.png-835e1ac6c0ffbe7fa2a5eb11bfd302c7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pierre_test_asset/OBSTACLES  DECHETS (9).png"
-dest_files=["res://.godot/imported/OBSTACLES  DECHETS (9).png-97c81d62fff853188cb87d00be7f8ea9.ctex"]
+source_file="res://pierre_test_asset/POISSON-3.png"
+dest_files=["res://.godot/imported/POISSON-3.png-835e1ac6c0ffbe7fa2a5eb11bfd302c7.ctex"]
 
 [params]
 
