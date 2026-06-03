@@ -27,6 +27,7 @@ func _physics_process(delta: float) -> void:
 		var collision = get_slide_collision(i)
 		var collider = collision.get_collider()
 		
+		#Si =Danger 
 		if collider.is_in_group("danger"):
 			# 2. AVANT de faire des dégâts, on vérifie si le joueur n'est PAS invincible
 			# 'is_stopped()' est VRAI si le timer ne tourne pas (donc joueur vulnérable)
