@@ -1,7 +1,7 @@
 extends Node2D
 
 enum State { RONDE, POURSUITE, COMBAT }
-var etat_actuel = State.RONDE
+var etat_actuel = State.COMBAT
 
 @export var vitesse = 100.0
 @export var point_1 = Vector2(500, 500)  # destination en mode ronde
@@ -23,7 +23,7 @@ var endurance = max_endurance #dash durant le gameplay
 var can_dash = false #switch qui definit si on peut dash ou pas (avec pour timer le temps entre deux dash)
 var position_depard 
 @export var max_endurance = 3 # nombre de dash maximum que le poisson a  
-@export var dash_speed = 300 #vitesse du dash 
+@export var dash_speed = 1000 #vitesse du dash 
 @export var time_min = 0 #temps minimum entre deux dash 
 @export var time_max = 5 #temps maximum entre deux dash
 @export var time_endurance = 5 #temps pour recupere l'endurance lorsqu on n en a plus 
@@ -40,7 +40,7 @@ func _ready():
 	joueur = $"../Hamecon"  # adapte le chemin
 
 func _process(delta):
-	print(position)
+	#print(position)
 	match etat_actuel:
 		State.RONDE:
 			_faire_ronde(delta)

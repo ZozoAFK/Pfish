@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://dxgagnxjrsaci" path="res://Proto/Scene/Hamecon.tscn" id="1_tyl2u"]
 [ext_resource type="PackedScene" uid="uid://cb21rdpxstbwb" path="res://Proto/Scene/Poisson.tscn" id="2_x5aal"]
+[ext_resource type="PackedScene" uid="uid://cifinp4ojoo6v" path="res://Proto/Scene/ronde-fish.tscn" id="3_cd8ja"]
 
 [sub_resource type="QuadMesh" id="QuadMesh_x5aal"]
 
@@ -25,4 +26,9 @@ mesh = SubResource("PrismMesh_cd8ja")
 position = Vector2(-524, -83)
 
 [node name="Poisson" parent="." unique_id=485619004 instance=ExtResource("2_x5aal")]
-position = Vector2(550, 500)
+position = Vector2(1908, 320)
+
+[node name="Fish" parent="." unique_id=1014845878 instance=ExtResource("3_cd8ja")]
+position = Vector2(248, 360)
+speed = 80.0
+ping_pong = false
