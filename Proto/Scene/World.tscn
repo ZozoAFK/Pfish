@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://byj1jqg14675s" path="res://pierre_test_asset/OBSTACLES  DECHETS (9).png" id="1_atkr3"]
 [ext_resource type="PackedScene" uid="uid://dxgagnxjrsaci" path="res://Proto/Scene/Hamecon.tscn" id="1_tyl2u"]
-[ext_resource type="PackedScene" path="res://Proto/Scene/ronde-fish.tscn" id="3_cd8ja"]
+[ext_resource type="PackedScene" uid="uid://cifinp4ojoo6v" path="res://Proto/Scene/ronde-fish.tscn" id="3_cd8ja"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wy8eu"]
 radius = 88.0
@@ -321,7 +321,7 @@ position = Vector2(582, 399)
 [node name="Fish" parent="." unique_id=1014845878 instance=ExtResource("3_cd8ja")]
 position = Vector2(248, 360)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2090796918]
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2090796918 groups=["danger"]]
 collision_mask = 2
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=810199483]
@@ -698,7 +698,7 @@ shape = SubResource("CapsuleShape2D_0xixk")
 position = Vector2(886, 9634)
 shape = SubResource("CapsuleShape2D_8kxnn")
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1481667207]
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1481667207 groups=["danger"]]
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1029781537]
 position = Vector2(1158.5, 864.5)

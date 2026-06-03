@@ -25,3 +25,9 @@ position = Vector2(-401, -242)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1099034992]
 shape = SubResource("RectangleShape2D_emdyq")
+
+[node name="TimerInvincibilite" type="Timer" parent="." unique_id=1747827923]
+wait_time = 1.5
+one_shot = true
+
+[connection signal="joueur_touche" from="." to="Camera2D/BarreHP" method="_on_hamecon_joueur_touche"]

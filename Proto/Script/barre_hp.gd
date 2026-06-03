@@ -50,3 +50,7 @@ func collision_fluide(degats: float) -> void:
 func collision_instantanee(degats: float) -> void:
 	hp_vert.value = clamp(hp_vert.value - degats, 0, pv_max)
 	hp_clair.value = clamp(hp_clair.value - degats, 0, pv_max)
+
+
+func _on_hamecon_joueur_touche(degats: float) -> void:
+	collision_instantanee(degats)
