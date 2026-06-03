@@ -40,7 +40,7 @@ var _direction: int  = 1   # utilisé seulement en ping-pong
 
 
 func _ready() -> void:
-	joueur = $"res://Proto/Scene/Hamecon.tscn" # adapte le chemin
+	joueur = $"../Hamecon.tscn" # adapte le chemin
 	if waypoints.is_empty():
 		push_warning("Fish '" + name + "' : aucun waypoint défini !")
 		return
@@ -149,7 +149,6 @@ func begin_dash (delta)->bool:
 	else :
 		recharge_endurance.start()
 		return false
-		
 
 
 func _on_temps_du_dash_timeout() -> void:
