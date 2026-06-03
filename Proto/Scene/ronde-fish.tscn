@@ -8,14 +8,14 @@ radius = 24.0
 height = 110.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b3wvt"]
-size = Vector2(372.5, 53.5)
+size = Vector2(372.5, 29.375)
 
 [node name="Fish" type="CharacterBody2D" unique_id=1014845878]
 script = ExtResource("1_r7e72")
 waypoints = Array[Vector2]([Vector2(100, 300), Vector2(400, 300)])
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=457894007]
-scale = Vector2(0.2959375, 0.22416666)
+scale = Vector2(0.1, 0.1)
 texture = ExtResource("2_e7gdg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1499095222]
@@ -27,18 +27,23 @@ collision_layer = 8
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1019708265]
-position = Vector2(374, -4)
+position = Vector2(240, -4.6875)
 shape = SubResource("RectangleShape2D_b3wvt")
 
 [node name="gauche_limite" type="Marker2D" parent="." unique_id=443857140]
+position = Vector2(-200, 0)
 
 [node name="gauche_bas_limite" type="Marker2D" parent="." unique_id=2107956384]
+position = Vector2(-100, 100)
 
 [node name="bas_limite" type="Marker2D" parent="." unique_id=958733548]
+position = Vector2(0, 200)
 
 [node name="droite_bas_limite" type="Marker2D" parent="." unique_id=1511197311]
+position = Vector2(100, 100)
 
 [node name="droite_limite" type="Marker2D" parent="." unique_id=962132849]
+position = Vector2(200, 0)
 
 [node name="recharge_endurance" type="Timer" parent="." unique_id=1589475397]
 

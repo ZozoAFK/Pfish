@@ -14,14 +14,20 @@ var dure_dash = false  #switch qui limite la duree du dash
 var endurance = max_endurance #dash durant le gameplay
 var can_dash = false #switch qui definit si on peut dash ou pas (avec pour timer le temps entre deux dash)
 var position_depard 
+var direction 
 @export var max_endurance = 3 # nombre de dash maximum que le poisson a  
 @export var dash_speed = 1000 #vitesse du dash 
 
 enum State { RONDE, POURSUITE, COMBAT }
 var etat_actuel = State.COMBAT
 
+
+
 var joueur : Node2D = null
 var player : Player = null
+
+
+
 
 @export var waypoints: Array[Vector2] = []
 @export var speed: float = 80.0 # Vitesse en pixels/seconde
@@ -29,13 +35,12 @@ var player : Player = null
 var _current_wp: int = 0
 var _direction: int  = 1   # utilisé seulement en ping-pong
 
-@onready var _sprite: Sprite2D = $Sprite2D
 
 
 
 
 func _ready() -> void:
-	joueur = $"../Hamecon" # adapte le chemin
+	joueur = $"res://Proto/Scene/Hamecon.tscn" # adapte le chemin
 	if waypoints.is_empty():
 		push_warning("Fish '" + name + "' : aucun waypoint défini !")
 		return
@@ -49,6 +54,7 @@ func _physics_process(delta: float) -> void:
 		State.POURSUITE:
 			_poursuivre(delta)
 		State.COMBAT:
+			print(direction)
 			if not(can_dash) :
 				begin_dash(delta)
 			if can_dash :
@@ -116,19 +122,24 @@ func _dash (tableau, position_depard, delta):
 	
 	if tableau[0] == "gauche" and dure_dash: 
 		look_at(Vector2(gauche_limite.position))
-		position = position.move_toward(gauche_limite.position, dash_speed * acc*delta)
+		direction = Vector2(gauche_limite.position)
+		velocity = lerp(velocity , direction * dash_speed, acc)
 	if tableau[0] == "bas_gauche" and dure_dash: 
 		look_at(Vector2(gauche_bas_limite.position))
-		position = position.move_toward(gauche_bas_limite  .position, dash_speed * acc * delta)
+		direction = Vector2(gauche_bas_limite.position)
+		velocity = lerp(velocity , direction * dash_speed, acc)
 	if tableau[0] == "bas" and dure_dash: 
 		look_at(Vector2(bas_limite.position))
-		position = position.move_toward(bas_limite.position, dash_speed * acc * delta)
+		direction = Vector2(bas_limite.position)
+		velocity = lerp(velocity , direction * dash_speed, acc)
 	if tableau[0] == "bas_droite" and dure_dash: 
 		look_at(Vector2(droite_bas_limite.position))
-		position = position.move_toward(droite_limite.position, dash_speed * acc * delta)
+		direction = Vector2(droite_bas_limite.position)
+		velocity = lerp(velocity , direction * dash_speed, acc)
 	if tableau[0] == "droite" and dure_dash: 
 		look_at(Vector2(droite_limite.position))
-		position = position.move_toward(droite_bas_limite.position, dash_speed * acc * delta)
+		direction = Vector2(droite_limite.position)
+		velocity = lerp(velocity , direction * dash_speed, acc)
 
 func begin_dash (delta)->bool:
 	if(endurance != 0):
