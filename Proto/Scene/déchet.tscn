@@ -1,17 +1,20 @@
 [gd_scene format=3 uid="uid://bdiwo7gurvtso"]
 
 [ext_resource type="Script" uid="uid://bp7h4h6l77mo2" path="res://Proto/Script/déchet.gd" id="1_5orj7"]
-[ext_resource type="Texture2D" uid="uid://c45lsh6nynxdp" path="res://pierre_test_asset/DECHET-3.png" id="1_6vgr4"]
+[ext_resource type="Texture2D" uid="uid://d0l4wphvqn4sm" path="res://pierre_test_asset/Chest2.png" id="2_5orj7"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_5orj7"]
+radius = 4.25
 
-[node name="Déchet" type="RigidBody2D" unique_id=582727744 groups=["dechet"]]
+[node name="Déchet" type="CharacterBody2D" unique_id=2100457893 groups=["dechet"]]
 script = ExtResource("1_5orj7")
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=759506327]
-scale = Vector2(0.09037497, 0.09162499)
-texture = ExtResource("1_6vgr4")
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=759506327 groups=["dechet"]]
+scale = Vector2(2, 2.04)
+texture = ExtResource("2_5orj7")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1388879976]
-scale = Vector2(4, 4)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1388879976 groups=["dechet"]]
+position = Vector2(0, -1)
+scale = Vector2(9.350967, 8.028952)
 shape = SubResource("CircleShape2D_5orj7")
+one_way_collision = true
