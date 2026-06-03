@@ -733,3 +733,6 @@ debug_color = Color(1, 0.004213414, 0.08783569, 0.41960785)
 
 [node name="Déchet" parent="." unique_id=582727744 instance=ExtResource("4_atkr3")]
 position = Vector2(594, 3264)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1545435027]
+position = Vector2(-1405, 543)
