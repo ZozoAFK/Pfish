@@ -1,28 +1,25 @@
 [gd_scene format=3 uid="uid://ck40p12sluo60"]
 
-[ext_resource type="Script" path="res://fish.gd" id="1_r7e72"]
 [ext_resource type="Texture2D" uid="uid://b5y7typm1rw1u" path="res://pierre_test_asset/POISSON-1.webp" id="2_mh78y"]
 [ext_resource type="Texture2D" uid="uid://d4m5ny5yuko4k" path="res://pierre_test_asset/POISSON-2.png" id="3_6a2lt"]
 [ext_resource type="Texture2D" uid="uid://42ypjlb4kbeg" path="res://pierre_test_asset/POISSON-3.png" id="4_qu7hc"]
 [ext_resource type="Texture2D" uid="uid://1lmysf3a4jsk" path="res://pierre_test_asset/POISSON-4.png" id="5_t3qst"]
-[ext_resource type="Texture2D" uid="uid://c6dxncrc4ccc6" path="res://pierre_test_asset/DECHET-1.png" id="6_t3qst"]
-[ext_resource type="Texture2D" uid="uid://dc6bh0h0m27g8" path="res://pierre_test_asset/DECHET-2.png" id="7_o36k0"]
-[ext_resource type="Texture2D" uid="uid://c45lsh6nynxdp" path="res://pierre_test_asset/DECHET-3.png" id="8_k68as"]
+[ext_resource type="Texture2D" uid="uid://bdio0lfwa7u7d" path="res://pierre_test_asset/DECHET-1.png" id="6_t3qst"]
+[ext_resource type="Texture2D" uid="uid://xs7cqk3yiat7" path="res://pierre_test_asset/DECHET-2.png" id="7_o36k0"]
+[ext_resource type="Texture2D" uid="uid://4ipew5m5ykaa" path="res://pierre_test_asset/DECHET-3.png" id="8_k68as"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_umbcw"]
 radius = 24.0
 height = 110.0
 
 [node name="Fish" type="CharacterBody2D" unique_id=1014845878]
-script = ExtResource("1_r7e72")
-waypoints = Array[Vector2]([Vector2(100, 300), Vector2(400, 300)])
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=457894007]
 position = Vector2(177, 131)
 scale = Vector2(0.36511174, 0.26922628)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1499095222]
-position = Vector2(418, 282)
+position = Vector2(137, 483)
 shape = SubResource("CapsuleShape2D_umbcw")
 
 [node name="Poisson1" type="Sprite2D" parent="." unique_id=1410870830]
@@ -30,7 +27,7 @@ position = Vector2(404, 77)
 texture = ExtResource("2_mh78y")
 
 [node name="Poisson2" type="Sprite2D" parent="." unique_id=10345984]
-position = Vector2(823, 155)
+position = Vector2(801, 166)
 texture = ExtResource("3_6a2lt")
 
 [node name="Poisson3" type="Sprite2D" parent="." unique_id=421823544]

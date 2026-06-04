@@ -27,12 +27,14 @@ position = Vector2(240, -4.6875)
 shape = SubResource("RectangleShape2D_b3wvt")
 
 [node name="hitbox" type="Area2D" parent="." unique_id=1002711964]
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=98142761]
 position = Vector2(9, -2)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_b3wvt")
 
+[connection signal="joueur_touche" from="." to="." method="_on_hamecon_joueur_touche"]
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]

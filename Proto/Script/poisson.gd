@@ -3,6 +3,8 @@ extends Node2D
 enum State { RONDE, POURSUITE, COMBAT }
 var etat_actuel = State.COMBAT
 
+signal joueur_touche(degats: float)  
+
 @export var vitesse = 100.0
 @export var point_1 = Vector2(500, 500)  # destination en mode ronde
 @export var point_2 = Vector2(100, 500)  # destination en mode ronde
