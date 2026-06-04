@@ -2,12 +2,7 @@
 
 [ext_resource type="Script" uid="uid://c86yywemjqb2t" path="res://Proto/Scene/menu_principal.gd" id="1_1x1gr"]
 [ext_resource type="FontFile" uid="uid://cqm6krhuletbc" path="res://Proto/Font/pixel.ttf" id="1_jp6m1"]
-
-[sub_resource type="Gradient" id="Gradient_1x1gr"]
-colors = PackedColorArray(0, 0.80784315, 1, 1, 0, 0.80784315, 1, 1)
-
-[sub_resource type="GradientTexture1D" id="GradientTexture1D_86nre"]
-gradient = SubResource("Gradient_1x1gr")
+[ext_resource type="Texture2D" uid="uid://d178ftghwntwd" path="res://pierre_test_asset/ASSET/MENU/BG_Anime.tres" id="2_86nre"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_hfnlw"]
 font = ExtResource("1_jp6m1")
@@ -31,15 +26,18 @@ grow_vertical = 2
 script = ExtResource("1_1x1gr")
 
 [node name="BackGround" type="TextureRect" parent="." unique_id=401600570]
-modulate = Color(0, 0.80784315, 1, 1)
-self_modulate = Color(0, 1.2282122, 14.312556, 1)
+self_modulate = Color(1.01685, 1.01685, 1.01685, 1)
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -71.0
+offset_top = -286.0
+offset_right = 117.0
+offset_bottom = 178.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("GradientTexture1D_86nre")
+texture = ExtResource("2_86nre")
 
 [node name="Label" type="Label" parent="." unique_id=336899054]
 layout_mode = 1
