@@ -49,19 +49,20 @@ func deplacement (delta):
 	else:
 		velocity.x = move_toward(velocity.x, 0, Speed_coter)
 
-# --- NOUVELLE FONCTION : DÉTECTION ET ACCROCHE ---
-func _on_zone_accroche_body_entered(body: Node2D) -> void:
+# --- NOUVELLE FONCTION : DÉTECTION ET ACCROCHE MODIFIÉE ---
+func _on_zone_accroche_area_entered(area: Area2D) -> void:
 	# 1. On vérifie si l'objet touché fait partie du groupe "dechet"
 	# 2. On vérifie si on n'a pas DÉJÀ un déchet sur l'hameçon
-	if body.is_in_group("dechet") and dechet_accroche == null:
+	if area.is_in_group("dechet") and dechet_accroche == null:
 		# On stocke la référence du déchet
-		dechet_accroche = body
+		dechet_accroche = area
 		
-		# Optionnel : Si le déchet a des collisions qui bloquent le joueur, 
-		# on les désactive pour qu'il se laisse porter sans physique
-		if body is CharacterBody2D or body is StaticBody2D:
-			body.process_mode = PROCESS_MODE_DISABLED 
-			# (Désactive ses scripts et sa physique propre pour qu'il devienne passif)
+		# On désactive la détection de la zone pour qu'elle ne déclenche plus d'événements
+		area.monitoring = false
+		area.monitorable = false
+		
+		# Optionnel : Désactiver complètement son traitement si besoin
+		area.process_mode = PROCESS_MODE_DISABLED 
 		
 		print("Déchet accroché !")
 
