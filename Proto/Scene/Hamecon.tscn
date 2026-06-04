@@ -40,4 +40,5 @@ position = Vector2(0, 42)
 shape = SubResource("CircleShape2D_5ny1p")
 
 [connection signal="joueur_touche" from="." to="Camera2D/BarreHP" method="_on_hamecon_joueur_touche"]
+[connection signal="area_entered" from="ZoneAccroche" to="." method="_on_zone_accroche_area_entered"]
 [connection signal="body_entered" from="ZoneAccroche" to="." method="_on_zone_accroche_body_entered"]
