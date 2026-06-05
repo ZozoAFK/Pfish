@@ -17,20 +17,21 @@ script = ExtResource("1_2toed")
 position = Vector2(49, -12)
 scale = Vector2(0.3007086, 0.27596372)
 texture = ExtResource("2_2toed")
+flip_h = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1883704712]
 collision_layer = 8
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=106989501]
-position = Vector2(-45, -3)
+position = Vector2(160, -1)
 shape = SubResource("RectangleShape2D_wqurr")
 
 [node name="hitbox" type="Area2D" parent="." unique_id=984979259]
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=1925246963]
-position = Vector2(52, -3)
+position = Vector2(50, -1)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_jhg1h")
 
