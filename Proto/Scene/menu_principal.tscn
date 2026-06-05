@@ -1,6 +1,6 @@
-[gd_scene format=3 uid="uid://c6ii20jjvdsuy"]
+[gd_scene format=3 uid="uid://bbh78862fqw1e"]
 
-[ext_resource type="Script" uid="uid://c86yywemjqb2t" path="res://Proto/Scene/menu_principal.gd" id="1_1x1gr"]
+[ext_resource type="Script" path="res://Proto/Scene/menu_principal.gd" id="1_1x1gr"]
 [ext_resource type="FontFile" uid="uid://cqm6krhuletbc" path="res://Proto/Font/pixel.ttf" id="1_jp6m1"]
 [ext_resource type="Texture2D" uid="uid://d178ftghwntwd" path="res://pierre_test_asset/ASSET/MENU/BG_Anime.tres" id="2_86nre"]
 
@@ -31,10 +31,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -71.0
-offset_top = -286.0
-offset_right = 117.0
-offset_bottom = 178.0
+offset_left = -146.0
+offset_top = -385.0
+offset_right = 192.0
+offset_bottom = 207.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_86nre")

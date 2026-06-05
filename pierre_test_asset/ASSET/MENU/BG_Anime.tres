@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://38mj7djth2v1" path="res://pierre_test_asset/ASSET/MENU/BG_Anime_FINI_9.png" id="9_dry53"]
 
 [resource]
-frames = 12
+frames = 23
 speed_scale = 7.5
 frame_0/texture = ExtResource("1_g5vxt")
 frame_1/texture = ExtResource("2_wuqun")
@@ -38,3 +38,25 @@ frame_10/texture = ExtResource("3_r1of4")
 frame_10/duration = 1.0
 frame_11/texture = ExtResource("4_r1of4")
 frame_11/duration = 1.0
+frame_12/texture = ExtResource("3_r1of4")
+frame_12/duration = 1.0
+frame_13/texture = ExtResource("4_r1of4")
+frame_13/duration = 1.0
+frame_14/texture = ExtResource("9_dry53")
+frame_14/duration = 1.0
+frame_15/texture = ExtResource("8_4g5t3")
+frame_15/duration = 1.0
+frame_16/texture = ExtResource("7_puwmt")
+frame_16/duration = 1.0
+frame_17/texture = ExtResource("6_r1of4")
+frame_17/duration = 1.0
+frame_18/texture = ExtResource("5_dry53")
+frame_18/duration = 1.0
+frame_19/texture = ExtResource("4_4g5t3")
+frame_19/duration = 1.0
+frame_20/texture = ExtResource("3_puwmt")
+frame_20/duration = 1.0
+frame_21/texture = ExtResource("2_wuqun")
+frame_21/duration = 1.0
+frame_22/texture = ExtResource("1_g5vxt")
+frame_22/duration = 1.0
