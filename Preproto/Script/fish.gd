@@ -103,3 +103,7 @@ func _on_hitbox_body_entered(body: Node2D) -> void:
 		etat_actuel = State.PAUSE
 		_pause_timer = PAUSE_DUREE
 		velocity = Vector2.ZERO
+
+
+func _on_joueur_touche(degats: float) -> void:
+	pass # Replace with function body.

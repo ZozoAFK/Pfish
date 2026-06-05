@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bdiwo7gurvtso" path="res://Proto/Scene/déchet.tscn" id="4_atkr3"]
 [ext_resource type="PackedScene" uid="uid://nwt4i7g6u2du" path="res://FISH_3.tscn" id="5_bugel"]
 [ext_resource type="PackedScene" uid="uid://c8c81a5slfcfp" path="res://fish_2.tscn" id="6_w3ikg"]
+[ext_resource type="PackedScene" uid="uid://cv640qqv5nt3b" path="res://fish_4.tscn" id="7_wy8eu"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wy8eu"]
 radius = 88.0
@@ -736,16 +737,20 @@ debug_color = Color(1, 0.004213414, 0.08783569, 0.41960785)
 
 [node name="Déchet" parent="." unique_id=582727744 instance=ExtResource("4_atkr3")]
 z_index = 2
-position = Vector2(531, 794)
+position = Vector2(235, 721)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1545435027]
 position = Vector2(-1405, 543)
 
 [node name="FISH_2" parent="." unique_id=52399432 instance=ExtResource("6_w3ikg")]
-position = Vector2(222, 1080)
+position = Vector2(167, 890)
 waypoints = Array[Vector2]([Vector2(250, 1000), Vector2(900, 1000)])
 
 [node name="FISH_3" parent="." unique_id=1160576597 instance=ExtResource("5_bugel")]
-position = Vector2(115, 1471)
+position = Vector2(135, 1057)
 waypoints = Array[Vector2]([Vector2(300, 1500), Vector2(700, 1500)])
 speed = 100.0
+
+[node name="FISH_4" parent="." unique_id=841817002 instance=ExtResource("7_wy8eu")]
+position = Vector2(122, 1395)
+waypoints = Array[Vector2]([Vector2(300, 900), Vector2(800, 900)])

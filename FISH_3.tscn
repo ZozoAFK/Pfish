@@ -4,11 +4,11 @@
 [ext_resource type="Texture2D" uid="uid://42ypjlb4kbeg" path="res://pierre_test_asset/POISSON-3.png" id="2_s2o1r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vejqd"]
-size = Vector2(294.625, 194)
+size = Vector2(133.3125, 194)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3upqc"]
-radius = 48.0
-height = 206.0
+radius = 34.0
+height = 144.0
 
 [node name="CharacterBody2D" type="CharacterBody2D" unique_id=1160576597]
 script = ExtResource("1_s2o1r")
@@ -19,20 +19,20 @@ collision_layer = 8
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1316820968]
-position = Vector2(349, -2)
+position = Vector2(202.34375, -2)
 shape = SubResource("RectangleShape2D_vejqd")
 
 [node name="hitbox" type="Area2D" parent="." unique_id=329507266]
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=264889784]
-position = Vector2(119, 0)
+position = Vector2(72, 1)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_3upqc")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=159128391]
-position = Vector2(121.00001, -4.999996)
-scale = Vector2(0.20535429, 0.21398187)
+position = Vector2(73.99999, -3.0000005)
+scale = Vector2(0.14267714, 0.15599094)
 texture = ExtResource("2_s2o1r")
 flip_h = true
 
