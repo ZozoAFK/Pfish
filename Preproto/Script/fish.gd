@@ -10,7 +10,8 @@ var player : Player = null
 
 @export var waypoints: Array[Vector2] = []
 @export var speed: float = 80.0
-@export var ping_pong: bool = false
+
+var ping_pong: bool = false
 
 var _current_wp: int = 0
 var _direction: int = 1

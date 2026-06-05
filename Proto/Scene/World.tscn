@@ -320,8 +320,8 @@ texture = ExtResource("1_atkr3")
 position = Vector2(582, 399)
 
 [node name="Fish" parent="." unique_id=1014845878 instance=ExtResource("3_cd8ja")]
-position = Vector2(248, 360)
-waypoints = Array[Vector2]([Vector2(400, 600), Vector2(400, 300)])
+position = Vector2(152, 542)
+waypoints = Array[Vector2]([Vector2(200, 650), Vector2(850, 650)])
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2090796918 groups=["danger"]]
 collision_mask = 2
