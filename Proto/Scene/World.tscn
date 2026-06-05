@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dxgagnxjrsaci" path="res://Proto/Scene/Hamecon.tscn" id="1_tyl2u"]
 [ext_resource type="PackedScene" uid="uid://cifinp4ojoo6v" path="res://Proto/Scene/ronde-fish.tscn" id="3_cd8ja"]
 [ext_resource type="PackedScene" uid="uid://bdiwo7gurvtso" path="res://Proto/Scene/déchet.tscn" id="4_atkr3"]
+[ext_resource type="PackedScene" uid="uid://c8c81a5slfcfp" path="res://fish_2.tscn" id="6_w3ikg"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wy8eu"]
 radius = 88.0
@@ -738,3 +739,7 @@ position = Vector2(531, 794)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1545435027]
 position = Vector2(-1405, 543)
+
+[node name="FISH_2" parent="." unique_id=52399432 instance=ExtResource("6_w3ikg")]
+position = Vector2(222, 1080)
+waypoints = Array[Vector2]([Vector2(250, 1000), Vector2(900, 1000)])
