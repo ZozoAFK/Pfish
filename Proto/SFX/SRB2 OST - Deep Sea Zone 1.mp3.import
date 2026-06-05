@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cn42qjwbaj20q"
+path="res://.godot/imported/SRB2 OST - Deep Sea Zone 1.mp3-10b5c80f04355cae3b008c918a14208d.mp3str"
+
+[deps]
+
+source_file="res://Proto/SFX/SRB2 OST - Deep Sea Zone 1.mp3"
+dest_files=["res://.godot/imported/SRB2 OST - Deep Sea Zone 1.mp3-10b5c80f04355cae3b008c918a14208d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
