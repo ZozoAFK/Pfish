@@ -27,7 +27,7 @@ position = Vector2(404, 77)
 texture = ExtResource("2_mh78y")
 
 [node name="Poisson2" type="Sprite2D" parent="." unique_id=10345984]
-position = Vector2(801, 166)
+position = Vector2(828, 34)
 texture = ExtResource("3_6a2lt")
 
 [node name="Poisson3" type="Sprite2D" parent="." unique_id=421823544]
@@ -40,7 +40,7 @@ position = Vector2(669, 443)
 texture = ExtResource("5_t3qst")
 
 [node name="Dechet1" type="Sprite2D" parent="." unique_id=1860352472]
-position = Vector2(2006, 429)
+position = Vector2(2027, 462)
 scale = Vector2(0.293, 0.315)
 texture = ExtResource("6_t3qst")
 
@@ -50,6 +50,6 @@ scale = Vector2(0.2145, 0.1905)
 texture = ExtResource("7_o36k0")
 
 [node name="Dechet3" type="Sprite2D" parent="." unique_id=1171172981]
-position = Vector2(1698, 176.00009)
+position = Vector2(1685, 139)
 scale = Vector2(0.26350006, 0.27349997)
 texture = ExtResource("8_k68as")

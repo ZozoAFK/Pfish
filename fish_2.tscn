@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://c8c81a5slfcfp"]
+
+[ext_resource type="Script" uid="uid://bxsjgpe4feke2" path="res://Preproto/Script/fish.gd" id="1_2toed"]
+[ext_resource type="Texture2D" uid="uid://c6u7i2yvf4rgx" path="res://pierre_test_asset/ASSET/pngtree-pixel-art-fish-character-swimming-retro-style-png-image_17539379.webp" id="2_2toed"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wqurr"]
+size = Vector2(117, 44)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jhg1h"]
+radius = 25.0
+height = 100.0
+
+[node name="FISH_2" type="CharacterBody2D" unique_id=52399432]
+script = ExtResource("1_2toed")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1081593016]
+position = Vector2(49, -12)
+scale = Vector2(0.3007086, 0.27596372)
+texture = ExtResource("2_2toed")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1883704712]
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=106989501]
+position = Vector2(-45, -3)
+shape = SubResource("RectangleShape2D_wqurr")
+
+[node name="hitbox" type="Area2D" parent="." unique_id=984979259]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=1925246963]
+position = Vector2(52, -3)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_jhg1h")
+
+[connection signal="joueur_touche" from="." to="." method="_on_joueur_touche"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
