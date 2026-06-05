@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://coypyde65ojrp"]
+
+[ext_resource type="FontFile" uid="uid://cqm6krhuletbc" path="res://Proto/Font/pixel.ttf" id="1_x5hak"]
+
+[node name="Control" type="Control" unique_id=1291479134]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1945615739]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="." unique_id=1920962397]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_fonts/font = ExtResource("1_x5hak")

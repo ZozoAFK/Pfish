@@ -7,6 +7,10 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_emdyq"]
 size = Vector2(27, 75.625)
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_5ny1p"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_2r8ex"]
+
 [sub_resource type="CircleShape2D" id="CircleShape2D_5ny1p"]
 radius = 8.5440035
 
@@ -26,6 +30,14 @@ position = Vector2(-401, -242)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1099034992]
 position = Vector2(0.5, 14.8125)
 shape = SubResource("RectangleShape2D_emdyq")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CollisionShape2D" unique_id=1506383096]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+material = SubResource("CanvasItemMaterial_5ny1p")
+position = Vector2(3.8749995, -638.06494)
+scale = Vector2(-1.7500005, 1215.6611)
+mesh = SubResource("BoxMesh_2r8ex")
 
 [node name="TimerInvincibilite" type="Timer" parent="." unique_id=1747827923]
 wait_time = 1.5
