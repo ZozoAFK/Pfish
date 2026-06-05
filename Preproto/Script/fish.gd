@@ -1,5 +1,5 @@
 extends CharacterBody2D
-class_name fish
+
 
 signal joueur_touche(degats: float)
 
@@ -16,7 +16,6 @@ var ping_pong: bool = false
 var _current_wp: int = 0
 var _direction: int = 1
 var _pause_timer: float = 0.0
-
 const DEGATS: float = 10.0
 const PAUSE_DUREE: float = 1.0
 
