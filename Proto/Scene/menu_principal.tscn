@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://Proto/Scene/menu_principal.gd" id="1_1x1gr"]
 [ext_resource type="FontFile" uid="uid://cqm6krhuletbc" path="res://Proto/Font/pixel.ttf" id="1_jp6m1"]
 [ext_resource type="Texture2D" uid="uid://d178ftghwntwd" path="res://pierre_test_asset/ASSET/MENU/BG_Anime.tres" id="2_86nre"]
+[ext_resource type="AudioStream" uid="uid://cn42qjwbaj20q" path="res://Proto/SFX/SRB2 OST - Deep Sea Zone 1.mp3" id="4_hfnlw"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_hfnlw"]
 font = ExtResource("1_jp6m1")
@@ -76,6 +77,11 @@ text = "START"
 layout_mode = 2
 theme = SubResource("Theme_tejit")
 text = "LEAVE"
+
+[node name="MusiqueFond" type="AudioStreamPlayer" parent="." unique_id=1012055700]
+stream = ExtResource("4_hfnlw")
+autoplay = true
+parameters/looping = true
 
 [connection signal="button_down" from="VBoxContainer/StartBtn" to="." method="_on_start_btn_button_down"]
 [connection signal="button_down" from="VBoxContainer/QuitBtn" to="." method="_on_quit_btn_button_down"]
