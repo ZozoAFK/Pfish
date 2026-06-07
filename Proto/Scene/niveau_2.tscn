@@ -1,0 +1,65 @@
+[gd_scene format=3 uid="uid://c5s13ab6esaxo"]
+
+[ext_resource type="Texture2D" uid="uid://cgop84rxstn4g" path="res://pierre_test_asset/ASSET/LD FINAL 1.png" id="1_n6egf"]
+[ext_resource type="PackedScene" uid="uid://cifinp4ojoo6v" path="res://Proto/Scene/Petit_poisson.tscn" id="2_5rj5h"]
+[ext_resource type="PackedScene" uid="uid://dxgagnxjrsaci" path="res://Proto/Scene/Hamecon.tscn" id="2_vb4ll"]
+[ext_resource type="PackedScene" uid="uid://nwt4i7g6u2du" path="res://Saumon.tscn" id="4_vb4ll"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vb4ll"]
+size = Vector2(197.5, 3721.125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0urrq"]
+size = Vector2(238, 3728.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d57yf"]
+size = Vector2(1059.5, 166)
+
+[node name="Niveau 2" type="Node2D" unique_id=966495424]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1055869496]
+position = Vector2(562, 3128)
+scale = Vector2(0.6172451, 1.0054522)
+texture = ExtResource("1_n6egf")
+
+[node name="Hamecon" parent="." unique_id=689676632 instance=ExtResource("2_vb4ll")]
+position = Vector2(554, 488)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=112617220]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1128564496]
+position = Vector2(-22.25, 2112.4375)
+shape = SubResource("RectangleShape2D_vb4ll")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1543316551]
+position = Vector2(1164, 2110.75)
+shape = SubResource("RectangleShape2D_0urrq")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1775675711]
+position = Vector2(572, 3889)
+shape = SubResource("RectangleShape2D_d57yf")
+
+[node name="Petit_poisson" parent="." unique_id=1014845878 instance=ExtResource("2_5rj5h")]
+position = Vector2(197, 994)
+waypoints = Array[Vector2]([Vector2(150, 1000), Vector2(1000, 1000)])
+position_start = Vector2(150, 1000)
+
+[node name="Petit_poisson2" parent="." unique_id=958152406 instance=ExtResource("2_5rj5h")]
+position = Vector2(512, 1079)
+waypoints = Array[Vector2]([Vector2(150, 1100), Vector2(1000, 1100)])
+position_start = Vector2(1000, 1100)
+
+[node name="Petit_poisson3" parent="." unique_id=1998751806 instance=ExtResource("2_5rj5h")]
+position = Vector2(776, 1184)
+waypoints = Array[Vector2]([Vector2(150, 1200), Vector2(1000, 1200)])
+position_start = Vector2(550, 1200)
+
+[node name="Saumon" parent="." unique_id=1160576597 instance=ExtResource("4_vb4ll")]
+position = Vector2(254, 1411)
+waypoints = Array[Vector2]([Vector2(150, 1400), Vector2(1000, 1800)])
+position_start = Vector2(150, 1400)
+
+[node name="Saumon2" parent="." unique_id=1280781481 instance=ExtResource("4_vb4ll")]
+position = Vector2(259, 1820)
+waypoints = Array[Vector2]([Vector2(150, 1800), Vector2(1000, 1400)])
+position_start = Vector2(500, 1200)
