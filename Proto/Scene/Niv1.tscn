@@ -1,38 +1,157 @@
 [gd_scene format=3 uid="uid://yycf0tsx81ph"]
 
 [ext_resource type="Texture2D" uid="uid://cgop84rxstn4g" path="res://pierre_test_asset/ASSET/LD FINAL 1.png" id="1_uh4i2"]
+[ext_resource type="PackedScene" uid="uid://c44a325r78b4c" path="res://Poisson_bleu.tscn" id="3_7otel"]
 [ext_resource type="PackedScene" uid="uid://cv640qqv5nt3b" path="res://Espadon.tscn" id="5_hifql"]
 [ext_resource type="PackedScene" uid="uid://bdiwo7gurvtso" path="res://Proto/Scene/déchet.tscn" id="6_7otel"]
 [ext_resource type="PackedScene" uid="uid://dxgagnxjrsaci" path="res://Proto/Scene/Hamecon.tscn" id="6_p2rxa"]
+[ext_resource type="PackedScene" uid="uid://cifinp4ojoo6v" path="res://Proto/Scene/Petit_poisson.tscn" id="6_vu2d8"]
+[ext_resource type="Texture2D" uid="uid://bubodniig4ar2" path="res://icon.svg" id="6_wkuin"]
+[ext_resource type="PackedScene" uid="uid://nwt4i7g6u2du" path="res://Saumon.tscn" id="8_wkuin"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p2rxa"]
-size = Vector2(197.5, 6001.125)
+size = Vector2(197.5, 3721.125)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7otel"]
-size = Vector2(238, 6011.5)
+size = Vector2(238, 3728.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wkuin"]
+size = Vector2(1059.5, 166)
 
 [node name="Node2D" type="Node2D" unique_id=1743649612]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1653042713]
-position = Vector2(573.00006, 3119.9998)
+position = Vector2(562, 3128)
 scale = Vector2(0.6172451, 1.0054522)
 texture = ExtResource("1_uh4i2")
 
 [node name="Hamecon" parent="." unique_id=689676632 instance=ExtResource("6_p2rxa")]
 position = Vector2(585, 454)
+Puissance_accoup = 4000
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1566601269]
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=442094473]
-position = Vector2(-22.25, 3252.4375)
+position = Vector2(-22.25, 2112.4375)
 shape = SubResource("RectangleShape2D_p2rxa")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=215324722]
-position = Vector2(1164, 3252.25)
+position = Vector2(1164, 2110.75)
 shape = SubResource("RectangleShape2D_7otel")
 
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1656575703]
+position = Vector2(572, 3889)
+shape = SubResource("RectangleShape2D_wkuin")
+
+[node name="Poisson_bleu" parent="." unique_id=52399432 instance=ExtResource("3_7otel")]
+position = Vector2(192, 1059)
+waypoints = Array[Vector2]([Vector2(150, 1000), Vector2(1000, 1000)])
+position_start = Vector2(150, 1000)
+
+[node name="Poisson_bleu2" parent="." unique_id=42831464 instance=ExtResource("3_7otel")]
+position = Vector2(809, 1162)
+waypoints = Array[Vector2]([Vector2(150, 1100), Vector2(1000, 1100)])
+position_start = Vector2(1000, 1100)
+
+[node name="Poisson_bleu3" parent="." unique_id=193218246 instance=ExtResource("3_7otel")]
+position = Vector2(204, 1281)
+waypoints = Array[Vector2]([Vector2(150, 1200), Vector2(1000, 1200)])
+position_start = Vector2(600, 1200)
+
+[node name="Petit_poisson" parent="." unique_id=1014845878 instance=ExtResource("6_vu2d8")]
+position = Vector2(339, 1962)
+waypoints = Array[Vector2]([Vector2(150, 1900), Vector2(950, 1900)])
+position_start = Vector2(350, 1900)
+
+[node name="Petit_poisson2" parent="." unique_id=1981985743 instance=ExtResource("6_vu2d8")]
+position = Vector2(294, 2015)
+waypoints = Array[Vector2]([Vector2(150, 1975), Vector2(950, 1975)])
+position_start = Vector2(300, 1975)
+
+[node name="Petit_poisson3" parent="." unique_id=1537199477 instance=ExtResource("6_vu2d8")]
+position = Vector2(244, 2064)
+waypoints = Array[Vector2]([Vector2(150, 2050), Vector2(950, 2050)])
+position_start = Vector2(250, 2050)
+
+[node name="Petit_poisson4" parent="." unique_id=298739277 instance=ExtResource("6_vu2d8")]
+position = Vector2(192, 2118)
+waypoints = Array[Vector2]([Vector2(150, 2125), Vector2(950, 2125)])
+position_start = Vector2(200, 2125)
+
+[node name="Petit_poisson5" parent="." unique_id=1991254341 instance=ExtResource("6_vu2d8")]
+position = Vector2(145, 2175)
+waypoints = Array[Vector2]([Vector2(150, 2200), Vector2(950, 2200)])
+position_start = Vector2(150, 2200)
+
+[node name="Espadon3" parent="." unique_id=996532440 instance=ExtResource("5_hifql")]
+position = Vector2(216, 2615)
+waypoints = Array[Vector2]([Vector2(150, 2600), Vector2(1000, 2600)])
+position_start = Vector2(300, 2600)
+
+[node name="Saumon" parent="." unique_id=1160576597 instance=ExtResource("8_wkuin")]
+position = Vector2(250, 2892)
+waypoints = Array[Vector2]([Vector2(150, 2900), Vector2(500, 2900)])
+position_start = Vector2(150, 2900)
+
+[node name="Saumon2" parent="." unique_id=2085409814 instance=ExtResource("8_wkuin")]
+position = Vector2(852, 3281)
+waypoints = Array[Vector2]([Vector2(500, 3300), Vector2(1000, 3300)])
+position_start = Vector2(750, 3300)
+
 [node name="Espadon" parent="." unique_id=841817002 instance=ExtResource("5_hifql")]
+position = Vector2(166, 3708)
+waypoints = Array[Vector2]([Vector2(150, 3700), Vector2(450, 3700)])
+position_start = Vector2(150, 3700)
+
+[node name="Espadon2" parent="." unique_id=779686010 instance=ExtResource("5_hifql")]
+position = Vector2(784, 3715)
+waypoints = Array[Vector2]([Vector2(700, 3700), Vector2(1000, 3700)])
+position_start = Vector2(700, 3700)
 
 [node name="Déchet" parent="." unique_id=2100457893 instance=ExtResource("6_7otel")]
 position = Vector2(570, 3696)
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=1907743414]
+position = Vector2(164, 1747)
+texture = ExtResource("6_wkuin")
+
+[node name="Icon" type="Sprite2D" parent="Sprite2D3" unique_id=1399494017]
+position = Vector2(80, -224)
+texture = ExtResource("6_wkuin")
+
+[node name="Icon2" type="Sprite2D" parent="Sprite2D3" unique_id=303812768]
+position = Vector2(671, -191)
+texture = ExtResource("6_wkuin")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D3" unique_id=1951948649]
+position = Vector2(782, 10)
+texture = ExtResource("6_wkuin")
+
+[node name="Icon3" type="Sprite2D" parent="Sprite2D3" unique_id=504542806]
+position = Vector2(616, -863)
+texture = ExtResource("6_wkuin")
+
+[node name="Icon4" type="Sprite2D" parent="Sprite2D3" unique_id=718190281]
+position = Vector2(740, -1187)
+texture = ExtResource("6_wkuin")
+
+[node name="Icon5" type="Sprite2D" parent="Sprite2D3" unique_id=843101391]
+position = Vector2(3, -995)
+texture = ExtResource("6_wkuin")
+
+[node name="Icon6" type="Sprite2D" parent="Sprite2D3" unique_id=1502465134]
+position = Vector2(573, -1038)
+texture = ExtResource("6_wkuin")
+
+[node name="Icon8" type="Sprite2D" parent="Sprite2D3" unique_id=1105837181]
+position = Vector2(20, 561)
+texture = ExtResource("6_wkuin")
+
+[node name="Icon9" type="Sprite2D" parent="Sprite2D3" unique_id=1255086082]
+position = Vector2(764, 713)
+texture = ExtResource("6_wkuin")
+
+[node name="Icon7" type="Sprite2D" parent="Sprite2D3" unique_id=1370476403]
+position = Vector2(492, -867)
+texture = ExtResource("6_wkuin")
