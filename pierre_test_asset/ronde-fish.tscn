@@ -4,9 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://d4m5ny5yuko4k" path="res://pierre_test_asset/POISSON-2.png" id="3_6a2lt"]
 [ext_resource type="Texture2D" uid="uid://42ypjlb4kbeg" path="res://pierre_test_asset/POISSON-3.png" id="4_qu7hc"]
 [ext_resource type="Texture2D" uid="uid://1lmysf3a4jsk" path="res://pierre_test_asset/POISSON-4.png" id="5_t3qst"]
-[ext_resource type="Texture2D" uid="uid://bdio0lfwa7u7d" path="res://pierre_test_asset/DECHET-1.png" id="6_t3qst"]
-[ext_resource type="Texture2D" uid="uid://xs7cqk3yiat7" path="res://pierre_test_asset/DECHET-2.png" id="7_o36k0"]
-[ext_resource type="Texture2D" uid="uid://4ipew5m5ykaa" path="res://pierre_test_asset/DECHET-3.png" id="8_k68as"]
+[ext_resource type="Texture2D" uid="uid://dosfcx4fgxols" path="res://pierre_test_asset/DECHET-1.png" id="6_t3qst"]
+[ext_resource type="Texture2D" uid="uid://tmqpm47vahii" path="res://pierre_test_asset/DECHET-2.png" id="7_o36k0"]
+[ext_resource type="Texture2D" uid="uid://c73tup8vq5wfa" path="res://pierre_test_asset/DECHET -3.png" id="7_qu7hc"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_umbcw"]
 radius = 24.0
@@ -40,16 +40,18 @@ position = Vector2(669, 443)
 texture = ExtResource("5_t3qst")
 
 [node name="Dechet1" type="Sprite2D" parent="." unique_id=1860352472]
-position = Vector2(2027, 462)
-scale = Vector2(0.293, 0.315)
+position = Vector2(1965.992, 543.14)
+scale = Vector2(0.17384371, 0.15652345)
 texture = ExtResource("6_t3qst")
 
 [node name="Dechet2" type="Sprite2D" parent="." unique_id=570949868]
-position = Vector2(1644, 642)
-scale = Vector2(0.2145, 0.1905)
+position = Vector2(1346.9999, 877)
+scale = Vector2(0.30549213, 0.30618754)
 texture = ExtResource("7_o36k0")
 
 [node name="Dechet3" type="Sprite2D" parent="." unique_id=1171172981]
-position = Vector2(1685, 139)
-scale = Vector2(0.26350006, 0.27349997)
-texture = ExtResource("8_k68as")
+position = Vector2(1622.544, 77.98401)
+scale = Vector2(0.14151566, 0.15432811)
+texture = ExtResource("7_qu7hc")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1219935810]

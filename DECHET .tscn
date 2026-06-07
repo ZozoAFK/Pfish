@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://b61m1m8atnx6e"]
+
+[ext_resource type="Script" uid="uid://sx1wwlxxqnw6" path="res://ronde-dechet.gd" id="1_x8eqx"]
+[ext_resource type="Texture2D" uid="uid://tmqpm47vahii" path="res://pierre_test_asset/DECHET-2.png" id="2_kyoc2"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uo3uj"]
+radius = 29.0
+height = 96.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1564418342]
+script = ExtResource("1_x8eqx")
+waypoints = Array[Vector2]([Vector2(100, 300), Vector2(400, 300)])
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=401472308]
+position = Vector2(250, 197)
+scale = Vector2(0.22265625, 0.22802734)
+texture = ExtResource("2_kyoc2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1767383787]
+position = Vector2(224, 184)
+shape = SubResource("CapsuleShape2D_uo3uj")

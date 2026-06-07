@@ -2,16 +2,12 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://tmqpm47vahii"
-path="res://.godot/imported/DECHET-2.png-5813fbd9fd061489c11b2352e7208ea6.ctex"
-metadata={
-"vram_texture": false
-}
+uid="uid://1pbt6cbfracx"
+valid=false
 
 [deps]
 
-source_file="res://pierre_test_asset/DECHET-2.png"
-dest_files=["res://.godot/imported/DECHET-2.png-5813fbd9fd061489c11b2352e7208ea6.ctex"]
+source_file="res://pierre_test_asset/ASSET/MENU/underwater-fantasy-files/__MACOSX/underwater-fantasy-files/Assets/PNG/layers/._foreground-1.png"
 
 [params]
 

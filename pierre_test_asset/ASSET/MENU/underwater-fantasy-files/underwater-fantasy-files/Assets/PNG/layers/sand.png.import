@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://tmqpm47vahii"
-path="res://.godot/imported/DECHET-2.png-5813fbd9fd061489c11b2352e7208ea6.ctex"
+uid="uid://dpa11txmy8rv4"
+path="res://.godot/imported/sand.png-5db3afec09f77cb2c7911aeed2a743bf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pierre_test_asset/DECHET-2.png"
-dest_files=["res://.godot/imported/DECHET-2.png-5813fbd9fd061489c11b2352e7208ea6.ctex"]
+source_file="res://pierre_test_asset/ASSET/MENU/underwater-fantasy-files/underwater-fantasy-files/Assets/PNG/layers/sand.png"
+dest_files=["res://.godot/imported/sand.png-5db3afec09f77cb2c7911aeed2a743bf.ctex"]
 
 [params]
 
