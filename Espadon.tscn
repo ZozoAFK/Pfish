@@ -10,7 +10,9 @@ size = Vector2(526.84375, 82.5)
 radius = 40.0
 height = 198.0
 
-[node name="FISH_4" type="CharacterBody2D" unique_id=841817002]
+[node name="Espadon" type="CharacterBody2D" unique_id=841817002]
+collision_layer = 8
+collision_mask = 9
 script = ExtResource("1_v5lpf")
 waypoints = Array[Vector2]([Vector2(0, 0), Vector2(0, 0)])
 speed = 150.0

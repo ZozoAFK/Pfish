@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cifinp4ojoo6v"]
 
-[ext_resource type="Script" uid="uid://bxsjgpe4feke2" path="res://Preproto/Script/fish.gd" id="1_r7e72"]
-[ext_resource type="Texture2D" uid="uid://d4m5ny5yuko4k" path="res://pierre_test_asset/POISSON-2.png" id="2_b3wvt"]
+[ext_resource type="Script" uid="uid://bxsjgpe4feke2" path="res://Preproto/Script/fish.gd" id="1_24pup"]
+[ext_resource type="Texture2D" uid="uid://d4m5ny5yuko4k" path="res://pierre_test_asset/POISSON-2.png" id="2_urxlv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b3wvt"]
 size = Vector2(216.4375, 20)
@@ -10,15 +10,17 @@ size = Vector2(216.4375, 20)
 radius = 23.0
 height = 76.0
 
-[node name="Fish" type="CharacterBody2D" unique_id=1014845878]
+[node name="Petit_poisson" type="CharacterBody2D" unique_id=1014845878]
 position = Vector2(0, -1)
-script = ExtResource("1_r7e72")
+collision_layer = 8
+collision_mask = 9
+script = ExtResource("1_24pup")
 waypoints = Array[Vector2]([Vector2(0, 0), Vector2(0, 0)])
 speed = 225.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=457894007]
 scale = Vector2(0.26252836, 0.24081631)
-texture = ExtResource("2_b3wvt")
+texture = ExtResource("2_urxlv")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1832562489]
 collision_layer = 8
@@ -29,6 +31,7 @@ position = Vector2(141.78125, 1)
 shape = SubResource("RectangleShape2D_b3wvt")
 
 [node name="hitbox" type="Area2D" parent="." unique_id=1002711964]
+collision_layer = 8
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=98142761]

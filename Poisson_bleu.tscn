@@ -10,7 +10,9 @@ size = Vector2(261.25, 64)
 radius = 25.0
 height = 100.0
 
-[node name="FISH_2" type="CharacterBody2D" unique_id=52399432]
+[node name="Poisson_bleu" type="CharacterBody2D" unique_id=52399432]
+collision_layer = 8
+collision_mask = 9
 script = ExtResource("1_2toed")
 waypoints = Array[Vector2]([Vector2(0, 0), Vector2(0, 0)])
 speed = 170.0

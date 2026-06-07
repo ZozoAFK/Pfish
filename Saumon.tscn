@@ -10,7 +10,9 @@ radius = 205.11948
 radius = 34.0
 height = 144.0
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1160576597]
+[node name="Saumon" type="CharacterBody2D" unique_id=1160576597]
+collision_layer = 8
+collision_mask = 9
 script = ExtResource("1_s2o1r")
 waypoints = Array[Vector2]([Vector2(0, 0), Vector2(0, 0)])
 speed = 150.0

@@ -8,8 +8,10 @@ var etat_actuel = State.RONDE
 var joueur : Node2D = null
 var player : Player = null
 
+
 @export var waypoints: Array[Vector2] = []
 @export var speed: float = 80.0
+@export var position_start : Vector2
 
 var ping_pong: bool = false
 
@@ -35,7 +37,7 @@ func _ready() -> void:
 	if waypoints.is_empty():
 		push_warning("Fish '" + name + "' : aucun waypoint défini !")
 		return
-	global_position = waypoints[0]
+	global_position = position_start
 
 func _physics_process(delta: float) -> void:
 	match etat_actuel:
