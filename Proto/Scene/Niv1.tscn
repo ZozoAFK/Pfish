@@ -1,13 +1,13 @@
-[gd_scene format=3 uid="uid://yycf0tsx81ph"]
+[gd_scene format=3 uid="uid://ck4t4rf16y3dy"]
 
 [ext_resource type="Texture2D" uid="uid://cgop84rxstn4g" path="res://pierre_test_asset/ASSET/LD FINAL 1.png" id="1_uh4i2"]
-[ext_resource type="PackedScene" uid="uid://c44a325r78b4c" path="res://Poisson_bleu.tscn" id="3_7otel"]
-[ext_resource type="PackedScene" uid="uid://cv640qqv5nt3b" path="res://Espadon.tscn" id="5_hifql"]
+[ext_resource type="PackedScene" path="res://fish_2.tscn" id="3_7otel"]
+[ext_resource type="PackedScene" path="res://fish_4.tscn" id="5_hifql"]
 [ext_resource type="PackedScene" uid="uid://bdiwo7gurvtso" path="res://Proto/Scene/déchet.tscn" id="6_7otel"]
 [ext_resource type="PackedScene" uid="uid://dxgagnxjrsaci" path="res://Proto/Scene/Hamecon.tscn" id="6_p2rxa"]
-[ext_resource type="PackedScene" uid="uid://cifinp4ojoo6v" path="res://Proto/Scene/Petit_poisson.tscn" id="6_vu2d8"]
+[ext_resource type="PackedScene" uid="uid://e27s81lnajpf" path="res://Proto/Scene/ronde-fish.tscn" id="6_vu2d8"]
 [ext_resource type="Texture2D" uid="uid://bubodniig4ar2" path="res://icon.svg" id="6_wkuin"]
-[ext_resource type="PackedScene" uid="uid://nwt4i7g6u2du" path="res://Saumon.tscn" id="8_wkuin"]
+[ext_resource type="PackedScene" path="res://FISH_3.tscn" id="8_wkuin"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p2rxa"]
 size = Vector2(197.5, 3721.125)

@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://e27s81lnajpf"]
+
+[ext_resource type="Script" uid="uid://bxsjgpe4feke2" path="res://Preproto/Script/fish.gd" id="1_r7e72"]
+[ext_resource type="Texture2D" uid="uid://d4m5ny5yuko4k" path="res://pierre_test_asset/POISSON-2.png" id="2_b3wvt"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b3wvt"]
+size = Vector2(216.4375, 20)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b3wvt"]
+radius = 23.0
+height = 76.0
+
+[node name="Fish" type="CharacterBody2D" unique_id=1014845878]
+position = Vector2(0, -1)
+script = ExtResource("1_r7e72")
+waypoints = Array[Vector2]([Vector2(0, 0), Vector2(0, 0)])
+speed = 225.0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=457894007]
+scale = Vector2(0.26252836, 0.24081631)
+texture = ExtResource("2_b3wvt")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1832562489]
+collision_layer = 8
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1019708265]
+position = Vector2(141.78125, 1)
+shape = SubResource("RectangleShape2D_b3wvt")
+
+[node name="hitbox" type="Area2D" parent="." unique_id=1002711964]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=98142761]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_b3wvt")
+
+[connection signal="joueur_touche" from="." to="." method="_on_hamecon_joueur_touche"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
