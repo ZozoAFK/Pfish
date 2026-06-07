@@ -1,9 +1,19 @@
-[gd_scene format=3 uid="uid://bsuwxao3feivd"]
+[gd_scene format=3 uid="uid://c6ii20jjvdsuy"]
 
-[ext_resource type="Script" path="res://Proto/Scene/menu_principal.gd" id="1_1x1gr"]
+[ext_resource type="Script" uid="uid://c86yywemjqb2t" path="res://Proto/Scene/menu_principal.gd" id="1_1x1gr"]
 [ext_resource type="FontFile" uid="uid://cqm6krhuletbc" path="res://Proto/Font/pixel.ttf" id="1_jp6m1"]
-[ext_resource type="Texture2D" uid="uid://d178ftghwntwd" path="res://pierre_test_asset/ASSET/MENU/BG_Anime.tres" id="2_86nre"]
+[ext_resource type="Shader" uid="uid://8kgdxon7j4xh" path="res://Proto/Scene/menu_principal.gdshader" id="2_xcbrh"]
+[ext_resource type="Texture2D" uid="uid://6b7e5qp8m5rc" path="res://pierre_test_asset/ASSET/MENU/underwater-fantasy-files/underwater-fantasy-files/Assets/PNG/underwater-fantasy-preview.png" id="3_tejit"]
 [ext_resource type="AudioStream" uid="uid://cn42qjwbaj20q" path="res://Proto/SFX/SRB2 OST - Deep Sea Zone 1.mp3" id="4_hfnlw"]
+[ext_resource type="Texture2D" uid="uid://ilcxah6xl3s3" path="res://pierre_test_asset/ASSET/RowBoat.png" id="5_tejit"]
+[ext_resource type="Script" uid="uid://cr8ge7x33sif2" path="res://Proto/Scene/start_btn.gd" id="6_810tx"]
+[ext_resource type="Texture2D" uid="uid://226yie5tb3ga" path="res://pierre_test_asset/ASSET/Treasure chest closed.png" id="7_63hw4"]
+[ext_resource type="Script" uid="uid://cbwupi5bs20of" path="res://Proto/Scene/quit_btn.gd" id="8_mojgd"]
+[ext_resource type="AudioStream" uid="uid://dr00vst5f1nus" path="res://Proto/SFX/Button_SFX.wav" id="10_mojgd"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_810tx"]
+shader = ExtResource("2_xcbrh")
+shader_parameter/speed = 0.02
 
 [sub_resource type="LabelSettings" id="LabelSettings_hfnlw"]
 font = ExtResource("1_jp6m1")
@@ -26,19 +36,20 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1x1gr")
 
-[node name="BackGround" type="TextureRect" parent="." unique_id=401600570]
-self_modulate = Color(1.01685, 1.01685, 1.01685, 1)
+[node name="BackGround" type="TextureRect" parent="." unique_id=1879771631]
+material = SubResource("ShaderMaterial_810tx")
 layout_mode = 1
-anchors_preset = 15
+anchors_preset = 14
+anchor_top = 0.5
 anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = -146.0
-offset_top = -385.0
-offset_right = 192.0
-offset_bottom = 207.0
+anchor_bottom = 0.5
+offset_left = -521.0
+offset_top = -322.0
+offset_right = 521.0
+offset_bottom = 322.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_86nre")
+texture = ExtResource("3_tejit")
 
 [node name="Label" type="Label" parent="." unique_id=336899054]
 layout_mode = 1
@@ -46,42 +57,109 @@ anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -322.0
-offset_top = 73.0
+offset_top = 47.0
 offset_right = 322.0
-offset_bottom = 141.0
+offset_bottom = 115.0
 grow_horizontal = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_outline_size = 1
 text = "MENU PRINCIPAL"
 label_settings = SubResource("LabelSettings_hfnlw")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=308713024]
+[node name="StartBtn" type="TextureButton" parent="." unique_id=1608686392]
+custom_minimum_size = Vector2(200, 300)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -141.0
-offset_top = -64.0
-offset_right = 141.0
-offset_bottom = 138.0
+offset_left = -200.0
+offset_top = -176.0
+offset_right = 200.0
+offset_bottom = 124.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 100
-
-[node name="StartBtn" type="Button" parent="VBoxContainer" unique_id=1905344710]
-layout_mode = 2
+pivot_offset = Vector2(200, 150)
 theme = SubResource("Theme_xcbrh")
+texture_normal = ExtResource("5_tejit")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("6_810tx")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="StartBtn" unique_id=655447195]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -76.0
+offset_top = -21.5
+offset_right = 76.0
+offset_bottom = 21.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0.0627451, 0.03529412, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_outline_size = 1
 text = "START"
 
-[node name="QuitBtn" type="Button" parent="VBoxContainer" unique_id=541738968]
-layout_mode = 2
+[node name="QuitBtn" type="TextureButton" parent="." unique_id=1996271262]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -108.0
+offset_top = -266.0
+offset_right = 109.0
+offset_bottom = -64.5
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(108.5, 100.75)
 theme = SubResource("Theme_tejit")
+texture_normal = ExtResource("7_63hw4")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("8_mojgd")
+
+[node name="Label" type="Label" parent="QuitBtn" unique_id=252564138]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -21.5
+offset_right = 75.0
+offset_bottom = 21.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0.0627451, 0.03529412, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_outline_size = 1
 text = "LEAVE"
 
 [node name="MusiqueFond" type="AudioStreamPlayer" parent="." unique_id=1012055700]
 stream = ExtResource("4_hfnlw")
+volume_db = -0.5
 autoplay = true
 parameters/looping = true
 
-[connection signal="button_down" from="VBoxContainer/StartBtn" to="." method="_on_start_btn_button_down"]
-[connection signal="button_down" from="VBoxContainer/QuitBtn" to="." method="_on_quit_btn_button_down"]
+[node name="Bouttons" type="AudioStreamPlayer" parent="." unique_id=1021552493]
+stream = ExtResource("10_mojgd")
+
+[connection signal="button_down" from="StartBtn" to="." method="_on_start_btn_button_down"]
+[connection signal="mouse_entered" from="StartBtn" to="StartBtn" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="StartBtn" to="StartBtn" method="_on_mouse_exited"]
+[connection signal="button_down" from="QuitBtn" to="." method="_on_quit_btn_button_down"]
+[connection signal="mouse_entered" from="QuitBtn" to="QuitBtn" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="QuitBtn" to="QuitBtn" method="_on_mouse_exited"]
