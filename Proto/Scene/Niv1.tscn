@@ -1,0 +1,72 @@
+[gd_scene format=3 uid="uid://yycf0tsx81ph"]
+
+[ext_resource type="Texture2D" uid="uid://cgop84rxstn4g" path="res://pierre_test_asset/ASSET/LD FINAL 1.png" id="1_uh4i2"]
+[ext_resource type="PackedScene" uid="uid://c44a325r78b4c" path="res://fish_2.tscn" id="3_7otel"]
+[ext_resource type="PackedScene" uid="uid://nwt4i7g6u2du" path="res://FISH_3.tscn" id="4_wkuin"]
+[ext_resource type="PackedScene" uid="uid://cv640qqv5nt3b" path="res://fish_4.tscn" id="5_hifql"]
+[ext_resource type="PackedScene" uid="uid://dxgagnxjrsaci" path="res://Proto/Scene/Hamecon.tscn" id="6_p2rxa"]
+[ext_resource type="PackedScene" uid="uid://cifinp4ojoo6v" path="res://Proto/Scene/ronde-fish.tscn" id="6_vu2d8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p2rxa"]
+size = Vector2(197.5, 6001.125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7otel"]
+size = Vector2(238, 6011.5)
+
+[node name="Node2D" type="Node2D" unique_id=1743649612]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1653042713]
+position = Vector2(573.00006, 3119.9998)
+scale = Vector2(0.6172451, 1.0054522)
+texture = ExtResource("1_uh4i2")
+
+[node name="FISH_2" parent="." unique_id=52399432 instance=ExtResource("3_7otel")]
+position = Vector2(194, 1044)
+waypoints = Array[Vector2]([Vector2(200, 1000), Vector2(1000, 1000)])
+
+[node name="CharacterBody2D" parent="." unique_id=1160576597 instance=ExtResource("4_wkuin")]
+position = Vector2(249, 1211)
+waypoints = Array[Vector2]([Vector2(200, 1200), Vector2(1000, 1200)])
+
+[node name="FISH_4" parent="." unique_id=841817002 instance=ExtResource("5_hifql")]
+position = Vector2(159, 1347)
+waypoints = Array[Vector2]([Vector2(200, 1500), Vector2(1000, 1500)])
+
+[node name="Fish" parent="." unique_id=1014845878 instance=ExtResource("6_vu2d8")]
+position = Vector2(231, 916)
+waypoints = Array[Vector2]([Vector2(200, 800), Vector2(1000, 800)])
+
+[node name="Hamecon" parent="." unique_id=689676632 instance=ExtResource("6_p2rxa")]
+position = Vector2(585, 454)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1566601269]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=442094473]
+position = Vector2(-22.25, 3252.4375)
+shape = SubResource("RectangleShape2D_p2rxa")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=215324722]
+position = Vector2(1164, 3252.25)
+shape = SubResource("RectangleShape2D_7otel")
+
+[node name="FISH_3" parent="." unique_id=1779061267 instance=ExtResource("3_7otel")]
+position = Vector2(234, 2690)
+waypoints = Array[Vector2]([Vector2(200, 2600), Vector2(1000, 3000)])
+
+[node name="CharacterBody2D2" parent="." unique_id=491470351 instance=ExtResource("4_wkuin")]
+position = Vector2(254, 2305)
+waypoints = Array[Vector2]([Vector2(200, 2400), Vector2(1000, 2800)])
+
+[node name="FISH_5" parent="." unique_id=1753180850 instance=ExtResource("5_hifql")]
+position = Vector2(293, 1960)
+waypoints = Array[Vector2]([Vector2(200, 2000), Vector2(1000, 2400)])
+
+[node name="Fish2" parent="." unique_id=2062318067 instance=ExtResource("6_vu2d8")]
+position = Vector2(260, 1810)
+waypoints = Array[Vector2]([Vector2(200, 1800), Vector2(1000, 2200)])
+
+[node name="FISH_6" parent="." unique_id=359633120 instance=ExtResource("3_7otel")]
+position = Vector2(976, 548)
+waypoints = Array[Vector2]([Vector2(1000, 750), Vector2(1000, 250)])
+speed = 100.0

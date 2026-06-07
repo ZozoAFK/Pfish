@@ -1,10 +1,10 @@
-[gd_scene format=3 uid="uid://c8c81a5slfcfp"]
+[gd_scene format=3 uid="uid://c44a325r78b4c"]
 
 [ext_resource type="Script" uid="uid://bxsjgpe4feke2" path="res://Preproto/Script/fish.gd" id="1_2toed"]
 [ext_resource type="Texture2D" uid="uid://c6u7i2yvf4rgx" path="res://pierre_test_asset/ASSET/pngtree-pixel-art-fish-character-swimming-retro-style-png-image_17539379.webp" id="2_2toed"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wqurr"]
-size = Vector2(117, 44)
+size = Vector2(261.25, 64)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jhg1h"]
 radius = 25.0
@@ -12,9 +12,11 @@ height = 100.0
 
 [node name="FISH_2" type="CharacterBody2D" unique_id=52399432]
 script = ExtResource("1_2toed")
+waypoints = Array[Vector2]([Vector2(0, 0), Vector2(0, 0)])
+speed = 170.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1081593016]
-position = Vector2(49, -12)
+position = Vector2(-2, -9.000001)
 scale = Vector2(0.3007086, 0.27596372)
 texture = ExtResource("2_2toed")
 flip_h = true
@@ -24,14 +26,13 @@ collision_layer = 8
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=106989501]
-position = Vector2(160, -1)
+position = Vector2(174.375, 0)
 shape = SubResource("RectangleShape2D_wqurr")
 
 [node name="hitbox" type="Area2D" parent="." unique_id=984979259]
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox" unique_id=1925246963]
-position = Vector2(50, -1)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_jhg1h")
 
