@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://bdiwo7gurvtso"]
 
-[ext_resource type="Script" uid="uid://bp7h4h6l77mo2" path="res://Proto/Script/déchet.gd" id="1_5orj7"]
+[ext_resource type="Script" path="res://Proto/Script/déchet.gd" id="1_5orj7"]
 [ext_resource type="Texture2D" uid="uid://d0l4wphvqn4sm" path="res://pierre_test_asset/Chest2.png" id="2_5orj7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5orj7"]
 size = Vector2(107, 90)
 
-[node name="Déchet" type="Area2D" unique_id=1833582491 groups=["dechet"]]
+[node name="trésor" type="Area2D" unique_id=1833582491 groups=["dechet"]]
 script = ExtResource("1_5orj7")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=759506327 groups=["dechet"]]

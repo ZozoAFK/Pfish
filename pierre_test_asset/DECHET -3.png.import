@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://4ipew5m5ykaa"
-path="res://.godot/imported/DECHET-3.png-5358544192f60f1b026cdeaa2ff2c8a7.ctex"
+uid="uid://c73tup8vq5wfa"
+path="res://.godot/imported/DECHET -3.png-9430566e1af9c7fb73fe0f208d7bf578.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pierre_test_asset/DECHET-3.png"
-dest_files=["res://.godot/imported/DECHET-3.png-5358544192f60f1b026cdeaa2ff2c8a7.ctex"]
+source_file="res://pierre_test_asset/DECHET -3.png"
+dest_files=["res://.godot/imported/DECHET -3.png-9430566e1af9c7fb73fe0f208d7bf578.ctex"]
 
 [params]
 
