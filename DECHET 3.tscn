@@ -1,13 +1,13 @@
-[gd_scene format=3 uid="uid://b0m8g17t5ai86"]
+[gd_scene format=3 uid="uid://d307oqflscedb"]
 
-[ext_resource type="Script" uid="uid://sx1wwlxxqnw6" path="res://ronde-dechet.gd" id="1_irgn6"]
+[ext_resource type="Script" path="res://ronde-dechet.gd" id="1_irgn6"]
 [ext_resource type="Texture2D" uid="uid://c73tup8vq5wfa" path="res://pierre_test_asset/ASSET/DECHET -3.png" id="2_0qpac"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yrreb"]
 radius = 16.0
 height = 48.0
 
-[node name="DECHET 3" type="CharacterBody2D" unique_id=763901561]
+[node name="Cannette" type="CharacterBody2D" unique_id=763901561]
 script = ExtResource("1_irgn6")
 waypoints = Array[Vector2]([Vector2(100, 0), Vector2(500, 0)])
 
