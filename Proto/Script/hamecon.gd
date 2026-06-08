@@ -43,8 +43,10 @@ func down (delta):
 		if Time_presse > temps_max : 
 			Time_presse = temps_max
 		velocity.y = lerp(-15000,Speed_down, Time_presse/ temps_max ) * delta 
+		print ("CA DESCEND LA")
 	if Input.is_action_just_pressed("SPACE"):
 		Time_presse = 0 
+
 
 func deplacement (delta):
 	if Input.is_action_pressed("SPACE"):
