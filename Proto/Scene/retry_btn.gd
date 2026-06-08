@@ -10,7 +10,12 @@ var base_color : Color
 
 func _ready() -> void:
 	# --- CODE AJOUTÉ : Génération automatique du masque de collision ---
-
+	var texture_bouton = texture_normal
+	if texture_bouton:
+		var img = texture_bouton.get_image()
+		var masque = BitMap.new()
+		masque.create_from_image_alpha(img)
+		texture_click_mask = masque
 	# -------------------------------------------------------------------
 
 	# On sauvegarde la taille et la couleur d'origine au lancement

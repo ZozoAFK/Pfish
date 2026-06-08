@@ -1,13 +1,13 @@
-[gd_scene format=3 uid="uid://dmq7vj3fy0eep"]
+[gd_scene format=3 uid="uid://coypyde65ojrp"]
 
 [ext_resource type="Texture2D" uid="uid://crnjtolpyqs5f" path="res://pierre_test_asset/ASSET/PANNEAU VICTOIRE.png" id="1_hoobx"]
-[ext_resource type="Script" uid="uid://bo8n0kyku7c" path="res://Proto/Script/panneau_victoire.gd" id="1_t6j6c"]
+[ext_resource type="Script" path="res://Proto/Script/panneau_victoire.gd" id="1_t6j6c"]
 [ext_resource type="FontFile" uid="uid://cqm6krhuletbc" path="res://Proto/Font/pixel.ttf" id="1_x5hak"]
 [ext_resource type="Texture2D" uid="uid://7ktru5ci6yah" path="res://pierre_test_asset/ASSET/Gold treasure.png" id="3_e8wis"]
 [ext_resource type="Texture2D" uid="uid://dc6l2mcdkd5m2" path="res://pierre_test_asset/ASSET/Shark.png" id="4_cyiil"]
-[ext_resource type="Script" uid="uid://dku4ul76p1od" path="res://Proto/Script/next_lvl_btn.gd" id="5_nnj50"]
+[ext_resource type="Script" path="res://Proto/Script/next_lvl_btn.gd" id="5_nnj50"]
 [ext_resource type="AudioStream" uid="uid://dr00vst5f1nus" path="res://Proto/SFX/Button_SFX.wav" id="6_tybxj"]
-[ext_resource type="Script" uid="uid://xcd6o5th6n7n" path="res://Proto/Script/main_menu_btn.gd" id="7_6e76k"]
+[ext_resource type="Script" path="res://Proto/Script/main_menu_btn.gd" id="7_6e76k"]
 
 [node name="Menu_Victoire" type="Control" unique_id=1291479134]
 layout_mode = 3

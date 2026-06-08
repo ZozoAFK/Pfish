@@ -1,6 +1,13 @@
 [gd_scene format=3 uid="uid://de26c5vkfpord"]
 
 [ext_resource type="FontFile" uid="uid://cqm6krhuletbc" path="res://Proto/Font/pixel.ttf" id="1_3njlh"]
+[ext_resource type="Texture2D" uid="uid://bq2do4yicdv26" path="res://pierre_test_asset/ASSET/Panneau défaite BG PFA.png" id="1_lb02n"]
+[ext_resource type="Script" uid="uid://dd3220eo0xyky" path="res://Proto/Script/panneau_defaite.gd" id="1_ttork"]
+[ext_resource type="Texture2D" uid="uid://b314bml13hm1p" path="res://pierre_test_asset/ASSET/Jelly fish.png" id="3_uukc6"]
+[ext_resource type="Texture2D" uid="uid://dscokor3kdqbs" path="res://pierre_test_asset/ASSET/bubble.webp" id="4_ttork"]
+[ext_resource type="Script" uid="uid://ul4wqmcs42sn" path="res://Proto/Scene/retry_btn.gd" id="5_bphml"]
+[ext_resource type="Script" uid="uid://xcd6o5th6n7n" path="res://Proto/Script/main_menu_btn.gd" id="7_0yguy"]
+[ext_resource type="AudioStream" uid="uid://dr00vst5f1nus" path="res://Proto/SFX/Button_SFX.wav" id="8_0yguy"]
 
 [node name="Menu_Defeat" type="Control" unique_id=209807354]
 layout_mode = 3
@@ -9,30 +16,117 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_ttork")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=909273975]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_lb02n")
 
 [node name="Label" type="Label" parent="." unique_id=1396269704]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -43.0
-offset_right = 43.0
-offset_bottom = 23.0
+offset_left = -99.0
+offset_top = 23.0
+offset_right = 99.0
+offset_bottom = 57.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("1_3njlh")
+theme_override_font_sizes/font_size = 32
 text = "YOU LOSE !"
 
 [node name="RetryBtn" type="TextureButton" parent="." unique_id=1581801729]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -221.0
+offset_top = -185.0
+offset_right = 221.0
+offset_bottom = 23.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(221, 104)
+texture_normal = ExtResource("3_uukc6")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("5_bphml")
+
+[node name="Label" type="Label" parent="RetryBtn" unique_id=754886856]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -59.5
+offset_top = -17.0
+offset_right = 59.5
+offset_bottom = 17.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_outline_size = 1
+theme_override_fonts/font = ExtResource("1_3njlh")
+theme_override_font_sizes/font_size = 32
+text = "RETRY"
 
 [node name="Main_MenuBtn" type="TextureButton" parent="." unique_id=1389901109]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -86.0
+offset_top = -287.0
+offset_right = 86.0
+offset_bottom = -149.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(86, 69)
+texture_normal = ExtResource("4_ttork")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("7_0yguy")
+
+[node name="Label" type="Label" parent="Main_MenuBtn" unique_id=955574956]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -51.0
+offset_top = -11.5
+offset_right = 51.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_outline_size = 1
+theme_override_fonts/font = ExtResource("1_3njlh")
+theme_override_font_sizes/font_size = 32
+text = "MAIN MENU"
+
+[node name="Bouttons" type="AudioStreamPlayer" parent="." unique_id=495475604]
+stream = ExtResource("8_0yguy")
+
+[connection signal="button_down" from="RetryBtn" to="." method="_on_retry_btn_button_down"]
+[connection signal="mouse_entered" from="RetryBtn" to="RetryBtn" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="RetryBtn" to="RetryBtn" method="_on_mouse_exited"]
+[connection signal="button_down" from="Main_MenuBtn" to="." method="_on_main_menu_btn_button_down"]
+[connection signal="mouse_entered" from="Main_MenuBtn" to="Main_MenuBtn" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Main_MenuBtn" to="Main_MenuBtn" method="_on_mouse_exited"]
