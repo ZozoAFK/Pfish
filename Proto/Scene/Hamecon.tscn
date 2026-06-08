@@ -20,6 +20,7 @@ collision_mask = 9
 script = ExtResource("1_emdyq")
 Speed_down = 175
 Speed_coter = 650
+Puissance_accoup = 4000
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1858886676]
 limit_left = 1
