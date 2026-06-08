@@ -1,12 +1,16 @@
 [gd_scene format=3 uid="uid://btqdtisv80c1f"]
 
+[ext_resource type="Script" uid="uid://sx1wwlxxqnw6" path="res://ronde-dechet.gd" id="1_amf2w"]
 [ext_resource type="Texture2D" uid="uid://dosfcx4fgxols" path="res://pierre_test_asset/ASSET/DECHET-1.png" id="2_kktsj"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nm5mi"]
 radius = 42.078884
 height = 145.46191
 
-[node name="DECHET 2" type="CharacterBody2D" unique_id=337217828]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=337217828]
+scale = Vector2(0.7599963, 0.8000003)
+script = ExtResource("1_amf2w")
+waypoints = Array[Vector2]([Vector2(100, 0), Vector2(500, 0)])
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1336606705]
 position = Vector2(-2.3841858e-07, 0)

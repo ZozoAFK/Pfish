@@ -7,15 +7,16 @@
 radius = 86.0
 height = 186.0
 
-[node name="DECHET 1" type="CharacterBody2D" unique_id=1564418342]
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1564418342]
+scale = Vector2(0.76000047, 0.76000035)
 script = ExtResource("1_x8eqx")
-waypoints = Array[Vector2]([Vector2(100, 300), Vector2(400, 300)])
+waypoints = Array[Vector2]([Vector2(100, 0), Vector2(500, 0)])
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=401472308]
-position = Vector2(-4, -13.25)
+position = Vector2(-5, -12)
 scale = Vector2(0.22265625, 0.22802734)
 texture = ExtResource("2_kyoc2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1767383787]
-position = Vector2(0, -0.25)
+position = Vector2(0, 1)
 shape = SubResource("CapsuleShape2D_uo3uj")
