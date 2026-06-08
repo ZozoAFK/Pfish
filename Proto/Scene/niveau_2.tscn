@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c5s13ab6esaxo"]
 
-[ext_resource type="Texture2D" uid="uid://cgop84rxstn4g" path="res://pierre_test_asset/ASSET/LD FINAL 1.png" id="1_n6egf"]
+[ext_resource type="Texture2D" uid="uid://ws7mn66harou" path="res://pierre_test_asset/ASSET/BG_LVL/Underwater_Etroit_BG.webp" id="1_d57yf"]
 [ext_resource type="PackedScene" uid="uid://rwufa0cie5qm" path="res://Proto/Scene/Petit_poisson.tscn" id="2_5rj5h"]
 [ext_resource type="PackedScene" uid="uid://dxgagnxjrsaci" path="res://Proto/Scene/Hamecon.tscn" id="2_vb4ll"]
 [ext_resource type="PackedScene" uid="uid://c44a325r78b4c" path="res://Poisson_bleu.tscn" id="5_8epdb"]
@@ -19,9 +19,9 @@ size = Vector2(1059.5, 166)
 [node name="Niveau 2" type="Node2D" unique_id=966495424]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1055869496]
-position = Vector2(557.00006, 3146)
-scale = Vector2(0.6172451, 1.0054522)
-texture = ExtResource("1_n6egf")
+position = Vector2(550, 1729)
+scale = Vector2(3.4160361, 6.7738094)
+texture = ExtResource("1_d57yf")
 
 [node name="Hamecon" parent="." unique_id=689676632 instance=ExtResource("2_vb4ll")]
 position = Vector2(554, 488)
