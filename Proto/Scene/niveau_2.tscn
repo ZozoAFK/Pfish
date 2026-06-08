@@ -59,14 +59,24 @@ waypoints = Array[Vector2]([Vector2(150, 1200), Vector2(1000, 1200)])
 position_start = Vector2(550, 1200)
 
 [node name="Poisson_bleu" parent="." unique_id=52399432 instance=ExtResource("5_8epdb")]
-position = Vector2(234, 1483)
+position = Vector2(204, 1393)
 waypoints = Array[Vector2]([Vector2(150, 1400), Vector2(1000, 1800)])
 position_start = Vector2(150, 1400)
 
 [node name="Poisson_bleu2" parent="." unique_id=946272696 instance=ExtResource("5_8epdb")]
-position = Vector2(282, 1773)
-waypoints = Array[Vector2]([Vector2(150, 1800), Vector2(1000, 1400)])
-position_start = Vector2(500, 1200)
+position = Vector2(185, 1488)
+waypoints = Array[Vector2]([Vector2(150, 1500), Vector2(1000, 1900)])
+position_start = Vector2(750, 1500)
+
+[node name="Poisson_bleu3" parent="." unique_id=1885107008 instance=ExtResource("5_8epdb")]
+position = Vector2(861, 1872)
+waypoints = Array[Vector2]([Vector2(150, 1600), Vector2(1000, 2000)])
+position_start = Vector2(550, 1800)
+
+[node name="Poisson_bleu4" parent="." unique_id=511736178 instance=ExtResource("5_8epdb")]
+position = Vector2(854, 1961)
+waypoints = Array[Vector2]([Vector2(150, 1700), Vector2(1000, 2100)])
+position_start = Vector2(1000, 1900)
 
 [node name="Espadon" parent="." unique_id=841817002 instance=ExtResource("5_d57yf")]
 position = Vector2(208, 2497)
