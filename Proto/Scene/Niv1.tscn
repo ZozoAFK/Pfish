@@ -13,6 +13,9 @@
 [ext_resource type="PackedScene" uid="uid://b8jqixkh75xps" path="res://DECHET .tscn" id="10_cmei8"]
 [ext_resource type="PackedScene" uid="uid://b0m8g17t5ai86" path="res://DECHET 3.tscn" id="11_v3r6r"]
 [ext_resource type="PackedScene" uid="uid://c53o3ln2jsgrj" path="res://Proto/Scene/moto.tscn" id="12_b4fkg"]
+[ext_resource type="Shader" uid="uid://c5veaoqc80xvt" path="res://Proto/Scene/Niv1.gdshader" id="14_k211y"]
+[ext_resource type="Texture2D" uid="uid://dbrbpyvrj4equ" path="res://pierre_test_asset/ASSET/sand_monticule.png" id="15_a4myk"]
+[ext_resource type="Texture2D" uid="uid://c1gj0v612uifs" path="res://pierre_test_asset/ASSET/Big_Rock.webp" id="16_xas2t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p2rxa"]
 size = Vector2(197.5, 3976)
@@ -25,6 +28,9 @@ size = Vector2(1059.5, 166)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v3r6r"]
 size = Vector2(1460, 196.5)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_kl6dn"]
+shader = ExtResource("14_k211y")
 
 [node name="Node2D" type="Node2D" unique_id=1743649612]
 script = ExtResource("1_cmei8")
@@ -118,7 +124,7 @@ waypoints = Array[Vector2]([Vector2(700, 3700), Vector2(1000, 3700)])
 position_start = Vector2(700, 3700)
 
 [node name="Déchet" parent="." unique_id=2100457893 instance=ExtResource("6_7otel")]
-position = Vector2(543, 908)
+position = Vector2(608, 3756)
 
 [node name="Chaussure" parent="." unique_id=337217828 instance=ExtResource("9_hwn2x")]
 position = Vector2(929, 557)
@@ -261,5 +267,16 @@ collision_layer = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ZoneVictoire" unique_id=178161715]
 shape = SubResource("RectangleShape2D_v3r6r")
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=24232987]
+material = SubResource("ShaderMaterial_kl6dn")
+position = Vector2(612.00006, 3579.0005)
+scale = Vector2(2.4742587, 1.9613167)
+texture = ExtResource("15_a4myk")
+
+[node name="Sprite2D3" type="Sprite2D" parent="." unique_id=769830461]
+position = Vector2(1143.0001, 3765.9998)
+scale = Vector2(0.3485716, 0.31857142)
+texture = ExtResource("16_xas2t")
 
 [connection signal="area_entered" from="ZoneVictoire" to="." method="_on_zone_victoire_area_entered"]
