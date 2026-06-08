@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://c5s13ab6esaxo"]
 
 [ext_resource type="Texture2D" uid="uid://cgop84rxstn4g" path="res://pierre_test_asset/ASSET/LD FINAL 1.png" id="1_n6egf"]
-[ext_resource type="PackedScene" uid="uid://cifinp4ojoo6v" path="res://Proto/Scene/Petit_poisson.tscn" id="2_5rj5h"]
+[ext_resource type="PackedScene" uid="uid://rwufa0cie5qm" path="res://Proto/Scene/Petit_poisson.tscn" id="2_5rj5h"]
 [ext_resource type="PackedScene" uid="uid://dxgagnxjrsaci" path="res://Proto/Scene/Hamecon.tscn" id="2_vb4ll"]
-[ext_resource type="PackedScene" uid="uid://nwt4i7g6u2du" path="res://Saumon.tscn" id="4_vb4ll"]
+[ext_resource type="PackedScene" uid="uid://c44a325r78b4c" path="res://Poisson_bleu.tscn" id="5_8epdb"]
 [ext_resource type="PackedScene" uid="uid://cv640qqv5nt3b" path="res://Espadon.tscn" id="5_d57yf"]
 [ext_resource type="Texture2D" uid="uid://bubodniig4ar2" path="res://icon.svg" id="6_8epdb"]
 
@@ -25,6 +25,8 @@ texture = ExtResource("1_n6egf")
 
 [node name="Hamecon" parent="." unique_id=689676632 instance=ExtResource("2_vb4ll")]
 position = Vector2(554, 488)
+Speed_down = 15000
+Puissance_accoup = 15000
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=112617220]
 collision_mask = 2
@@ -56,13 +58,13 @@ position = Vector2(776, 1184)
 waypoints = Array[Vector2]([Vector2(150, 1200), Vector2(1000, 1200)])
 position_start = Vector2(550, 1200)
 
-[node name="Saumon" parent="." unique_id=1160576597 instance=ExtResource("4_vb4ll")]
-position = Vector2(254, 1411)
+[node name="Poisson_bleu" parent="." unique_id=52399432 instance=ExtResource("5_8epdb")]
+position = Vector2(234, 1483)
 waypoints = Array[Vector2]([Vector2(150, 1400), Vector2(1000, 1800)])
 position_start = Vector2(150, 1400)
 
-[node name="Saumon2" parent="." unique_id=1280781481 instance=ExtResource("4_vb4ll")]
-position = Vector2(259, 1820)
+[node name="Poisson_bleu2" parent="." unique_id=946272696 instance=ExtResource("5_8epdb")]
+position = Vector2(282, 1773)
 waypoints = Array[Vector2]([Vector2(150, 1800), Vector2(1000, 1400)])
 position_start = Vector2(500, 1200)
 
@@ -75,18 +77,18 @@ position_start = Vector2(1000, 2500)
 position = Vector2(543, 2171)
 texture = ExtResource("6_8epdb")
 
-[node name="Icon2" type="Sprite2D" parent="." unique_id=1185288186]
-position = Vector2(920, 2341)
+[node name="Icon2" type="Sprite2D" parent="Icon" unique_id=1185288186]
+position = Vector2(377, 170)
 texture = ExtResource("6_8epdb")
 
-[node name="Icon3" type="Sprite2D" parent="." unique_id=1532273479]
-position = Vector2(190, 2336)
+[node name="Icon3" type="Sprite2D" parent="Icon" unique_id=1532273479]
+position = Vector2(-353, 165)
 texture = ExtResource("6_8epdb")
 
-[node name="Icon4" type="Sprite2D" parent="." unique_id=2074649136]
-position = Vector2(235, 592)
+[node name="Icon4" type="Sprite2D" parent="Icon" unique_id=2074649136]
+position = Vector2(-308, -1579)
 texture = ExtResource("6_8epdb")
 
-[node name="Icon5" type="Sprite2D" parent="." unique_id=2120119544]
-position = Vector2(953, 838)
+[node name="Icon5" type="Sprite2D" parent="Icon" unique_id=2120119544]
+position = Vector2(410, -1333)
 texture = ExtResource("6_8epdb")

@@ -10,6 +10,8 @@ class_name Player
 var dechet_accroche: Node2D = null # Stocke le déchet actuellement attrapé
 # Ajustez ce Vector2 pour définir où le déchet se place par rapport au centre de l'hameçon
 @export var position_accroche: Vector2 = Vector2(0, 20) 
+var Time_presse = 0
+var temps_max = 1
 
 signal joueur_touche(degats: float)
 
@@ -36,12 +38,22 @@ func _physics_process(delta: float) -> void:
 				déclencher_degats()
 
 func down (delta):
-	if not(Input.is_action_just_pressed("SPACE")):
-		velocity.y = Speed_down
+	if not(Input.is_action_pressed("SPACE")):
+		Time_presse += delta 
+		if Time_presse > temps_max : 
+			Time_presse = temps_max
+		velocity.y = lerp(-15000,Speed_down, Time_presse/ temps_max ) * delta 
+	if Input.is_action_just_pressed("SPACE"):
+		Time_presse = 0 
 
 func deplacement (delta):
-	if Input.is_action_just_pressed("SPACE"):
-		velocity.y = -Puissance_accoup
+	if Input.is_action_pressed("SPACE"):
+		Time_presse += delta 
+		if Time_presse > temps_max : 
+			Time_presse = temps_max
+		velocity.y = -lerp(-15000,Puissance_accoup, Time_presse/temps_max ) * delta 
+	if Input.is_action_just_released("SPACE"):
+		Time_presse = 0 
 		
 	var direction := Input.get_axis("LEFT", "RIGHT")
 	if direction:
