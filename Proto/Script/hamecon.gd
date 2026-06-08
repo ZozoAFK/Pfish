@@ -72,11 +72,12 @@ func _on_zone_accroche_area_entered(area: Area2D) -> void:
 		dechet_accroche = area
 		
 		# On désactive la détection de la zone pour qu'elle ne déclenche plus d'événements
-		area.monitoring = false
-		area.monitorable = false
+		# NOUVELLE ÉCRITURE (sécurisée pour Godot) :
+		area.set_deferred("monitoring", false)
+		area.set_deferred("monitorable", false)
 		
 		# Optionnel : Désactiver complètement son traitement si besoin
-		area.process_mode = PROCESS_MODE_DISABLED 
+		#area.process_mode = PROCESS_MODE_DISABLED 
 		
 		print("Déchet accroché !")
 

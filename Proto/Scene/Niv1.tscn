@@ -1,33 +1,38 @@
 [gd_scene format=3 uid="uid://yycf0tsx81ph"]
 
-[ext_resource type="Texture2D" uid="uid://cgop84rxstn4g" path="res://pierre_test_asset/ASSET/LD FINAL 1.png" id="1_uh4i2"]
+[ext_resource type="Script" uid="uid://btnymjvt7aslx" path="res://Proto/Scene/niv_1.gd" id="1_cmei8"]
+[ext_resource type="Texture2D" uid="uid://xnsfkvpb2nqf" path="res://pierre_test_asset/ASSET/BG_LVL/ReefBG.png" id="1_hwn2x"]
 [ext_resource type="PackedScene" uid="uid://c44a325r78b4c" path="res://Poisson_bleu.tscn" id="3_7otel"]
 [ext_resource type="AudioStream" uid="uid://cxdsmajw5244j" path="res://Proto/SFX/sea dungeon 8bit2.mp3" id="3_hifql"]
 [ext_resource type="PackedScene" uid="uid://cv640qqv5nt3b" path="res://Espadon.tscn" id="5_hifql"]
 [ext_resource type="PackedScene" uid="uid://bdiwo7gurvtso" path="res://Proto/Scene/déchet.tscn" id="6_7otel"]
 [ext_resource type="PackedScene" uid="uid://dxgagnxjrsaci" path="res://Proto/Scene/Hamecon.tscn" id="6_p2rxa"]
-[ext_resource type="PackedScene" path="res://Proto/Scene/ronde-fish.tscn" id="6_vu2d8"]
+[ext_resource type="PackedScene" uid="uid://e27s81lnajpf" path="res://Proto/Scene/ronde-fish.tscn" id="6_vu2d8"]
 [ext_resource type="PackedScene" uid="uid://nwt4i7g6u2du" path="res://Saumon.tscn" id="8_wkuin"]
-[ext_resource type="PackedScene" uid="uid://cngej8kgmrclj" path="res://DECHET2.tscn" id="9_hwn2x"]
+[ext_resource type="PackedScene" uid="uid://btqdtisv80c1f" path="res://DECHET2.tscn" id="9_hwn2x"]
 [ext_resource type="PackedScene" uid="uid://b8jqixkh75xps" path="res://DECHET .tscn" id="10_cmei8"]
-[ext_resource type="PackedScene" uid="uid://d307oqflscedb" path="res://DECHET 3.tscn" id="11_v3r6r"]
+[ext_resource type="PackedScene" uid="uid://b0m8g17t5ai86" path="res://DECHET 3.tscn" id="11_v3r6r"]
 [ext_resource type="PackedScene" uid="uid://c53o3ln2jsgrj" path="res://Proto/Scene/moto.tscn" id="12_b4fkg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p2rxa"]
-size = Vector2(197.5, 3721.125)
+size = Vector2(197.5, 3976)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7otel"]
-size = Vector2(238, 3728.5)
+size = Vector2(238, 3971)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wkuin"]
 size = Vector2(1059.5, 166)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v3r6r"]
+size = Vector2(1460, 196.5)
+
 [node name="Node2D" type="Node2D" unique_id=1743649612]
+script = ExtResource("1_cmei8")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1653042713]
-position = Vector2(562, 3128)
-scale = Vector2(0.6172451, 1.0054522)
-texture = ExtResource("1_uh4i2")
+position = Vector2(603, 2028)
+scale = Vector2(0.95442694, 1.4861313)
+texture = ExtResource("1_hwn2x")
 
 [node name="Hamecon" parent="." unique_id=689676632 instance=ExtResource("6_p2rxa")]
 position = Vector2(585, 454)
@@ -41,11 +46,11 @@ autoplay = true
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=442094473]
-position = Vector2(-22.25, 2112.4375)
+position = Vector2(-22.25, 1985)
 shape = SubResource("RectangleShape2D_p2rxa")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=215324722]
-position = Vector2(1164, 2110.75)
+position = Vector2(1164, 1989.5)
 shape = SubResource("RectangleShape2D_7otel")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1656575703]
@@ -113,7 +118,7 @@ waypoints = Array[Vector2]([Vector2(700, 3700), Vector2(1000, 3700)])
 position_start = Vector2(700, 3700)
 
 [node name="Déchet" parent="." unique_id=2100457893 instance=ExtResource("6_7otel")]
-position = Vector2(570, 3696)
+position = Vector2(543, 908)
 
 [node name="Chaussure" parent="." unique_id=337217828 instance=ExtResource("9_hwn2x")]
 position = Vector2(929, 557)
@@ -249,3 +254,12 @@ waypoints = Array[Vector2]([Vector2(790, 758)])
 [node name="Cannette14" parent="." unique_id=993026081 instance=ExtResource("11_v3r6r")]
 position = Vector2(1007, 487)
 waypoints = Array[Vector2]([Vector2(1007, 487)])
+
+[node name="ZoneVictoire" type="Area2D" parent="." unique_id=335841912]
+position = Vector2(597, 95)
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZoneVictoire" unique_id=178161715]
+shape = SubResource("RectangleShape2D_v3r6r")
+
+[connection signal="area_entered" from="ZoneVictoire" to="." method="_on_zone_victoire_area_entered"]
