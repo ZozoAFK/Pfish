@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://de26c5vkfpord"]
+
+[ext_resource type="FontFile" uid="uid://cqm6krhuletbc" path="res://Proto/Font/pixel.ttf" id="1_3njlh"]
+
+[node name="Menu_Defeat" type="Control" unique_id=209807354]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=909273975]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="." unique_id=1396269704]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -43.0
+offset_right = 43.0
+offset_bottom = 23.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("1_3njlh")
+text = "YOU LOSE !"
+
+[node name="RetryBtn" type="TextureButton" parent="." unique_id=1581801729]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Main_MenuBtn" type="TextureButton" parent="." unique_id=1389901109]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

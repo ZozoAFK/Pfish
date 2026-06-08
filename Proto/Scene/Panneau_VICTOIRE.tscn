@@ -1,14 +1,22 @@
-[gd_scene format=3 uid="uid://coypyde65ojrp"]
+[gd_scene format=3 uid="uid://dmq7vj3fy0eep"]
 
+[ext_resource type="Texture2D" uid="uid://crnjtolpyqs5f" path="res://pierre_test_asset/ASSET/PANNEAU VICTOIRE.png" id="1_hoobx"]
+[ext_resource type="Script" uid="uid://bo8n0kyku7c" path="res://Proto/Script/panneau_victoire.gd" id="1_t6j6c"]
 [ext_resource type="FontFile" uid="uid://cqm6krhuletbc" path="res://Proto/Font/pixel.ttf" id="1_x5hak"]
+[ext_resource type="Texture2D" uid="uid://7ktru5ci6yah" path="res://pierre_test_asset/ASSET/Gold treasure.png" id="3_e8wis"]
+[ext_resource type="Texture2D" uid="uid://dc6l2mcdkd5m2" path="res://pierre_test_asset/ASSET/Shark.png" id="4_cyiil"]
+[ext_resource type="Script" uid="uid://dku4ul76p1od" path="res://Proto/Script/next_lvl_btn.gd" id="5_nnj50"]
+[ext_resource type="AudioStream" uid="uid://dr00vst5f1nus" path="res://Proto/SFX/Button_SFX.wav" id="6_tybxj"]
+[ext_resource type="Script" uid="uid://xcd6o5th6n7n" path="res://Proto/Script/main_menu_btn.gd" id="7_6e76k"]
 
-[node name="Control" type="Control" unique_id=1291479134]
+[node name="Menu_Victoire" type="Control" unique_id=1291479134]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_t6j6c")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1945615739]
 layout_mode = 1
@@ -17,15 +25,106 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+texture = ExtResource("1_hoobx")
 
 [node name="Label" type="Label" parent="." unique_id=1920962397]
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -20.0
-offset_right = 20.0
-offset_bottom = 23.0
+offset_left = -170.0
+offset_top = 23.0
+offset_right = 173.0
+offset_bottom = 57.0
 grow_horizontal = 2
 theme_override_fonts/font = ExtResource("1_x5hak")
+theme_override_font_sizes/font_size = 32
 text = "LEVEL FINISHED !"
+
+[node name="Next_LvlBtn" type="TextureButton" parent="." unique_id=1253757154]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -92.0
+offset_top = -173.0
+offset_right = 92.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(92, 78)
+texture_normal = ExtResource("3_e8wis")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("5_nnj50")
+
+[node name="Label" type="Label" parent="Next_LvlBtn" unique_id=2082841687]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.0
+offset_top = -11.5
+offset_right = 56.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 1
+theme_override_constants/shadow_outline_size = 1
+theme_override_fonts/font = ExtResource("1_x5hak")
+text = "NEXT LEVEL"
+
+[node name="Main_MenuBtn" type="TextureButton" parent="." unique_id=1054991695]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -198.0
+offset_top = -60.0
+offset_right = 198.0
+offset_bottom = 122.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(198, 91)
+texture_normal = ExtResource("4_cyiil")
+ignore_texture_size = true
+stretch_mode = 5
+script = ExtResource("7_6e76k")
+
+[node name="Label" type="Label" parent="Main_MenuBtn" unique_id=1541037877]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -51.0
+offset_top = -11.5
+offset_right = 51.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_constants/shadow_outline_size = 1
+theme_override_fonts/font = ExtResource("1_x5hak")
+text = "MAIN MENU"
+
+[node name="Bouttons" type="AudioStreamPlayer" parent="." unique_id=1694068110]
+stream = ExtResource("6_tybxj")
+
+[connection signal="button_down" from="Next_LvlBtn" to="." method="_on_next_lvl_btn_button_down"]
+[connection signal="mouse_entered" from="Next_LvlBtn" to="Next_LvlBtn" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Next_LvlBtn" to="Next_LvlBtn" method="_on_mouse_exited"]
+[connection signal="button_down" from="Main_MenuBtn" to="." method="_on_main_menu_btn_button_down"]
+[connection signal="mouse_entered" from="Main_MenuBtn" to="Main_MenuBtn" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Main_MenuBtn" to="Main_MenuBtn" method="_on_mouse_exited"]
