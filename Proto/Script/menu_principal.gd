@@ -1,6 +1,6 @@
 extends Control
 
-@onready var World = preload("res://Proto/Scene/World.tscn")
+@onready var LVL1 = preload("res://Proto/Scene/Niv1.tscn")
 # On récupère le nœud qui va jouer le son
 @onready var sfx_player: AudioStreamPlayer = $Bouttons
 
@@ -11,7 +11,7 @@ func _on_start_btn_button_down() -> void:
 	# Ton timer de 1 seconde est parfait ici ! 
 	# Il laisse le temps au son de se jouer avant que la scène ne change.
 	await get_tree().create_timer(1).timeout
-	get_tree().change_scene_to_packed(World)
+	get_tree().change_scene_to_packed(LVL1)
 
 
 func _on_quit_btn_button_down() -> void:
