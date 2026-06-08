@@ -150,14 +150,14 @@ texture = ExtResource("6_wkuin")
 position = Vector2(492, -867)
 texture = ExtResource("6_wkuin")
 
-[node name="Icon" type="Sprite2D" parent="." unique_id=1500972295]
-position = Vector2(152, 3269)
+[node name="Icon3" type="Sprite2D" parent="Sprite2D3/Icon7" unique_id=1796310937]
+position = Vector2(-28, 2314)
 texture = ExtResource("6_wkuin")
 
-[node name="Icon2" type="Sprite2D" parent="." unique_id=1192957210]
-position = Vector2(726, 3341)
+[node name="Icon2" type="Sprite2D" parent="Sprite2D3/Icon7" unique_id=1192957210]
+position = Vector2(70, 2461)
 texture = ExtResource("6_wkuin")
 
-[node name="Icon3" type="Sprite2D" parent="." unique_id=1796310937]
-position = Vector2(628, 3194)
+[node name="Icon" type="Sprite2D" parent="Sprite2D3/Icon7" unique_id=1500972295]
+position = Vector2(-504, 2389)
 texture = ExtResource("6_wkuin")
