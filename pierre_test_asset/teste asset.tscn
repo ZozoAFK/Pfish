@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://uwp4jevb0b10" path="res://Preproto/Scene/hamecon.tscn" id="1_robv1"]
 [ext_resource type="PackedScene" uid="uid://bnbptiq0ugpm3" path="res://Preproto/Scene/poisson.tscn" id="2_svkt2"]
-[ext_resource type="Texture2D" uid="uid://byj1jqg14675s" path="res://pierre_test_asset/LEVEL DESIGN.png" id="3_hmutp"]
+[ext_resource type="Texture2D" uid="uid://byj1jqg14675s" path="res://pierre_test_asset/ASSET/LEVEL DESIGN.png" id="3_hmutp"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_h8888"]
 radius = 88.0

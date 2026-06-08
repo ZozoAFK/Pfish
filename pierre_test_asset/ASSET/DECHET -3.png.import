@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byj1jqg14675s"
-path="res://.godot/imported/LEVEL DESIGN.png-dccfaf45ced52355b5eccd314cc48a3f.ctex"
+uid="uid://c73tup8vq5wfa"
+path="res://.godot/imported/DECHET -3.png-334740c45bc1283f84b54f67f6dc5bf0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pierre_test_asset/LEVEL DESIGN.png"
-dest_files=["res://.godot/imported/LEVEL DESIGN.png-dccfaf45ced52355b5eccd314cc48a3f.ctex"]
+source_file="res://pierre_test_asset/ASSET/DECHET -3.png"
+dest_files=["res://.godot/imported/DECHET -3.png-334740c45bc1283f84b54f67f6dc5bf0.ctex"]
 
 [params]
 
