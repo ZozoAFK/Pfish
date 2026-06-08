@@ -2,11 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://byj1jqg14675s" path="res://pierre_test_asset/ASSET/LEVEL DESIGN.png" id="1_atkr3"]
 [ext_resource type="PackedScene" uid="uid://dxgagnxjrsaci" path="res://Proto/Scene/Hamecon.tscn" id="1_tyl2u"]
-[ext_resource type="PackedScene" uid="uid://cifinp4ojoo6v" path="res://Proto/Scene/Petit_poisson.tscn" id="3_cd8ja"]
+[ext_resource type="PackedScene" uid="uid://rwufa0cie5qm" path="res://Proto/Scene/Petit_poisson.tscn" id="3_cd8ja"]
 [ext_resource type="PackedScene" uid="uid://bdiwo7gurvtso" path="res://Proto/Scene/déchet.tscn" id="4_atkr3"]
 [ext_resource type="PackedScene" uid="uid://nwt4i7g6u2du" path="res://Saumon.tscn" id="5_bugel"]
 [ext_resource type="PackedScene" uid="uid://c44a325r78b4c" path="res://Poisson_bleu.tscn" id="6_w3ikg"]
 [ext_resource type="PackedScene" uid="uid://cv640qqv5nt3b" path="res://Espadon.tscn" id="7_wy8eu"]
+[ext_resource type="PackedScene" uid="uid://b61m1m8atnx6e" path="res://DECHET .tscn" id="8_2mf7f"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wy8eu"]
 radius = 88.0
@@ -754,3 +755,7 @@ speed = 100.0
 [node name="FISH_4" parent="." unique_id=841817002 instance=ExtResource("7_wy8eu")]
 position = Vector2(122, 1395)
 waypoints = Array[Vector2]([Vector2(300, 900), Vector2(800, 900)])
+
+[node name="CharacterBody2D" parent="." unique_id=1564418342 instance=ExtResource("8_2mf7f")]
+position = Vector2(193, 2378)
+waypoints = Array[Vector2]([Vector2(1000, 1000)])
