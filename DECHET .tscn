@@ -4,18 +4,18 @@
 [ext_resource type="Texture2D" uid="uid://tmqpm47vahii" path="res://pierre_test_asset/ASSET/DECHET-2.png" id="2_kyoc2"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uo3uj"]
-radius = 22.0
-height = 62.0
+radius = 86.0
+height = 186.0
 
-[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1564418342]
+[node name="DECHET 1" type="CharacterBody2D" unique_id=1564418342]
 script = ExtResource("1_x8eqx")
 waypoints = Array[Vector2]([Vector2(100, 300), Vector2(400, 300)])
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=401472308]
-position = Vector2(250, 197)
+position = Vector2(-4, -13.25)
 scale = Vector2(0.22265625, 0.22802734)
 texture = ExtResource("2_kyoc2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1767383787]
-position = Vector2(253, 201)
+position = Vector2(0, -0.25)
 shape = SubResource("CapsuleShape2D_uo3uj")
