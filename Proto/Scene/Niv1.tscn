@@ -150,7 +150,7 @@ waypoints = Array[Vector2]([Vector2(770, 3256)])
 
 [node name="Bouteille4" parent="." unique_id=1084406501 instance=ExtResource("10_cmei8")]
 position = Vector2(135, 3252)
-rotation = 3.536037
+rotation = 5.1661744
 waypoints = Array[Vector2]([Vector2(135, 3252)])
 
 [node name="Cannette2" parent="." unique_id=763901561 instance=ExtResource("11_v3r6r")]
@@ -180,12 +180,12 @@ waypoints = Array[Vector2]([Vector2(898, 2305)])
 
 [node name="Chaussure3" parent="." unique_id=59381903 instance=ExtResource("9_hwn2x")]
 position = Vector2(969, 2412.0002)
-rotation = 1.2322024
+rotation = 0.87441
 waypoints = Array[Vector2]([Vector2(969, 2412)])
 
 [node name="Chaussure4" parent="." unique_id=1306569387 instance=ExtResource("9_hwn2x")]
 position = Vector2(140, 1703)
-rotation = -2.0280726
+rotation = -2.30558
 waypoints = Array[Vector2]([Vector2(140, 1703)])
 
 [node name="Cannette6" parent="." unique_id=1813486017 instance=ExtResource("11_v3r6r")]
@@ -245,3 +245,7 @@ waypoints = Array[Vector2]([Vector2(833, 624)])
 [node name="Cannette13" parent="." unique_id=1001109451 instance=ExtResource("11_v3r6r")]
 position = Vector2(790, 758)
 waypoints = Array[Vector2]([Vector2(790, 758)])
+
+[node name="Cannette14" parent="." unique_id=993026081 instance=ExtResource("11_v3r6r")]
+position = Vector2(1007, 487)
+waypoints = Array[Vector2]([Vector2(1007, 487)])
