@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://42ypjlb4kbeg"
-path="res://.godot/imported/POISSON-3.png-835e1ac6c0ffbe7fa2a5eb11bfd302c7.ctex"
+uid="uid://d4m5ny5yuko4k"
+path="res://.godot/imported/POISSON-2.png-6e94a181f323536f06f1c3b5f8c09a77.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pierre_test_asset/POISSON-3.png"
-dest_files=["res://.godot/imported/POISSON-3.png-835e1ac6c0ffbe7fa2a5eb11bfd302c7.ctex"]
+source_file="res://pierre_test_asset/ASSET/POISSON-2.png"
+dest_files=["res://.godot/imported/POISSON-2.png-6e94a181f323536f06f1c3b5f8c09a77.ctex"]
 
 [params]
 

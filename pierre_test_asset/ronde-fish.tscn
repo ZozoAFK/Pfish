@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://ck40p12sluo60"]
 
-[ext_resource type="Texture2D" uid="uid://b5y7typm1rw1u" path="res://pierre_test_asset/POISSON-1.webp" id="2_mh78y"]
-[ext_resource type="Texture2D" uid="uid://d4m5ny5yuko4k" path="res://pierre_test_asset/POISSON-2.png" id="3_6a2lt"]
-[ext_resource type="Texture2D" uid="uid://42ypjlb4kbeg" path="res://pierre_test_asset/POISSON-3.png" id="4_qu7hc"]
-[ext_resource type="Texture2D" uid="uid://1lmysf3a4jsk" path="res://pierre_test_asset/POISSON-4.png" id="5_t3qst"]
-[ext_resource type="Texture2D" uid="uid://dosfcx4fgxols" path="res://pierre_test_asset/DECHET-1.png" id="6_t3qst"]
-[ext_resource type="Texture2D" uid="uid://tmqpm47vahii" path="res://pierre_test_asset/DECHET-2.png" id="7_o36k0"]
-[ext_resource type="Texture2D" uid="uid://c73tup8vq5wfa" path="res://pierre_test_asset/DECHET -3.png" id="7_qu7hc"]
+[ext_resource type="Texture2D" uid="uid://b5y7typm1rw1u" path="res://pierre_test_asset/ASSET/POISSON-1.webp" id="2_mh78y"]
+[ext_resource type="Texture2D" uid="uid://d4m5ny5yuko4k" path="res://pierre_test_asset/ASSET/POISSON-2.png" id="3_6a2lt"]
+[ext_resource type="Texture2D" uid="uid://42ypjlb4kbeg" path="res://pierre_test_asset/ASSET/POISSON-3.png" id="4_qu7hc"]
+[ext_resource type="Texture2D" uid="uid://1lmysf3a4jsk" path="res://pierre_test_asset/ASSET/POISSON-4.png" id="5_t3qst"]
+[ext_resource type="Texture2D" uid="uid://dosfcx4fgxols" path="res://pierre_test_asset/ASSET/DECHET-1.png" id="6_t3qst"]
+[ext_resource type="Texture2D" uid="uid://tmqpm47vahii" path="res://pierre_test_asset/ASSET/DECHET-2.png" id="7_o36k0"]
+[ext_resource type="Texture2D" uid="uid://c73tup8vq5wfa" path="res://pierre_test_asset/ASSET/DECHET -3.png" id="7_qu7hc"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_umbcw"]
 radius = 24.0

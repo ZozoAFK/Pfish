@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://e27s81lnajpf"]
 
 [ext_resource type="Script" uid="uid://bxsjgpe4feke2" path="res://Preproto/Script/fish.gd" id="1_r7e72"]
-[ext_resource type="Texture2D" uid="uid://d4m5ny5yuko4k" path="res://pierre_test_asset/POISSON-2.png" id="2_b3wvt"]
+[ext_resource type="Texture2D" uid="uid://d4m5ny5yuko4k" path="res://pierre_test_asset/ASSET/POISSON-2.png" id="2_b3wvt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b3wvt"]
 size = Vector2(216.4375, 20)

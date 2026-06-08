@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://nwt4i7g6u2du"]
 
 [ext_resource type="Script" uid="uid://bxsjgpe4feke2" path="res://Preproto/Script/fish.gd" id="1_s2o1r"]
-[ext_resource type="Texture2D" uid="uid://42ypjlb4kbeg" path="res://pierre_test_asset/POISSON-3.png" id="2_s2o1r"]
+[ext_resource type="Texture2D" uid="uid://42ypjlb4kbeg" path="res://pierre_test_asset/ASSET/POISSON-3.png" id="2_s2o1r"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_s2o1r"]
 radius = 205.11948

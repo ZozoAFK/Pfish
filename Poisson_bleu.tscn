@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://c44a325r78b4c"]
 
 [ext_resource type="Script" uid="uid://bxsjgpe4feke2" path="res://Preproto/Script/fish.gd" id="1_2toed"]
-[ext_resource type="Texture2D" uid="uid://c6u7i2yvf4rgx" path="res://pierre_test_asset/ASSET/pngtree-pixel-art-fish-character-swimming-retro-style-png-image_17539379.webp" id="2_2toed"]
+[ext_resource type="Texture2D" uid="uid://b5y7typm1rw1u" path="res://pierre_test_asset/ASSET/POISSON-1.webp" id="2_nxrqr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wqurr"]
 size = Vector2(261.25, 64)
@@ -20,7 +20,7 @@ speed = 170.0
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1081593016]
 position = Vector2(-2, -9.000001)
 scale = Vector2(0.3007086, 0.27596372)
-texture = ExtResource("2_2toed")
+texture = ExtResource("2_nxrqr")
 flip_h = true
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1883704712]
