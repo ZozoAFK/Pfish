@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://c53o3ln2jsgrj"]
 
-[ext_resource type="Script" path="res://ronde-dechet.gd" id="1_keabl"]
+[ext_resource type="Script" uid="uid://sx1wwlxxqnw6" path="res://Proto/Script/ronde-dechet.gd" id="1_keabl"]
 [ext_resource type="Texture2D" uid="uid://13pyfr3unboa" path="res://pierre_test_asset/ASSET/DECHET - 8.png" id="1_uq3ux"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_keabl"]
 size = Vector2(219, 92.5)
 
-[node name="Moto" type="CharacterBody2D" unique_id=417816095]
+[node name="Moto" type="CharacterBody2D" unique_id=417816095 groups=["dechet"]]
 script = ExtResource("1_keabl")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1574065550]

@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cu5vicu1ek55a" path="res://Proto/Script/barre_hp.gd" id="1_o22lk"]
 [ext_resource type="Texture2D" uid="uid://bbfxt556vpc0f" path="res://Proto/Scene/HP_Sprite.png" id="2_q7nm8"]
+[ext_resource type="AudioStream" uid="uid://cde7owy4qgswo" path="res://Proto/SFX/Damage_SFX.mp3" id="3_cmmyg"]
 
 [node name="BarreHP" type="Node2D" unique_id=77477878]
 script = ExtResource("1_o22lk")
@@ -40,3 +41,6 @@ offset_bottom = 1099.0
 scale = Vector2(0.188, 0.025)
 step = 0.01
 texture_progress = ExtResource("2_q7nm8")
+
+[node name="Damage_SFX" type="AudioStreamPlayer" parent="." unique_id=863507193]
+stream = ExtResource("3_cmmyg")

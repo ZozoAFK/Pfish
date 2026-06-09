@@ -33,7 +33,7 @@ func _physics_process(delta: float) -> void:
 		var collision = get_slide_collision(i)
 		var collider = collision.get_collider()
 		
-		if collider.is_in_group("danger"):
+		if collider.is_in_group("dechet"):
 			if timer_invincibilite.is_stopped():
 				déclencher_degats()
 

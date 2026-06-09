@@ -6,9 +6,9 @@
 [ext_resource type="Texture2D" uid="uid://6b7e5qp8m5rc" path="res://pierre_test_asset/ASSET/MENU/underwater-fantasy-files/underwater-fantasy-files/Assets/PNG/underwater-fantasy-preview.png" id="3_tejit"]
 [ext_resource type="AudioStream" uid="uid://cn42qjwbaj20q" path="res://Proto/SFX/SRB2 OST - Deep Sea Zone 1.mp3" id="4_hfnlw"]
 [ext_resource type="Texture2D" uid="uid://ilcxah6xl3s3" path="res://pierre_test_asset/ASSET/RowBoat.png" id="5_tejit"]
-[ext_resource type="Script" path="res://Proto/Script/start_btn.gd" id="6_810tx"]
+[ext_resource type="Script" uid="uid://cr8ge7x33sif2" path="res://Proto/Script/start_btn.gd" id="6_810tx"]
 [ext_resource type="Texture2D" uid="uid://226yie5tb3ga" path="res://pierre_test_asset/ASSET/Treasure chest closed.png" id="7_63hw4"]
-[ext_resource type="Script" path="res://Proto/quit_btn.gd" id="8_mojgd"]
+[ext_resource type="Script" uid="uid://cbwupi5bs20of" path="res://Proto/Script/quit_btn.gd" id="8_mojgd"]
 [ext_resource type="AudioStream" uid="uid://dr00vst5f1nus" path="res://Proto/SFX/Button_SFX.wav" id="10_mojgd"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_810tx"]
@@ -68,7 +68,7 @@ theme_override_constants/shadow_outline_size = 1
 text = "MENU PRINCIPAL"
 label_settings = SubResource("LabelSettings_hfnlw")
 
-[node name="StartBtn" type="TextureButton" parent="." unique_id=1608686392]
+[node name="StartBtn" type="TextureButton" parent="." unique_id=1608686392 node_paths=PackedStringArray("hover_sfx")]
 custom_minimum_size = Vector2(200, 300)
 layout_mode = 1
 anchors_preset = 8
@@ -88,6 +88,7 @@ texture_normal = ExtResource("5_tejit")
 ignore_texture_size = true
 stretch_mode = 5
 script = ExtResource("6_810tx")
+hover_sfx = NodePath("../Click_SFX")
 metadata/_edit_group_ = true
 
 [node name="Label" type="Label" parent="StartBtn" unique_id=655447195]
@@ -109,7 +110,7 @@ theme_override_constants/shadow_offset_y = 2
 theme_override_constants/shadow_outline_size = 1
 text = "START"
 
-[node name="QuitBtn" type="TextureButton" parent="." unique_id=1996271262]
+[node name="QuitBtn" type="TextureButton" parent="." unique_id=1996271262 node_paths=PackedStringArray("hover_sfx")]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -128,6 +129,7 @@ texture_normal = ExtResource("7_63hw4")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("8_mojgd")
+hover_sfx = NodePath("../Click_SFX")
 
 [node name="Label" type="Label" parent="QuitBtn" unique_id=252564138]
 layout_mode = 1
@@ -156,6 +158,8 @@ parameters/looping = true
 
 [node name="Bouttons" type="AudioStreamPlayer" parent="." unique_id=1021552493]
 stream = ExtResource("10_mojgd")
+
+[node name="Click_SFX" type="AudioStreamPlayer" parent="." unique_id=273085192]
 
 [connection signal="button_down" from="StartBtn" to="." method="_on_start_btn_button_down"]
 [connection signal="mouse_entered" from="StartBtn" to="StartBtn" method="_on_mouse_entered"]

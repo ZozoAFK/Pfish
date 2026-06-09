@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://yycf0tsx81ph"]
 
-[ext_resource type="Script" uid="uid://btnymjvt7aslx" path="res://Proto/Scene/niv_1.gd" id="1_cmei8"]
+[ext_resource type="Script" uid="uid://btnymjvt7aslx" path="res://Proto/Script/niv_1.gd" id="1_cmei8"]
 [ext_resource type="Texture2D" uid="uid://xnsfkvpb2nqf" path="res://pierre_test_asset/ASSET/BG_LVL/ReefBG.png" id="1_hwn2x"]
 [ext_resource type="PackedScene" uid="uid://c44a325r78b4c" path="res://Poisson_bleu.tscn" id="3_7otel"]
 [ext_resource type="AudioStream" uid="uid://cxdsmajw5244j" path="res://Proto/SFX/sea dungeon 8bit2.mp3" id="3_hifql"]
@@ -41,7 +41,7 @@ position = Vector2(603, 2028)
 scale = Vector2(0.95442694, 1.4861313)
 texture = ExtResource("1_hwn2x")
 
-[node name="Hamecon" parent="." unique_id=689676632 instance=ExtResource("6_p2rxa")]
+[node name="Hamecon" parent="." unique_id=689676632 groups=["joueur"] instance=ExtResource("6_p2rxa")]
 position = Vector2(585, 454)
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Hamecon" unique_id=1246228476]

@@ -1,14 +1,15 @@
 [gd_scene format=3 uid="uid://cngej8kgmrclj"]
 
-[ext_resource type="Script" path="res://ronde-dechet.gd" id="1_amf2w"]
+[ext_resource type="Script" uid="uid://sx1wwlxxqnw6" path="res://Proto/Script/ronde-dechet.gd" id="1_amf2w"]
 [ext_resource type="Texture2D" uid="uid://dosfcx4fgxols" path="res://pierre_test_asset/ASSET/DECHET-1.png" id="2_kktsj"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_nm5mi"]
 radius = 42.078884
 height = 145.46191
 
-[node name="Chaussure" type="CharacterBody2D" unique_id=337217828]
+[node name="Chaussure" type="CharacterBody2D" unique_id=337217828 groups=["dechet"]]
 scale = Vector2(0.7599963, 0.8000003)
+collision_mask = 2
 script = ExtResource("1_amf2w")
 waypoints = Array[Vector2]([Vector2(100, 0), Vector2(500, 0)])
 
