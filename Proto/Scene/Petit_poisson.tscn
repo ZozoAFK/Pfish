@@ -19,6 +19,7 @@ waypoints = Array[Vector2]([Vector2(0, 0), Vector2(0, 0)])
 speed = 225.0
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=457894007]
+texture_filter = 1
 scale = Vector2(0.26252836, 0.24081631)
 texture = ExtResource("2_urxlv")
 

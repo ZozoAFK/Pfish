@@ -1,58 +1,36 @@
 extends CharacterBody2D
 
-# ──────────────────────────────────────────────
-#  RONDE DES POISSONS — Fish.gd
-#  À attacher sur un CharacterBody2D.
-#
-#  Hiérarchie minimale :
-#   CharacterBody2D  (ce script)
-#   ├── Sprite2D
-#   └── CollisionShape2D
-# ──────────────────────────────────────────────
-
-## Points de la ronde. À remplir dans l'inspecteur ou depuis le spawner.
 @export var waypoints: Array[Vector2] = []
-
-## Vitesse en pixels/seconde
 @export var speed: float = 80.0
-
-## false = boucle circulaire | true = aller-retour
 @export var ping_pong: bool = false
 
 var _current_wp: int = 0
-var _direction: int  = 1   # utilisé seulement en ping-pong
+var _direction: int = 1
 
 @onready var _sprite: Sprite2D = $Sprite2D
 
-
 func _ready() -> void:
+	add_to_group("dechet")  # ← le joueur détecte déjà ce groupe
 	if waypoints.is_empty():
-		push_warning("Fish '" + name + "' : aucun waypoint défini !")
+		push_warning("Déchet '" + name + "' : aucun waypoint défini !")
 		return
 	global_position = waypoints[0]
 
-
-func _physics_process(_delta: float) -> void:
+func _physics_process(delta: float) -> void:
 	if waypoints.is_empty():
 		return
-
 	var target: Vector2 = waypoints[_current_wp]
 	var diff: Vector2   = target - global_position
-
 	if diff.length() < 4.0:
 		_advance_waypoint()
 		return
-
 	velocity = diff.normalized() * speed
 	move_and_slide()
-
-	# Retourne le sprite selon le sens de déplacement
 	if _sprite:
 		if velocity.x > 0.01:
 			_sprite.flip_h = false
 		elif velocity.x < -0.01:
 			_sprite.flip_h = true
-
 
 func _advance_waypoint() -> void:
 	if ping_pong:

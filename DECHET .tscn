@@ -1,14 +1,15 @@
 [gd_scene format=3 uid="uid://b8jqixkh75xps"]
 
-[ext_resource type="Script" path="res://ronde-dechet.gd" id="1_x8eqx"]
+[ext_resource type="Script" uid="uid://sx1wwlxxqnw6" path="res://ronde-dechet.gd" id="1_x8eqx"]
 [ext_resource type="Texture2D" uid="uid://bcla4wllyj60w" path="res://pierre_test_asset/ASSET/DECHET -6.webp" id="2_x8eqx"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uo3uj"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x8eqx"]
 radius = 30.263142
-height = 73.68418
+height = 76.31575
 
-[node name="Bouteille" type="CharacterBody2D" unique_id=1564418342]
+[node name="Bouteille" type="CharacterBody2D" unique_id=1564418342 groups=["dechet"]]
 scale = Vector2(0.76000047, 0.76000035)
+collision_mask = 2
 script = ExtResource("1_x8eqx")
 waypoints = Array[Vector2]([Vector2(100, 0), Vector2(500, 0)])
 
@@ -17,6 +18,7 @@ position = Vector2(-5, -12)
 scale = Vector2(0.22265625, 0.22802734)
 texture = ExtResource("2_x8eqx")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1767383787]
-position = Vector2(-6.5789433, -5.263156)
-shape = SubResource("CapsuleShape2D_uo3uj")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1826002945]
+visibility_layer = 2
+position = Vector2(-3.9473658, -11.842099)
+shape = SubResource("CapsuleShape2D_x8eqx")
