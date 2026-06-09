@@ -8,6 +8,7 @@
 [ext_resource type="Script" path="res://Proto/Script/next_lvl_btn.gd" id="5_nnj50"]
 [ext_resource type="AudioStream" uid="uid://dr00vst5f1nus" path="res://Proto/SFX/Button_SFX.wav" id="6_tybxj"]
 [ext_resource type="Script" uid="uid://xcd6o5th6n7n" path="res://Proto/Script/main_menu_btn.gd" id="7_6e76k"]
+[ext_resource type="AudioStream" uid="uid://b3obnyrl435ru" path="res://Proto/SFX/VICTORY SFX.mp3" id="9_6e76k"]
 
 [node name="Menu_Victoire" type="Control" unique_id=1291479134]
 layout_mode = 3
@@ -126,6 +127,10 @@ text = "MAIN MENU"
 
 [node name="Bouttons" type="AudioStreamPlayer" parent="." unique_id=1694068110]
 stream = ExtResource("6_tybxj")
+
+[node name="Victory_SFX" type="AudioStreamPlayer" parent="." unique_id=1249548759]
+stream = ExtResource("9_6e76k")
+autoplay = true
 
 [connection signal="button_down" from="Next_LvlBtn" to="." method="_on_next_lvl_btn_button_down"]
 [connection signal="mouse_entered" from="Next_LvlBtn" to="Next_LvlBtn" method="_on_mouse_entered"]
