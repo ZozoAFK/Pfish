@@ -4,17 +4,22 @@
 [ext_resource type="PackedScene" uid="uid://dxgagnxjrsaci" path="res://Proto/Scene/Hamecon.tscn" id="2_vb4ll"]
 [ext_resource type="AudioStream" uid="uid://cpnw274e6gjgy" path="res://Proto/SFX/Gold_SFX.mp3" id="3_8epdb"]
 [ext_resource type="Texture2D" uid="uid://b6euwo4qty2w0" path="res://pierre_test_asset/zXqjG3.png" id="3_plrpk"]
+[ext_resource type="PackedScene" uid="uid://bdiwo7gurvtso" path="res://Proto/Scene/déchet.tscn" id="4_8epdb"]
 [ext_resource type="PackedScene" uid="uid://c44a325r78b4c" path="res://Poisson_bleu.tscn" id="5_8epdb"]
 [ext_resource type="PackedScene" uid="uid://cv640qqv5nt3b" path="res://Espadon.tscn" id="5_d57yf"]
 [ext_resource type="Texture2D" uid="uid://bubodniig4ar2" path="res://icon.svg" id="6_8epdb"]
 [ext_resource type="PackedScene" uid="uid://nwt4i7g6u2du" path="res://Saumon.tscn" id="6_d57yf"]
 [ext_resource type="PackedScene" uid="uid://e27s81lnajpf" path="res://Proto/Scene/ronde-fish.tscn" id="7_8epdb"]
+[ext_resource type="PackedScene" uid="uid://d307oqflscedb" path="res://DECHET 3.tscn" id="10_h38jt"]
+[ext_resource type="PackedScene" uid="uid://b8jqixkh75xps" path="res://DECHET .tscn" id="11_mr2ar"]
+[ext_resource type="PackedScene" uid="uid://cngej8kgmrclj" path="res://DECHET2.tscn" id="12_loa3g"]
+[ext_resource type="PackedScene" uid="uid://c53o3ln2jsgrj" path="res://Proto/Scene/moto.tscn" id="13_5ks8r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vb4ll"]
-size = Vector2(197.5, 4947.125)
+size = Vector2(197.5, 5298)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0urrq"]
-size = Vector2(238, 4957.5)
+size = Vector2(238, 5289)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d57yf"]
 size = Vector2(1059.5, 166)
@@ -43,11 +48,11 @@ stream = ExtResource("3_8epdb")
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1128564496]
-position = Vector2(-22.25, 2725.4375)
+position = Vector2(-22.25, 2550)
 shape = SubResource("RectangleShape2D_vb4ll")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1543316551]
-position = Vector2(1164, 2725.25)
+position = Vector2(1164, 2559.5)
 shape = SubResource("RectangleShape2D_0urrq")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1775675711]
@@ -127,6 +132,49 @@ texture = ExtResource("6_8epdb")
 position = Vector2(-31, 1087)
 texture = ExtResource("6_8epdb")
 
+[node name="Moto" parent="Icon2" unique_id=417816095 instance=ExtResource("13_5ks8r")]
+position = Vector2(361.99994, 1820)
+rotation = -2.268928
+waypoints = Array[Vector2]([Vector2(625, 2778)])
+
+[node name="Cannette" parent="Icon2" unique_id=763901561 instance=ExtResource("10_h38jt")]
+position = Vector2(175, 1881)
+waypoints = Array[Vector2]([Vector2(438, 2839)])
+
+[node name="Bouteille" parent="Icon2" unique_id=1564418342 instance=ExtResource("11_mr2ar")]
+position = Vector2(376, 1934)
+rotation = 0.7557276
+waypoints = Array[Vector2]([Vector2(639, 2892)])
+
+[node name="Cannette2" parent="Icon2" unique_id=169653953 instance=ExtResource("10_h38jt")]
+position = Vector2(265, 1785)
+rotation = -0.9948377
+waypoints = Array[Vector2]([Vector2(528, 2743)])
+
+[node name="Chaussure" parent="Icon2" unique_id=337217828 instance=ExtResource("12_loa3g")]
+position = Vector2(269, 1868)
+waypoints = Array[Vector2]([Vector2(532, 2826)])
+
+[node name="Bouteille2" parent="Icon2" unique_id=1681609657 instance=ExtResource("11_mr2ar")]
+position = Vector2(211.99997, 1822)
+rotation = 0.9512044
+waypoints = Array[Vector2]([Vector2(475, 2780)])
+
+[node name="Bouteille3" parent="Icon2" unique_id=1919216189 instance=ExtResource("11_mr2ar")]
+position = Vector2(258, 1971)
+rotation = 0.27750736
+waypoints = Array[Vector2]([Vector2(521, 2929)])
+
+[node name="Cannette3" parent="Icon2" unique_id=888671058 instance=ExtResource("10_h38jt")]
+position = Vector2(310, 1948)
+rotation = -2.1868975
+waypoints = Array[Vector2]([Vector2(573, 2906)])
+
+[node name="Cannette4" parent="Icon2" unique_id=1463467665 instance=ExtResource("10_h38jt")]
+position = Vector2(197.00006, 1937)
+rotation = 2.131047
+waypoints = Array[Vector2]([Vector2(460, 2895)])
+
 [node name="Poisson_bleu4" parent="." unique_id=1030986787 instance=ExtResource("5_8epdb")]
 position = Vector2(298, 2801)
 waypoints = Array[Vector2]([Vector2(300, 2800), Vector2(575, 2650), Vector2(850, 2800), Vector2(575, 2950)])
@@ -184,3 +232,274 @@ position_start = Vector2(1000, 4250)
 position = Vector2(355, 4595)
 waypoints = Array[Vector2]([Vector2(150, 4600), Vector2(1000, 4600)])
 position_start = Vector2(500, 4600)
+
+[node name="Cannette" parent="." unique_id=1827421931 instance=ExtResource("10_h38jt")]
+position = Vector2(143, 126.00001)
+rotation = 1.0297443
+waypoints = Array[Vector2]([Vector2(143, 126)])
+
+[node name="Bouteille" parent="." unique_id=1197286063 instance=ExtResource("11_mr2ar")]
+position = Vector2(246.00002, 55)
+rotation = 5.000368
+waypoints = Array[Vector2]([Vector2(246, 55)])
+
+[node name="Chaussure" parent="." unique_id=463368746 instance=ExtResource("12_loa3g")]
+position = Vector2(971.00006, 437.99994)
+rotation = -1.9024088
+waypoints = Array[Vector2]([Vector2(971, 438)])
+
+[node name="Cannette2" parent="." unique_id=351281772 instance=ExtResource("10_h38jt")]
+position = Vector2(198, 161)
+waypoints = Array[Vector2]([Vector2(198, 161)])
+
+[node name="Bouteille2" parent="." unique_id=368317046 instance=ExtResource("11_mr2ar")]
+position = Vector2(133.00003, 248.00003)
+rotation = -5.80322
+waypoints = Array[Vector2]([Vector2(133, 248)])
+
+[node name="Cannette3" parent="." unique_id=2011872560 instance=ExtResource("10_h38jt")]
+position = Vector2(264, 132)
+rotation = -2.4661503
+waypoints = Array[Vector2]([Vector2(264, 132)])
+
+[node name="Chaussure2" parent="." unique_id=2048313690 instance=ExtResource("12_loa3g")]
+position = Vector2(841.9999, 531.00006)
+rotation = 1.282817
+waypoints = Array[Vector2]([Vector2(842, 531)])
+
+[node name="Cannette4" parent="." unique_id=318518463 instance=ExtResource("10_h38jt")]
+position = Vector2(857, 448)
+rotation = 1.3910275
+waypoints = Array[Vector2]([Vector2(857, 448)])
+
+[node name="Cannette5" parent="." unique_id=1971822630 instance=ExtResource("10_h38jt")]
+position = Vector2(947, 526)
+rotation = -3.778638
+waypoints = Array[Vector2]([Vector2(947, 526)])
+
+[node name="Bouteille3" parent="." unique_id=962428873 instance=ExtResource("11_mr2ar")]
+position = Vector2(138.00002, 48.000015)
+rotation = -2.2165682
+waypoints = Array[Vector2]([Vector2(138, 48)])
+
+[node name="Cannette6" parent="." unique_id=1582673421 instance=ExtResource("10_h38jt")]
+position = Vector2(124.999985, 864.99994)
+rotation = 2.0280726
+waypoints = Array[Vector2]([Vector2(125, 865)])
+
+[node name="Bouteille4" parent="." unique_id=689719136 instance=ExtResource("11_mr2ar")]
+position = Vector2(292.99997, 976)
+waypoints = Array[Vector2]([Vector2(293, 976)])
+
+[node name="Bouteille5" parent="." unique_id=964781418 instance=ExtResource("11_mr2ar")]
+position = Vector2(157, 1041)
+rotation = -2.0280726
+waypoints = Array[Vector2]([Vector2(157, 1041)])
+
+[node name="Cannette7" parent="." unique_id=1167811121 instance=ExtResource("10_h38jt")]
+position = Vector2(142, 950)
+rotation = 1.8692477
+waypoints = Array[Vector2]([Vector2(142, 950)])
+
+[node name="Cannette8" parent="." unique_id=1964562826 instance=ExtResource("10_h38jt")]
+position = Vector2(245, 1012)
+rotation = -0.46949357
+waypoints = Array[Vector2]([Vector2(245, 1012)])
+
+[node name="Bouteille6" parent="." unique_id=306277252 instance=ExtResource("11_mr2ar")]
+position = Vector2(207.99997, 902)
+rotation = 1.9477874
+waypoints = Array[Vector2]([Vector2(208, 902)])
+
+[node name="Cannette9" parent="." unique_id=170350428 instance=ExtResource("10_h38jt")]
+position = Vector2(1002.99994, 1102)
+rotation = 1.7889625
+waypoints = Array[Vector2]([Vector2(1003, 1102)])
+
+[node name="Moto" parent="." unique_id=466753134 instance=ExtResource("13_5ks8r")]
+position = Vector2(401.99988, 1949.0001)
+rotation = 0.6754424
+waypoints = Array[Vector2]([Vector2(400, 1950)])
+
+[node name="Moto2" parent="." unique_id=1715126375 instance=ExtResource("13_5ks8r")]
+position = Vector2(707.00006, 2131)
+rotation = -0.43807763
+waypoints = Array[Vector2]([Vector2(707, 2131)])
+
+[node name="Bouteille7" parent="." unique_id=2050168432 instance=ExtResource("11_mr2ar")]
+position = Vector2(128.99994, 2034.9999)
+rotation = -0.9145525
+waypoints = Array[Vector2]([Vector2(130, 2035)])
+
+[node name="Cannette10" parent="." unique_id=55258643 instance=ExtResource("10_h38jt")]
+position = Vector2(113, 2099)
+rotation = 1.4713125
+waypoints = Array[Vector2]([Vector2(113, 2099)])
+
+[node name="Chaussure3" parent="." unique_id=1226909208 instance=ExtResource("12_loa3g")]
+position = Vector2(185.00012, 2083)
+rotation = -0.7557276
+scale = Vector2(0.5, 0.526)
+waypoints = Array[Vector2]([Vector2(192, 2087)])
+
+[node name="Chaussure4" parent="." unique_id=457537453 instance=ExtResource("12_loa3g")]
+position = Vector2(992.0001, 1967.9999)
+rotation = 3.4592426
+scale = Vector2(0.5, 0.526)
+waypoints = Array[Vector2]([Vector2(992, 1968)])
+
+[node name="Bouteille8" parent="." unique_id=250400363 instance=ExtResource("11_mr2ar")]
+position = Vector2(415.99997, 2130)
+waypoints = Array[Vector2]([Vector2(416, 2130)])
+
+[node name="Cannette11" parent="." unique_id=461000213 instance=ExtResource("10_h38jt")]
+position = Vector2(103.00006, 2149)
+rotation = -0.3403392
+waypoints = Array[Vector2]([Vector2(103, 2149)])
+
+[node name="Cannette12" parent="." unique_id=2027130601 instance=ExtResource("10_h38jt")]
+position = Vector2(338, 2178)
+rotation = 0.9145525
+waypoints = Array[Vector2]([Vector2(338, 2178)])
+
+[node name="Cannette13" parent="." unique_id=1074587950 instance=ExtResource("10_h38jt")]
+position = Vector2(430.99994, 2196)
+rotation = -1.1047934
+waypoints = Array[Vector2]([Vector2(431, 2196)])
+
+[node name="Chaussure5" parent="." unique_id=2016217262 instance=ExtResource("12_loa3g")]
+position = Vector2(374.0001, 2236)
+rotation = -2.0280726
+scale = Vector2(0.5, 0.526)
+waypoints = Array[Vector2]([Vector2(374, 2236)])
+
+[node name="Bouteille9" parent="." unique_id=620468056 instance=ExtResource("11_mr2ar")]
+position = Vector2(703, 1909)
+rotation = -3.1677725
+waypoints = Array[Vector2]([Vector2(703, 1909)])
+
+[node name="Cannette14" parent="." unique_id=1334182615 instance=ExtResource("10_h38jt")]
+position = Vector2(633, 1906)
+rotation = -0.5969026
+waypoints = Array[Vector2]([Vector2(633, 1906)])
+
+[node name="Cannette15" parent="." unique_id=799642082 instance=ExtResource("10_h38jt")]
+position = Vector2(997, 2026)
+waypoints = Array[Vector2]([Vector2(997, 2026)])
+
+[node name="Cannette16" parent="." unique_id=1156735935 instance=ExtResource("10_h38jt")]
+position = Vector2(1011.99994, 2276.9998)
+rotation = 1.1536627
+waypoints = Array[Vector2]([Vector2(1012, 2277)])
+
+[node name="Cannette17" parent="." unique_id=449949886 instance=ExtResource("10_h38jt")]
+position = Vector2(960.00006, 2232)
+rotation = -0.6754424
+waypoints = Array[Vector2]([Vector2(960, 2232)])
+
+[node name="Bouteille10" parent="." unique_id=1237708080 instance=ExtResource("11_mr2ar")]
+position = Vector2(1004, 2217)
+rotation = 0.9145525
+waypoints = Array[Vector2]([Vector2(1004, 2217)])
+
+[node name="Bouteille11" parent="." unique_id=1663457578 instance=ExtResource("11_mr2ar")]
+position = Vector2(516.9999, 2068)
+rotation = 0.7557276
+waypoints = Array[Vector2]([Vector2(517, 2068)])
+
+[node name="Cannette18" parent="." unique_id=443242233 instance=ExtResource("10_h38jt")]
+position = Vector2(759, 2054)
+rotation = -1.7889625
+waypoints = Array[Vector2]([Vector2(759, 2054)])
+
+[node name="Chaussure6" parent="." unique_id=2146527936 instance=ExtResource("12_loa3g")]
+position = Vector2(679, 1982)
+rotation = 0.5166175
+scale = Vector2(0.5, 0.526)
+waypoints = Array[Vector2]([Vector2(679, 1982)])
+
+[node name="Cannette19" parent="." unique_id=1015889150 instance=ExtResource("10_h38jt")]
+position = Vector2(748, 1984)
+waypoints = Array[Vector2]([Vector2(748, 1984)])
+
+[node name="Chaussure7" parent="." unique_id=2065243579 instance=ExtResource("12_loa3g")]
+position = Vector2(902.99994, 2247)
+rotation = 2.8239427
+scale = Vector2(0.5, 0.526)
+waypoints = Array[Vector2]([Vector2(903, 2247)])
+
+[node name="Cannette20" parent="." unique_id=751371646 instance=ExtResource("10_h38jt")]
+position = Vector2(952.00006, 2277)
+rotation = 1.7889625
+waypoints = Array[Vector2]([Vector2(952, 2277)])
+
+[node name="Cannette21" parent="." unique_id=479848174 instance=ExtResource("10_h38jt")]
+position = Vector2(948.0001, 2005.0002)
+rotation = 2.4260077
+waypoints = Array[Vector2]([Vector2(948, 2005)])
+
+[node name="Saumon3" parent="." unique_id=1309749267 instance=ExtResource("6_d57yf")]
+position = Vector2(162, 3481)
+waypoints = Array[Vector2]([Vector2(150, 3481), Vector2(1000, 3481)])
+position_start = Vector2(3481, 0)
+
+[node name="Bouteille12" parent="." unique_id=1047189691 instance=ExtResource("11_mr2ar")]
+position = Vector2(113.99992, 3270.0005)
+rotation = 1.9477874
+waypoints = Array[Vector2]([Vector2(114, 3270)])
+
+[node name="Cannette22" parent="." unique_id=1637650858 instance=ExtResource("10_h38jt")]
+position = Vector2(216, 3276)
+rotation = -0.9948377
+waypoints = Array[Vector2]([Vector2(216, 3276)])
+
+[node name="Chaussure8" parent="." unique_id=1857639227 instance=ExtResource("12_loa3g")]
+position = Vector2(164.00002, 3333.0002)
+rotation = 0.41887903
+waypoints = Array[Vector2]([Vector2(164, 3333)])
+
+[node name="Bouteille13" parent="." unique_id=322166410 instance=ExtResource("11_mr2ar")]
+position = Vector2(251.00015, 3363)
+rotation = 0.6754424
+waypoints = Array[Vector2]([Vector2(251, 3363)])
+
+[node name="Bouteille14" parent="." unique_id=843104336 instance=ExtResource("11_mr2ar")]
+position = Vector2(984.00006, 3265.9998)
+rotation = 1.6493361
+waypoints = Array[Vector2]([Vector2(984, 3266)])
+
+[node name="Bouteille15" parent="." unique_id=1822249754 instance=ExtResource("11_mr2ar")]
+position = Vector2(838.00006, 3333.9998)
+rotation = -1.5515977
+waypoints = Array[Vector2]([Vector2(838, 3334)])
+
+[node name="Bouteille16" parent="." unique_id=1912870193 instance=ExtResource("11_mr2ar")]
+position = Vector2(934, 3388.0002)
+waypoints = Array[Vector2]([Vector2(934, 3388)])
+
+[node name="Bouteille17" parent="." unique_id=210604073 instance=ExtResource("11_mr2ar")]
+position = Vector2(996.99994, 3421)
+rotation = 1.4713125
+waypoints = Array[Vector2]([Vector2(997, 3421)])
+
+[node name="Cannette23" parent="." unique_id=1262681823 instance=ExtResource("10_h38jt")]
+position = Vector2(946, 3305)
+waypoints = Array[Vector2]([Vector2(946, 3305)])
+
+[node name="Cannette24" parent="." unique_id=1445180699 instance=ExtResource("10_h38jt")]
+position = Vector2(874, 3284)
+rotation = 1.1519173
+waypoints = Array[Vector2]([Vector2(874, 3284)])
+
+[node name="Cannette25" parent="." unique_id=69314681 instance=ExtResource("10_h38jt")]
+position = Vector2(125.00022, 3411)
+rotation = -2.0280726
+waypoints = Array[Vector2]([Vector2(125, 3411)])
+
+[node name="Cannette26" parent="." unique_id=765711475 instance=ExtResource("10_h38jt")]
+position = Vector2(863, 3403)
+rotation = -0.9145525
+waypoints = Array[Vector2]([Vector2(863, 3403)])
+
+[node name="trésor" parent="." unique_id=1833582491 instance=ExtResource("4_8epdb")]
+position = Vector2(650, 5063)

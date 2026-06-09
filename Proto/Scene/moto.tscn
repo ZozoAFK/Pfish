@@ -1,10 +1,11 @@
 [gd_scene format=3 uid="uid://c53o3ln2jsgrj"]
 
-[ext_resource type="Script" uid="uid://sx1wwlxxqnw6" path="res://Proto/Script/ronde-dechet.gd" id="1_keabl"]
+[ext_resource type="Script" path="res://Proto/Script/ronde-dechet.gd" id="1_keabl"]
 [ext_resource type="Texture2D" uid="uid://13pyfr3unboa" path="res://pierre_test_asset/ASSET/DECHET - 8.png" id="1_uq3ux"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_keabl"]
-size = Vector2(219, 92.5)
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_keabl"]
+radius = 44.0
+height = 223.0
 
 [node name="Moto" type="CharacterBody2D" unique_id=417816095 groups=["dechet"]]
 script = ExtResource("1_keabl")
@@ -14,5 +15,6 @@ scale = Vector2(0.121354155, 0.1069987)
 texture = ExtResource("1_uq3ux")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=974843780]
-position = Vector2(0.5, 19.75)
-shape = SubResource("RectangleShape2D_keabl")
+position = Vector2(2, 22)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_keabl")
