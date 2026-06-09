@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://bdiwo7gurvtso" path="res://Proto/Scene/déchet.tscn" id="4_8epdb"]
 [ext_resource type="PackedScene" uid="uid://c44a325r78b4c" path="res://Poisson_bleu.tscn" id="5_8epdb"]
 [ext_resource type="PackedScene" uid="uid://cv640qqv5nt3b" path="res://Espadon.tscn" id="5_d57yf"]
-[ext_resource type="Texture2D" uid="uid://bubodniig4ar2" path="res://icon.svg" id="6_8epdb"]
 [ext_resource type="PackedScene" uid="uid://nwt4i7g6u2du" path="res://Saumon.tscn" id="6_d57yf"]
 [ext_resource type="PackedScene" uid="uid://e27s81lnajpf" path="res://Proto/Scene/ronde-fish.tscn" id="7_8epdb"]
 [ext_resource type="PackedScene" uid="uid://d307oqflscedb" path="res://DECHET 3.tscn" id="10_h38jt"]
@@ -41,7 +40,7 @@ position = Vector2(535, -114)
 Speed_down = 15000
 Puissance_accoup = 15000
 
-[node name="Chest_Catch_SFX" type="AudioStreamPlayer" parent="Hamecon" unique_id=150721053]
+[node name="Chest_Catch_SFX2" type="AudioStreamPlayer" parent="Hamecon" unique_id=150721053]
 stream = ExtResource("3_8epdb")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=112617220]
@@ -104,77 +103,6 @@ position = Vector2(178, 1701)
 waypoints = Array[Vector2]([Vector2(200, 1700), Vector2(950, 1700)])
 position_start = Vector2(200, 1700)
 
-[node name="Icon2" type="Sprite2D" parent="." unique_id=2032386748]
-position = Vector2(263, 958)
-texture = ExtResource("6_8epdb")
-
-[node name="Icon7" type="Sprite2D" parent="Icon2" unique_id=2120119544]
-position = Vector2(658, -479)
-texture = ExtResource("6_8epdb")
-
-[node name="Icon" type="Sprite2D" parent="Icon2" unique_id=302457364]
-position = Vector2(314, 1851)
-texture = ExtResource("6_8epdb")
-
-[node name="Icon6" type="Sprite2D" parent="Icon2" unique_id=2074649136]
-position = Vector2(-27, -826)
-texture = ExtResource("6_8epdb")
-
-[node name="Icon5" type="Sprite2D" parent="Icon2" unique_id=886254882]
-position = Vector2(614, 1054)
-texture = ExtResource("6_8epdb")
-
-[node name="Icon4" type="Sprite2D" parent="Icon2" unique_id=224666303]
-position = Vector2(319, 1205)
-texture = ExtResource("6_8epdb")
-
-[node name="Icon3" type="Sprite2D" parent="Icon2" unique_id=1770893340]
-position = Vector2(-31, 1087)
-texture = ExtResource("6_8epdb")
-
-[node name="Moto" parent="Icon2" unique_id=417816095 instance=ExtResource("13_5ks8r")]
-position = Vector2(361.99994, 1820)
-rotation = -2.268928
-waypoints = Array[Vector2]([Vector2(625, 2778)])
-
-[node name="Cannette" parent="Icon2" unique_id=763901561 instance=ExtResource("10_h38jt")]
-position = Vector2(175, 1881)
-waypoints = Array[Vector2]([Vector2(438, 2839)])
-
-[node name="Bouteille" parent="Icon2" unique_id=1564418342 instance=ExtResource("11_mr2ar")]
-position = Vector2(376, 1934)
-rotation = 0.7557276
-waypoints = Array[Vector2]([Vector2(639, 2892)])
-
-[node name="Cannette2" parent="Icon2" unique_id=169653953 instance=ExtResource("10_h38jt")]
-position = Vector2(265, 1785)
-rotation = -0.9948377
-waypoints = Array[Vector2]([Vector2(528, 2743)])
-
-[node name="Chaussure" parent="Icon2" unique_id=337217828 instance=ExtResource("12_loa3g")]
-position = Vector2(269, 1868)
-waypoints = Array[Vector2]([Vector2(532, 2826)])
-
-[node name="Bouteille2" parent="Icon2" unique_id=1681609657 instance=ExtResource("11_mr2ar")]
-position = Vector2(211.99997, 1822)
-rotation = 0.9512044
-waypoints = Array[Vector2]([Vector2(475, 2780)])
-
-[node name="Bouteille3" parent="Icon2" unique_id=1919216189 instance=ExtResource("11_mr2ar")]
-position = Vector2(258, 1971)
-rotation = 0.27750736
-waypoints = Array[Vector2]([Vector2(521, 2929)])
-
-[node name="Cannette3" parent="Icon2" unique_id=888671058 instance=ExtResource("10_h38jt")]
-position = Vector2(310, 1948)
-rotation = -2.1868975
-waypoints = Array[Vector2]([Vector2(573, 2906)])
-
-[node name="Cannette4" parent="Icon2" unique_id=1463467665 instance=ExtResource("10_h38jt")]
-position = Vector2(197.00006, 1937)
-rotation = 2.131047
-waypoints = Array[Vector2]([Vector2(460, 2895)])
-
 [node name="Poisson_bleu4" parent="." unique_id=1030986787 instance=ExtResource("5_8epdb")]
 position = Vector2(298, 2801)
 waypoints = Array[Vector2]([Vector2(300, 2800), Vector2(575, 2650), Vector2(850, 2800), Vector2(575, 2950)])
@@ -194,14 +122,6 @@ position_start = Vector2(850, 2800)
 position = Vector2(985, 2810)
 waypoints = Array[Vector2]([Vector2(1000, 2800), Vector2(575, 3100), Vector2(150, 2800), Vector2(575, 2500)])
 position_start = Vector2(1000, 2800)
-
-[node name="Icon" type="Sprite2D" parent="." unique_id=1612080800]
-position = Vector2(219, 3327)
-texture = ExtResource("6_8epdb")
-
-[node name="Icon3" type="Sprite2D" parent="." unique_id=1177254114]
-position = Vector2(915, 3337)
-texture = ExtResource("6_8epdb")
 
 [node name="Fish6" parent="." unique_id=1963120334 instance=ExtResource("7_8epdb")]
 position = Vector2(166, 3601)
@@ -232,6 +152,11 @@ position_start = Vector2(1000, 4250)
 position = Vector2(355, 4595)
 waypoints = Array[Vector2]([Vector2(150, 4600), Vector2(1000, 4600)])
 position_start = Vector2(500, 4600)
+
+[node name="Saumon3" parent="." unique_id=1309749267 instance=ExtResource("6_d57yf")]
+position = Vector2(162, 3481)
+waypoints = Array[Vector2]([Vector2(150, 3481), Vector2(1000, 3481)])
+position_start = Vector2(3481, 0)
 
 [node name="Cannette" parent="." unique_id=1827421931 instance=ExtResource("10_h38jt")]
 position = Vector2(143, 126.00001)
@@ -283,33 +208,33 @@ rotation = -2.2165682
 waypoints = Array[Vector2]([Vector2(138, 48)])
 
 [node name="Cannette6" parent="." unique_id=1582673421 instance=ExtResource("10_h38jt")]
-position = Vector2(124.999985, 864.99994)
+position = Vector2(124.99997, 937.99994)
 rotation = 2.0280726
-waypoints = Array[Vector2]([Vector2(125, 865)])
+waypoints = Array[Vector2]([Vector2(125, 938)])
 
 [node name="Bouteille4" parent="." unique_id=689719136 instance=ExtResource("11_mr2ar")]
-position = Vector2(292.99997, 976)
-waypoints = Array[Vector2]([Vector2(293, 976)])
+position = Vector2(562.99994, 964)
+waypoints = Array[Vector2]([Vector2(563, 964)])
 
 [node name="Bouteille5" parent="." unique_id=964781418 instance=ExtResource("11_mr2ar")]
-position = Vector2(157, 1041)
+position = Vector2(204.00002, 950)
 rotation = -2.0280726
-waypoints = Array[Vector2]([Vector2(157, 1041)])
+waypoints = Array[Vector2]([Vector2(204, 950)])
 
 [node name="Cannette7" parent="." unique_id=1167811121 instance=ExtResource("10_h38jt")]
-position = Vector2(142, 950)
+position = Vector2(169.00003, 1006.00006)
 rotation = 1.8692477
-waypoints = Array[Vector2]([Vector2(142, 950)])
+waypoints = Array[Vector2]([Vector2(169, 1006)])
 
 [node name="Cannette8" parent="." unique_id=1964562826 instance=ExtResource("10_h38jt")]
-position = Vector2(245, 1012)
+position = Vector2(553, 1040)
 rotation = -0.46949357
-waypoints = Array[Vector2]([Vector2(245, 1012)])
+waypoints = Array[Vector2]([Vector2(553, 1040)])
 
 [node name="Bouteille6" parent="." unique_id=306277252 instance=ExtResource("11_mr2ar")]
-position = Vector2(207.99997, 902)
+position = Vector2(471.99994, 929)
 rotation = 1.9477874
-waypoints = Array[Vector2]([Vector2(208, 902)])
+waypoints = Array[Vector2]([Vector2(472, 929)])
 
 [node name="Cannette9" parent="." unique_id=170350428 instance=ExtResource("10_h38jt")]
 position = Vector2(1002.99994, 1102)
@@ -437,11 +362,6 @@ waypoints = Array[Vector2]([Vector2(952, 2277)])
 position = Vector2(948.0001, 2005.0002)
 rotation = 2.4260077
 waypoints = Array[Vector2]([Vector2(948, 2005)])
-
-[node name="Saumon3" parent="." unique_id=1309749267 instance=ExtResource("6_d57yf")]
-position = Vector2(162, 3481)
-waypoints = Array[Vector2]([Vector2(150, 3481), Vector2(1000, 3481)])
-position_start = Vector2(3481, 0)
 
 [node name="Bouteille12" parent="." unique_id=1047189691 instance=ExtResource("11_mr2ar")]
 position = Vector2(113.99992, 3270.0005)
