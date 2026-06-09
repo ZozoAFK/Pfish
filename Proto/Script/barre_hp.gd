@@ -8,6 +8,12 @@ extends Node2D
 @export var vitesse_transition: float = 10.0
 @export var degats_instantanes: float = 10.0
 
+# --- NOUVELLES VARIABLES POUR LA DÉFAITE ---
+# Le chemin vers ta scène de défaite
+var scene_defaite = preload("res://Proto/Scene/Panneau_DEFAITE.tscn")
+# Évite de lancer le chrono de défaite plusieurs fois
+var mort : bool = false 
+
 func _ready() -> void:
 	add_to_group("barre_vie")  # ← permet à Fish de trouver ce nœud
 	hp_vert.max_value = pv_max
@@ -31,10 +37,30 @@ func _process(delta: float) -> void:
 
 func collision_fluide(degats: float) -> void:
 	hp_vert.value = clamp(hp_vert.value - degats, 0, pv_max)
+	# On vérifie la mort après la modification de la valeur
+	verifier_mort()
 
 func collision_instantanee(degats: float) -> void:
 	hp_vert.value = clamp(hp_vert.value - degats, 0, pv_max)
 	hp_clair.value = clamp(hp_clair.value - degats, 0, pv_max)
+	# On vérifie la mort après la modification de la valeur
+	verifier_mort()
 
 func _on_hamecon_joueur_touche(degats: float) -> void:
 	collision_instantanee(degats)
+
+# --- NOUVELLE FONCTION : VÉRIFICATION ET CHANGEMENT DE SCÈNE ---
+func verifier_mort() -> void:
+	# Si les PV tombent à 0 et qu'on n'a pas déjà déclenché la mort
+	if hp_vert.value <= 0 and not mort:
+		mort = true
+		declencher_defaite()
+
+func declencher_defaite() -> void:
+	print("Plus de PV ! Défaite dans 2 secondes...")
+	
+	# On attend 2 secondes
+	await get_tree().create_timer(2.0).timeout
+	
+	# On change de scène vers le panneau défaite
+	get_tree().change_scene_to_packed(scene_defaite)

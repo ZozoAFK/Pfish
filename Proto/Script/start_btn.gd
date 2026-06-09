@@ -4,6 +4,10 @@ extends TextureButton
 @export var hover_scale : Vector2 = Vector2(1.2, 1.2) # Grossit de 20%
 @export var hover_color : Color = Color(1.2, 1.2, 1.5) # Légère teinte bleutée/lumineuse
 
+# --- NOUVELLE VARIABLE POUR LE SON ---
+# Tu pourras glisser-déposer ton AudioStreamPlayer directement dans l'inspecteur
+@export var hover_sfx : AudioStreamPlayer
+
 # On stocke les valeurs de base pour pouvoir y retourner
 var base_scale : Vector2
 var base_color : Color
@@ -27,8 +31,11 @@ func _on_mouse_entered() -> void:
 	# On applique le grossissement
 	scale = hover_scale
 	# On change la couleur (modulate). 
-	# Astuce : Dépasser 1.0 (ex: 1.5) crée un effet "lumineux" en Pixel Art !
 	self.modulate = hover_color
+	
+	# --- JOUE LE SON ICI ---
+	if hover_sfx: # On vérifie d'ici que le son a bien été assigné pour éviter les crashs
+		hover_sfx.play()
 
 # Quand la souris s'en va
 func _on_mouse_exited() -> void:

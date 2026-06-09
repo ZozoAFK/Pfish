@@ -199,8 +199,8 @@ rotation = 0.87441
 waypoints = Array[Vector2]([Vector2(969, 2412)])
 
 [node name="Chaussure4" parent="." unique_id=1306569387 instance=ExtResource("9_hwn2x")]
-position = Vector2(140, 1703)
-rotation = -2.30558
+position = Vector2(151, 1724)
+rotation = -2.5830872
 waypoints = Array[Vector2]([Vector2(140, 1703)])
 
 [node name="Cannette6" parent="." unique_id=1813486017 instance=ExtResource("11_v3r6r")]
