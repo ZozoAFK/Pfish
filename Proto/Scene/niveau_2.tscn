@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ws7mn66harou" path="res://pierre_test_asset/ASSET/BG_LVL/Underwater_Etroit_BG.webp" id="1_d57yf"]
 [ext_resource type="PackedScene" uid="uid://dxgagnxjrsaci" path="res://Proto/Scene/Hamecon.tscn" id="2_vb4ll"]
 [ext_resource type="AudioStream" uid="uid://cpnw274e6gjgy" path="res://Proto/SFX/Gold_SFX.mp3" id="3_8epdb"]
+[ext_resource type="Texture2D" uid="uid://b6euwo4qty2w0" path="res://pierre_test_asset/zXqjG3.png" id="3_plrpk"]
 [ext_resource type="PackedScene" uid="uid://c44a325r78b4c" path="res://Poisson_bleu.tscn" id="5_8epdb"]
 [ext_resource type="PackedScene" uid="uid://cv640qqv5nt3b" path="res://Espadon.tscn" id="5_d57yf"]
 [ext_resource type="Texture2D" uid="uid://bubodniig4ar2" path="res://icon.svg" id="6_8epdb"]
@@ -24,6 +25,11 @@ size = Vector2(1059.5, 166)
 position = Vector2(550, 2443.9998)
 scale = Vector2(3.4160361, 8.901786)
 texture = ExtResource("1_d57yf")
+
+[node name="ZXqjG3" type="Sprite2D" parent="." unique_id=2098583244]
+position = Vector2(547, 1611.25)
+scale = Vector2(3.5875003, 7.6435003)
+texture = ExtResource("3_plrpk")
 
 [node name="Hamecon" parent="." unique_id=689676632 instance=ExtResource("2_vb4ll")]
 position = Vector2(535, -114)
