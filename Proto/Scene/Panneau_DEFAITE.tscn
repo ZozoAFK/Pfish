@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://dd3220eo0xyky" path="res://Proto/Script/panneau_defaite.gd" id="1_ttork"]
 [ext_resource type="Texture2D" uid="uid://b314bml13hm1p" path="res://pierre_test_asset/ASSET/Jelly fish.png" id="3_uukc6"]
 [ext_resource type="Texture2D" uid="uid://dscokor3kdqbs" path="res://pierre_test_asset/ASSET/bubble.webp" id="4_ttork"]
-[ext_resource type="Script" uid="uid://ul4wqmcs42sn" path="res://Proto/Script/retry_btn.gd" id="5_bphml"]
+[ext_resource type="Script" path="res://Proto/Script/retry_btn.gd" id="5_bphml"]
 [ext_resource type="Script" uid="uid://xcd6o5th6n7n" path="res://Proto/Script/main_menu_btn.gd" id="7_0yguy"]
 [ext_resource type="AudioStream" uid="uid://dr00vst5f1nus" path="res://Proto/SFX/Button_SFX.wav" id="8_0yguy"]
 [ext_resource type="Texture2D" uid="uid://nunpbtx30t83" path="res://pierre_test_asset/ASSET/Bubble/bubble_sheet.png" id="9_2wow3"]
