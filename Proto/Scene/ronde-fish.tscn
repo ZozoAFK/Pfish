@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://d4m5ny5yuko4k" path="res://pierre_test_asset/ASSET/POISSON-2.png" id="2_b3wvt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b3wvt"]
-size = Vector2(216.4375, 20)
+size = Vector2(181.4375, 20)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_b3wvt"]
 radius = 23.0
@@ -25,7 +25,7 @@ collision_layer = 8
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1019708265]
-position = Vector2(141.78125, 1)
+position = Vector2(124.28125, 1)
 shape = SubResource("RectangleShape2D_b3wvt")
 
 [node name="hitbox" type="Area2D" parent="." unique_id=1002711964]
