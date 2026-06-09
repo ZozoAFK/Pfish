@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://d307oqflscedb"]
 
-[ext_resource type="Script" uid="uid://sx1wwlxxqnw6" path="res://ronde-dechet.gd" id="1_irgn6"]
+[ext_resource type="Script" uid="uid://sx1wwlxxqnw6" path="res://Proto/Script/ronde-dechet.gd" id="1_irgn6"]
 [ext_resource type="Texture2D" uid="uid://c73tup8vq5wfa" path="res://pierre_test_asset/ASSET/DECHET -3.png" id="2_0qpac"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_yrreb"]

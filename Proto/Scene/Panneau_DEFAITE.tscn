@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://dd3220eo0xyky" path="res://Proto/Script/panneau_defaite.gd" id="1_ttork"]
 [ext_resource type="Texture2D" uid="uid://b314bml13hm1p" path="res://pierre_test_asset/ASSET/Jelly fish.png" id="3_uukc6"]
 [ext_resource type="Texture2D" uid="uid://dscokor3kdqbs" path="res://pierre_test_asset/ASSET/bubble.webp" id="4_ttork"]
-[ext_resource type="Script" uid="uid://ul4wqmcs42sn" path="res://Proto/Scene/retry_btn.gd" id="5_bphml"]
+[ext_resource type="Script" uid="uid://ul4wqmcs42sn" path="res://Proto/Script/retry_btn.gd" id="5_bphml"]
 [ext_resource type="Script" uid="uid://xcd6o5th6n7n" path="res://Proto/Script/main_menu_btn.gd" id="7_0yguy"]
 [ext_resource type="AudioStream" uid="uid://dr00vst5f1nus" path="res://Proto/SFX/Button_SFX.wav" id="8_0yguy"]
 [ext_resource type="Texture2D" uid="uid://nunpbtx30t83" path="res://pierre_test_asset/ASSET/Bubble/bubble_sheet.png" id="9_2wow3"]
@@ -162,6 +162,7 @@ animations = [{
 }]
 
 [node name="Menu_Defeat" type="Control" unique_id=209807354]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -207,6 +208,7 @@ offset_bottom = 23.0
 grow_horizontal = 2
 grow_vertical = 2
 pivot_offset = Vector2(221, 104)
+action_mode = 0
 texture_normal = ExtResource("3_uukc6")
 ignore_texture_size = true
 stretch_mode = 5
@@ -248,6 +250,7 @@ offset_bottom = -149.0
 grow_horizontal = 2
 grow_vertical = 0
 pivot_offset = Vector2(86, 69)
+action_mode = 0
 texture_normal = ExtResource("4_ttork")
 ignore_texture_size = true
 stretch_mode = 5
@@ -298,9 +301,9 @@ parameters/looping = true
 [node name="Click_SFX" type="AudioStreamPlayer" parent="." unique_id=1756854572]
 stream = ExtResource("12_uuhg1")
 
-[connection signal="button_down" from="RetryBtn" to="." method="_on_retry_btn_button_down"]
 [connection signal="mouse_entered" from="RetryBtn" to="RetryBtn" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="RetryBtn" to="RetryBtn" method="_on_mouse_exited"]
-[connection signal="button_down" from="Main_MenuBtn" to="." method="_on_main_menu_btn_button_down"]
+[connection signal="pressed" from="RetryBtn" to="." method="_on_retry_btn_pressed"]
 [connection signal="mouse_entered" from="Main_MenuBtn" to="Main_MenuBtn" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Main_MenuBtn" to="Main_MenuBtn" method="_on_mouse_exited"]
+[connection signal="pressed" from="Main_MenuBtn" to="." method="_on_main_menu_btn_pressed"]

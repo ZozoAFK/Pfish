@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://ilcxah6xl3s3" path="res://pierre_test_asset/ASSET/RowBoat.png" id="5_tejit"]
 [ext_resource type="Script" uid="uid://cr8ge7x33sif2" path="res://Proto/Script/start_btn.gd" id="6_810tx"]
 [ext_resource type="Texture2D" uid="uid://226yie5tb3ga" path="res://pierre_test_asset/ASSET/Treasure chest closed.png" id="7_63hw4"]
-[ext_resource type="Script" uid="uid://cbwupi5bs20of" path="res://Proto/quit_btn.gd" id="8_mojgd"]
+[ext_resource type="Script" uid="uid://cbwupi5bs20of" path="res://Proto/Script/quit_btn.gd" id="8_mojgd"]
 [ext_resource type="AudioStream" uid="uid://dr00vst5f1nus" path="res://Proto/SFX/Button_SFX.wav" id="10_mojgd"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_810tx"]
