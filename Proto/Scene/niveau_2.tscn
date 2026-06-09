@@ -4,15 +4,16 @@
 [ext_resource type="PackedScene" uid="uid://dxgagnxjrsaci" path="res://Proto/Scene/Hamecon.tscn" id="2_vb4ll"]
 [ext_resource type="AudioStream" uid="uid://cpnw274e6gjgy" path="res://Proto/SFX/Gold_SFX.mp3" id="3_8epdb"]
 [ext_resource type="PackedScene" uid="uid://c44a325r78b4c" path="res://Poisson_bleu.tscn" id="5_8epdb"]
+[ext_resource type="PackedScene" uid="uid://cv640qqv5nt3b" path="res://Espadon.tscn" id="5_d57yf"]
 [ext_resource type="Texture2D" uid="uid://bubodniig4ar2" path="res://icon.svg" id="6_8epdb"]
 [ext_resource type="PackedScene" uid="uid://nwt4i7g6u2du" path="res://Saumon.tscn" id="6_d57yf"]
 [ext_resource type="PackedScene" uid="uid://e27s81lnajpf" path="res://Proto/Scene/ronde-fish.tscn" id="7_8epdb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vb4ll"]
-size = Vector2(197.5, 3721.125)
+size = Vector2(197.5, 4947.125)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0urrq"]
-size = Vector2(238, 3728.5)
+size = Vector2(238, 4957.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d57yf"]
 size = Vector2(1059.5, 166)
@@ -20,8 +21,8 @@ size = Vector2(1059.5, 166)
 [node name="Niveau 2" type="Node2D" unique_id=966495424]
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1055869496]
-position = Vector2(550, 1729)
-scale = Vector2(3.4160361, 6.7738094)
+position = Vector2(550, 2443.9998)
+scale = Vector2(3.4160361, 8.901786)
 texture = ExtResource("1_d57yf")
 
 [node name="Hamecon" parent="." unique_id=689676632 instance=ExtResource("2_vb4ll")]
@@ -36,15 +37,15 @@ stream = ExtResource("3_8epdb")
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1128564496]
-position = Vector2(-22.25, 2112.4375)
+position = Vector2(-22.25, 2725.4375)
 shape = SubResource("RectangleShape2D_vb4ll")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1543316551]
-position = Vector2(1164, 2110.75)
+position = Vector2(1164, 2725.25)
 shape = SubResource("RectangleShape2D_0urrq")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1775675711]
-position = Vector2(572, 3889)
+position = Vector2(549, 5235)
 shape = SubResource("RectangleShape2D_d57yf")
 
 [node name="Poisson_bleu" parent="." unique_id=52399432 instance=ExtResource("5_8epdb")]
@@ -139,3 +140,41 @@ position_start = Vector2(850, 2800)
 position = Vector2(985, 2810)
 waypoints = Array[Vector2]([Vector2(1000, 2800), Vector2(575, 3100), Vector2(150, 2800), Vector2(575, 2500)])
 position_start = Vector2(1000, 2800)
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1612080800]
+position = Vector2(219, 3327)
+texture = ExtResource("6_8epdb")
+
+[node name="Icon3" type="Sprite2D" parent="." unique_id=1177254114]
+position = Vector2(915, 3337)
+texture = ExtResource("6_8epdb")
+
+[node name="Fish6" parent="." unique_id=1963120334 instance=ExtResource("7_8epdb")]
+position = Vector2(166, 3601)
+waypoints = Array[Vector2]([Vector2(150, 3600), Vector2(1000, 3600)])
+position_start = Vector2(150, 3600)
+
+[node name="Fish7" parent="." unique_id=1895516836 instance=ExtResource("7_8epdb")]
+position = Vector2(160, 3697)
+waypoints = Array[Vector2]([Vector2(150, 3700), Vector2(1000, 3700)])
+position_start = Vector2(150, 3700)
+
+[node name="Fish8" parent="." unique_id=535549355 instance=ExtResource("7_8epdb")]
+position = Vector2(902, 3785)
+waypoints = Array[Vector2]([Vector2(1000, 3800), Vector2(150, 3800)])
+position_start = Vector2(1000, 3800)
+
+[node name="Fish9" parent="." unique_id=1471679408 instance=ExtResource("7_8epdb")]
+position = Vector2(908, 3860)
+waypoints = Array[Vector2]([Vector2(1000, 3900), Vector2(150, 3900)])
+position_start = Vector2(1000, 3900)
+
+[node name="Espadon" parent="." unique_id=841817002 instance=ExtResource("5_d57yf")]
+position = Vector2(242, 4251)
+waypoints = Array[Vector2]([Vector2(150, 4250), Vector2(1000, 4250)])
+position_start = Vector2(1000, 4250)
+
+[node name="Saumon2" parent="." unique_id=192764249 instance=ExtResource("6_d57yf")]
+position = Vector2(355, 4595)
+waypoints = Array[Vector2]([Vector2(150, 4600), Vector2(1000, 4600)])
+position_start = Vector2(500, 4600)
