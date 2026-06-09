@@ -9,6 +9,8 @@
 [ext_resource type="Script" uid="uid://xcd6o5th6n7n" path="res://Proto/Script/main_menu_btn.gd" id="7_0yguy"]
 [ext_resource type="AudioStream" uid="uid://dr00vst5f1nus" path="res://Proto/SFX/Button_SFX.wav" id="8_0yguy"]
 [ext_resource type="Texture2D" uid="uid://nunpbtx30t83" path="res://pierre_test_asset/ASSET/Bubble/bubble_sheet.png" id="9_2wow3"]
+[ext_resource type="AudioStream" uid="uid://c1aaimjsemxe5" path="res://Proto/SFX/Lose_SFX.mp3" id="10_gltey"]
+[ext_resource type="AudioStream" uid="uid://duqll6auqaesp" path="res://Proto/SFX/Abyss_SFX.mp3" id="11_6j4jd"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gltey"]
 atlas = ExtResource("9_2wow3")
@@ -279,6 +281,16 @@ scale = Vector2(1.5, 1.3571384)
 sprite_frames = SubResource("SpriteFrames_4s00u")
 autoplay = "default"
 frame_progress = 0.9338477
+
+[node name="Lose_SFX" type="AudioStreamPlayer" parent="." unique_id=240730723]
+stream = ExtResource("10_gltey")
+autoplay = true
+
+[node name="Abyss_SFX" type="AudioStreamPlayer" parent="." unique_id=851227436]
+stream = ExtResource("11_6j4jd")
+volume_db = -10.0
+autoplay = true
+parameters/looping = true
 
 [connection signal="button_down" from="RetryBtn" to="." method="_on_retry_btn_button_down"]
 [connection signal="mouse_entered" from="RetryBtn" to="RetryBtn" method="_on_mouse_entered"]

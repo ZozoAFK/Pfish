@@ -5,7 +5,7 @@ class_name Player
 @export var Speed_coter = 1000
 @export var Puissance_accoup : int = 5000
 @onready var timer_invincibilite: Timer = $TimerInvincibilite
-
+@onready var chest_catch_sfx: AudioStreamPlayer = $Chest_Catch_SFX
 # --- NOUVELLES VARIABLES POUR LES DÉCHETS ---
 var dechet_accroche: Node2D = null # Stocke le déchet actuellement attrapé
 # Ajustez ce Vector2 pour définir où le déchet se place par rapport au centre de l'hameçon
@@ -70,7 +70,7 @@ func _on_zone_accroche_area_entered(area: Area2D) -> void:
 	if area.is_in_group("dechet") and dechet_accroche == null:
 		# On stocke la référence du déchet
 		dechet_accroche = area
-		
+		chest_catch_sfx.play()
 		# On désactive la détection de la zone pour qu'elle ne déclenche plus d'événements
 		# NOUVELLE ÉCRITURE (sécurisée pour Godot) :
 		area.set_deferred("monitoring", false)
