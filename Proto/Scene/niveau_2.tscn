@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ws7mn66harou" path="res://pierre_test_asset/ASSET/BG_LVL/Underwater_Etroit_BG.webp" id="1_d57yf"]
 [ext_resource type="PackedScene" uid="uid://rwufa0cie5qm" path="res://Proto/Scene/Petit_poisson.tscn" id="2_5rj5h"]
 [ext_resource type="PackedScene" uid="uid://dxgagnxjrsaci" path="res://Proto/Scene/Hamecon.tscn" id="2_vb4ll"]
+[ext_resource type="AudioStream" uid="uid://cpnw274e6gjgy" path="res://Proto/SFX/Gold_SFX.mp3" id="3_8epdb"]
 [ext_resource type="PackedScene" uid="uid://c44a325r78b4c" path="res://Poisson_bleu.tscn" id="5_8epdb"]
 [ext_resource type="PackedScene" uid="uid://cv640qqv5nt3b" path="res://Espadon.tscn" id="5_d57yf"]
 [ext_resource type="Texture2D" uid="uid://bubodniig4ar2" path="res://icon.svg" id="6_8epdb"]
@@ -27,6 +28,9 @@ texture = ExtResource("1_d57yf")
 position = Vector2(554, 488)
 Speed_down = 15000
 Puissance_accoup = 15000
+
+[node name="Chest_Catch_SFX" type="AudioStreamPlayer" parent="Hamecon" unique_id=150721053]
+stream = ExtResource("3_8epdb")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=112617220]
 collision_mask = 2
