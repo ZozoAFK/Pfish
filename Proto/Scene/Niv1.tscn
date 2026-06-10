@@ -16,7 +16,7 @@
 [ext_resource type="Shader" uid="uid://c5veaoqc80xvt" path="res://Proto/Scene/Niv1.gdshader" id="14_k211y"]
 [ext_resource type="Texture2D" uid="uid://dbrbpyvrj4equ" path="res://pierre_test_asset/ASSET/sand_monticule.png" id="15_a4myk"]
 [ext_resource type="Texture2D" uid="uid://c1gj0v612uifs" path="res://pierre_test_asset/ASSET/Big_Rock.webp" id="16_xas2t"]
-[ext_resource type="AudioStream" uid="uid://dtalvvmy2slaa" path="res://pierre_test_asset/ASSET/PFISH NIV1.mp3" id="18_xas2t"]
+[ext_resource type="AudioStream" uid="uid://dtalvvmy2slaa" path="res://Proto/SFX/PFISH NIV1.mp3" id="18_xas2t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p2rxa"]
 size = Vector2(233.5, 3976)

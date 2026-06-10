@@ -1,7 +1,19 @@
 [gd_scene format=3 uid="uid://buynbnk66oq8b"]
 
-[node name="Node2D" type="Node2D" unique_id=1916750199]
+[ext_resource type="Texture2D" uid="uid://bvpd52rkkah65" path="res://pierre_test_asset/ASSET/Panneau_Etoile.png" id="1_ftash"]
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=181073408]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="Control" type="Node2D" unique_id=144983257]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=902649817]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -426.0
+offset_top = -354.0
+offset_right = 426.0
+offset_bottom = 354.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ftash")

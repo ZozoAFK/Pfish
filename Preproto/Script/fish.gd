@@ -28,10 +28,16 @@ func _ready() -> void:
 	joueur = $"../Hamecon"
 	if joueur == null:
 		push_error("Hamecon introuvable !")
+	else:
+		# --- AJOUT : Connecte le signal du poisson à la fonction de dégâts de l'hameçon ---
+		if joueur.has_method("_on_joueur_touche"):
+			joueur_touche.connect(joueur._on_joueur_touche)
+			print("✅ Signal de dégâts du poisson connecté à l'Hameçon")
 
 	await get_tree().process_frame
 	var barre_hp = get_tree().get_first_node_in_group("barre_vie")
 	if barre_hp:
+		# On garde aussi ta connexion à la barre d'HP
 		joueur_touche.connect(barre_hp._on_hamecon_joueur_touche)
 		print("✅ Signal connecté à BarreHP")
 	else:

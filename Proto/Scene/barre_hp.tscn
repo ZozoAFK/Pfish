@@ -2,7 +2,15 @@
 
 [ext_resource type="Script" uid="uid://cu5vicu1ek55a" path="res://Proto/Script/barre_hp.gd" id="1_o22lk"]
 [ext_resource type="Texture2D" uid="uid://bbfxt556vpc0f" path="res://Proto/Scene/HP_Sprite.png" id="2_q7nm8"]
+[ext_resource type="Texture2D" uid="uid://dxdu261jkwurt" path="res://pierre_test_asset/ASSET/Starfish.webp" id="3_0ieda"]
 [ext_resource type="AudioStream" uid="uid://cde7owy4qgswo" path="res://Proto/SFX/Damage_SFX.mp3" id="3_cmmyg"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_cmmyg"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_0ieda"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c37or"]
+size = Vector2(20, 2)
 
 [node name="BarreHP" type="Node2D" unique_id=77477878]
 script = ExtResource("1_o22lk")
@@ -13,21 +21,22 @@ script = ExtResource("1_o22lk")
 modulate = Color(0.52156866, 0.52156866, 0.52156866, 1)
 self_modulate = Color(0.5294118, 0.5294118, 0.5294118, 1)
 offset_left = 36.000015
-offset_top = 372.96
+offset_top = 380.96
 offset_right = 1956.0
-offset_bottom = 1452.96
+offset_bottom = 1460.96
 rotation = -1.5707964
 scale = Vector2(0.188, 0.025)
 step = 0.01
 texture_progress = ExtResource("2_q7nm8")
+metadata/_edit_use_anchors_ = true
 
 [node name="HPClair" type="TextureProgressBar" parent="CanvasLayer" unique_id=1749270231]
 modulate = Color(0.32156864, 0.7019608, 0.3137255, 1)
 self_modulate = Color(0.43529412, 0.7411765, 0.40784314, 1)
 offset_left = 36.000015
-offset_top = 372.96
+offset_top = 380.96
 offset_right = 1956.0
-offset_bottom = 1452.96
+offset_bottom = 1460.96
 rotation = -1.5707964
 scale = Vector2(0.18776041, 0.024740733)
 step = 0.01
@@ -37,13 +46,77 @@ texture_progress = ExtResource("2_q7nm8")
 modulate = Color(0.0461666, 1, 0.029999971, 1)
 self_modulate = Color(0.083333254, 1, 0, 1)
 offset_left = 36.000015
-offset_top = 372.96
+offset_top = 380.96
 offset_right = 1956.0
-offset_bottom = 1452.96
+offset_bottom = 1460.96
 rotation = -1.5707964
 scale = Vector2(0.188, 0.025)
 step = 0.01
 texture_progress = ExtResource("2_q7nm8")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="CanvasLayer" unique_id=1985565826]
+modulate = Color(0, 0, 0, 1)
+material = SubResource("CanvasItemMaterial_cmmyg")
+position = Vector2(49, 202)
+scale = Vector2(36, 1)
+mesh = SubResource("BoxMesh_0ieda")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/MeshInstance2D" unique_id=799097902]
+scale = Vector2(1e-05, 1e-05)
+shape = SubResource("RectangleShape2D_c37or")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="CanvasLayer" unique_id=1824788279]
+modulate = Color(0, 0, 0, 1)
+material = SubResource("CanvasItemMaterial_cmmyg")
+position = Vector2(49, 93)
+scale = Vector2(36, 1)
+mesh = SubResource("BoxMesh_0ieda")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/MeshInstance2D2" unique_id=603570389]
+scale = Vector2(1e-05, 1e-05)
+shape = SubResource("RectangleShape2D_c37or")
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="CanvasLayer" unique_id=1130054897]
+modulate = Color(0, 0, 0, 1)
+material = SubResource("CanvasItemMaterial_cmmyg")
+position = Vector2(49, 20)
+scale = Vector2(36, 1)
+mesh = SubResource("BoxMesh_0ieda")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CanvasLayer/MeshInstance2D3" unique_id=78956394]
+scale = Vector2(1e-05, 1e-05)
+shape = SubResource("RectangleShape2D_c37or")
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=2024154276]
+modulate = Color(1.8466613, 1.548769, 0, 1)
+offset_left = 36.0
+offset_top = 4.0
+offset_right = 396.0
+offset_bottom = 364.0
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("3_0ieda")
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="CanvasLayer" unique_id=1541368257]
+modulate = Color(1.0100168, 1.5696106, 1.6095817, 1)
+self_modulate = Color(0.97, 1.19425, 1.555, 1)
+offset_left = 36.0
+offset_top = 77.0
+offset_right = 396.0
+offset_bottom = 437.0
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("3_0ieda")
+stretch_mode = 5
+
+[node name="TextureRect3" type="TextureRect" parent="CanvasLayer" unique_id=1479787395]
+modulate = Color(0.78, 0.3276, 0.33513987, 1)
+offset_left = 36.0
+offset_top = 186.0
+offset_right = 396.0
+offset_bottom = 546.0
+scale = Vector2(0.08, 0.08)
+texture = ExtResource("3_0ieda")
+stretch_mode = 5
 
 [node name="Damage_SFX" type="AudioStreamPlayer" parent="." unique_id=863507193]
 stream = ExtResource("3_cmmyg")

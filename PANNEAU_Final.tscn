@@ -6,6 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://c36568qylhqxe" path="res://pierre_test_asset/ASSET/GoldFish.png" id="3_5218v"]
 [ext_resource type="Script" uid="uid://1pwawi16gx43" path="res://Proto/Script/main_menuFINALEbtn.gd" id="5_5218v"]
 [ext_resource type="AudioStream" uid="uid://dr00vst5f1nus" path="res://Proto/SFX/Button_SFX.wav" id="6_3dkwh"]
+[ext_resource type="AudioStream" uid="uid://cn42qjwbaj20q" path="res://Proto/SFX/SRB2 OST - Deep Sea Zone 1.mp3" id="7_krj2r"]
 
 [node name="Control" type="Control" unique_id=1757011394]
 layout_mode = 3
@@ -73,7 +74,6 @@ offset_right = 114.0
 offset_bottom = -171.0
 grow_horizontal = 2
 grow_vertical = 0
-pivot_offset_ratio = Vector2(114, 103)
 texture_normal = ExtResource("3_5218v")
 ignore_texture_size = true
 stretch_mode = 5
@@ -103,6 +103,11 @@ text = "MAIN MENU
 
 [node name="Bouttons" type="AudioStreamPlayer" parent="." unique_id=228115020]
 stream = ExtResource("6_3dkwh")
+
+[node name="OST" type="AudioStreamPlayer" parent="." unique_id=1935089237]
+stream = ExtResource("7_krj2r")
+autoplay = true
+parameters/looping = true
 
 [connection signal="button_down" from="MainMenu" to="." method="_on_main_menu_button_down"]
 [connection signal="mouse_entered" from="MainMenu" to="MainMenu" method="_on_mouse_entered"]

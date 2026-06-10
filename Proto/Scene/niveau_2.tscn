@@ -16,7 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://b8jqixkh75xps" path="res://DECHET .tscn" id="11_mr2ar"]
 [ext_resource type="PackedScene" uid="uid://cngej8kgmrclj" path="res://DECHET2.tscn" id="12_loa3g"]
 [ext_resource type="PackedScene" uid="uid://c53o3ln2jsgrj" path="res://Proto/Scene/moto.tscn" id="13_5ks8r"]
-[ext_resource type="AudioStream" uid="uid://c88071lmjfn56" path="res://pierre_test_asset/ASSET/PFISH NIV2.mp3" id="15_loa3g"]
+[ext_resource type="AudioStream" uid="uid://c88071lmjfn56" path="res://Proto/SFX/PFISH NIV2.mp3" id="15_loa3g"]
 [ext_resource type="Texture2D" uid="uid://c16rgoexdb8ig" path="res://pierre_test_asset/ASSET/LEVEL DESIGN (8)-Photoroom.png" id="19_rf5wy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vb4ll"]
@@ -60,7 +60,7 @@ scale = Vector2(3.6124997, 7.4655)
 texture = ExtResource("3_plrpk")
 
 [node name="FondNiv5" type="Sprite2D" parent="." unique_id=2096614344]
-position = Vector2(1386.9998, 4817)
+position = Vector2(1342, 4808)
 rotation = 1.7540135
 scale = Vector2(0.82257044, 1.3757821)
 skew = -0.024055958
@@ -99,9 +99,9 @@ texture = ExtResource("4_5ks8r")
 flip_v = true
 
 [node name="FondNiv4" type="Sprite2D" parent="FondNiv4/FondNiv4/FondNiv4" unique_id=418777259]
-position = Vector2(1174.7843, 78.196045)
+position = Vector2(1164.9727, 82.5214)
 rotation = 3.2777283
-scale = Vector2(0.8848282, 1.7660611)
+scale = Vector2(0.92117715, 1.4167105)
 texture = ExtResource("4_5ks8r")
 flip_h = true
 

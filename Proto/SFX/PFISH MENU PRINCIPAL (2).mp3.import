@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c1418n3tqxtqa"
+path="res://.godot/imported/PFISH MENU PRINCIPAL (2).mp3-23b6b4d379eba0449e5d19492ec05a65.mp3str"
+
+[deps]
+
+source_file="res://Proto/SFX/PFISH MENU PRINCIPAL (2).mp3"
+dest_files=["res://.godot/imported/PFISH MENU PRINCIPAL (2).mp3-23b6b4d379eba0449e5d19492ec05a65.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
