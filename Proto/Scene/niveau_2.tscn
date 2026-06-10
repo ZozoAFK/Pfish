@@ -166,51 +166,61 @@ position_start = Vector2(3481, 0)
 [node name="Cannette" parent="." unique_id=1827421931 instance=ExtResource("10_h38jt")]
 position = Vector2(143, 126.00001)
 rotation = 1.0297443
-waypoints = Array[Vector2]([Vector2(143, 126)])
+waypoints = Array[Vector2]([Vector2(143, 126), Vector2(143, 146)])
+speed = 6.0
 
 [node name="Bouteille" parent="." unique_id=1197286063 instance=ExtResource("11_mr2ar")]
 position = Vector2(246.00002, 55)
 rotation = 5.000368
-waypoints = Array[Vector2]([Vector2(246, 55)])
+waypoints = Array[Vector2]([Vector2(246, 55), Vector2(246, 75)])
+speed = 4.0
 
 [node name="Chaussure" parent="." unique_id=463368746 instance=ExtResource("12_loa3g")]
 position = Vector2(971.00006, 437.99994)
 rotation = -1.9024088
-waypoints = Array[Vector2]([Vector2(971, 438)])
+waypoints = Array[Vector2]([Vector2(971, 438), Vector2(971, 458)])
+speed = 5.0
 
 [node name="Cannette2" parent="." unique_id=351281772 instance=ExtResource("10_h38jt")]
 position = Vector2(198, 161)
-waypoints = Array[Vector2]([Vector2(198, 161)])
+waypoints = Array[Vector2]([Vector2(198, 161), Vector2(198, 181)])
+speed = 4.0
 
 [node name="Bouteille2" parent="." unique_id=368317046 instance=ExtResource("11_mr2ar")]
 position = Vector2(133.00003, 248.00003)
 rotation = -5.80322
-waypoints = Array[Vector2]([Vector2(133, 248)])
+waypoints = Array[Vector2]([Vector2(133, 248), Vector2(133, 268)])
+speed = 5.0
 
 [node name="Cannette3" parent="." unique_id=2011872560 instance=ExtResource("10_h38jt")]
 position = Vector2(264, 132)
 rotation = -2.4661503
-waypoints = Array[Vector2]([Vector2(264, 132)])
+waypoints = Array[Vector2]([Vector2(264, 132), Vector2(264, 152)])
+speed = 5.0
 
 [node name="Chaussure2" parent="." unique_id=2048313690 instance=ExtResource("12_loa3g")]
 position = Vector2(841.9999, 531.00006)
 rotation = 1.282817
-waypoints = Array[Vector2]([Vector2(842, 531)])
+waypoints = Array[Vector2]([Vector2(842, 531), Vector2(842, 551)])
+speed = 6.0
 
 [node name="Cannette4" parent="." unique_id=318518463 instance=ExtResource("10_h38jt")]
 position = Vector2(857, 448)
 rotation = 1.3910275
-waypoints = Array[Vector2]([Vector2(857, 448)])
+waypoints = Array[Vector2]([Vector2(857, 448), Vector2(857, 468)])
+speed = 6.0
 
 [node name="Cannette5" parent="." unique_id=1971822630 instance=ExtResource("10_h38jt")]
 position = Vector2(947, 526)
 rotation = -3.778638
-waypoints = Array[Vector2]([Vector2(947, 526)])
+waypoints = Array[Vector2]([Vector2(947, 526), Vector2(947, 546)])
+speed = 4.0
 
 [node name="Bouteille3" parent="." unique_id=962428873 instance=ExtResource("11_mr2ar")]
 position = Vector2(138.00002, 48.000015)
 rotation = -2.2165682
-waypoints = Array[Vector2]([Vector2(138, 48)])
+waypoints = Array[Vector2]([Vector2(138, 48), Vector2(138, 68)])
+speed = 5.0
 
 [node name="Cannette6" parent="." unique_id=1582673421 instance=ExtResource("10_h38jt")]
 position = Vector2(124.99997, 937.99994)
@@ -430,6 +440,7 @@ waypoints = Array[Vector2]([Vector2(863, 3403)])
 position = Vector2(650, 5063)
 
 [node name="ZoneVictoire" type="Area2D" parent="." unique_id=69821599]
+visible = false
 position = Vector2(597, 95)
 collision_layer = 3
 
