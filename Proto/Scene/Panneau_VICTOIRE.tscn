@@ -107,6 +107,8 @@ texture_normal = ExtResource("4_cyiil")
 ignore_texture_size = true
 stretch_mode = 5
 script = ExtResource("7_6e76k")
+hover_scale = null
+hover_color = null
 hover_sfx = NodePath("../Click_SFX")
 
 [node name="Label" type="Label" parent="Main_MenuBtn" unique_id=1541037877]
