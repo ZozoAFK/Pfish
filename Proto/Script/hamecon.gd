@@ -19,6 +19,8 @@ var dechet_accroche: Node2D = null # Stocke le déchet actuellement attrapé
 var Time_presse = 0
 var temps_max = 1
 
+
+
 signal joueur_touche(degats: float)
 
 func déclencher_degats() -> void:
@@ -48,7 +50,7 @@ func down (delta):
 		Time_presse += delta 
 		if Time_presse > temps_max : 
 			Time_presse = temps_max
-		velocity.y = lerp(-15000,Speed_down, Time_presse/ temps_max ) * delta 
+		velocity.y = lerp(0,Speed_down, Time_presse/ temps_max ) * delta 
 	if Input.is_action_just_pressed("SPACE"):
 		Time_presse = 0 
 
@@ -57,7 +59,7 @@ func deplacement (delta):
 		Time_presse += delta 
 		if Time_presse > temps_max : 
 			Time_presse = temps_max
-		velocity.y = -lerp(-15000,Puissance_accoup, Time_presse/temps_max ) * delta 
+		velocity.y = -lerp(0,Puissance_accoup, Time_presse/temps_max ) * delta 
 	if Input.is_action_just_released("SPACE"):
 		Time_presse = 0 
 		
