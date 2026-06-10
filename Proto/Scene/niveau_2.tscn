@@ -7,7 +7,6 @@
 [ext_resource type="Texture2D" uid="uid://b6euwo4qty2w0" path="res://pierre_test_asset/zXqjG3.png" id="3_plrpk"]
 [ext_resource type="Texture2D" uid="uid://dt4esumunf6ox" path="res://pierre_test_asset/ASSET/Fond niv2.png" id="4_5ks8r"]
 [ext_resource type="PackedScene" uid="uid://bdiwo7gurvtso" path="res://Proto/Scene/déchet.tscn" id="4_8epdb"]
-[ext_resource type="Texture2D" uid="uid://csl1gbavq3de6" path="res://pierre_test_asset/ASSET/Lil_Rock_Assemble.png" id="4_pmn4t"]
 [ext_resource type="PackedScene" uid="uid://c44a325r78b4c" path="res://Poisson_bleu.tscn" id="5_8epdb"]
 [ext_resource type="PackedScene" uid="uid://cv640qqv5nt3b" path="res://Espadon.tscn" id="5_d57yf"]
 [ext_resource type="Texture2D" uid="uid://cj7760gsplhc0" path="res://pierre_test_asset/ASSET/LEVEL DESIGN (9)-Photoroom.png" id="5_x41my"]
@@ -73,19 +72,6 @@ position = Vector2(554, 4911)
 scale = Vector2(2.4229167, 4.260162)
 texture = ExtResource("3_5ks8r")
 
-[node name="LilRockAssemble" type="Sprite2D" parent="." unique_id=112919670]
-position = Vector2(1533.9999, 5079.9995)
-rotation = 1.5707965
-scale = Vector2(0.35178325, 0.35383445)
-texture = ExtResource("4_pmn4t")
-
-[node name="LevelDesign(9)Photoroom4" type="Sprite2D" parent="." unique_id=820562956]
-position = Vector2(557.8558, 6519.466)
-rotation = 1.5707964
-scale = Vector2(0.29014793, 0.21034047)
-texture = ExtResource("5_x41my")
-flip_h = true
-
 [node name="FondNiv3" type="Sprite2D" parent="." unique_id=1740173668]
 position = Vector2(243.00003, 4232)
 rotation = -1.5707961
@@ -113,9 +99,9 @@ texture = ExtResource("4_5ks8r")
 flip_v = true
 
 [node name="FondNiv4" type="Sprite2D" parent="FondNiv4/FondNiv4/FondNiv4" unique_id=418777259]
-position = Vector2(1172.5868, 94.2379)
+position = Vector2(1174.7843, 78.196045)
 rotation = 3.2777283
-scale = Vector2(0.8848282, 1.6985958)
+scale = Vector2(0.8848282, 1.7660611)
 texture = ExtResource("4_5ks8r")
 flip_h = true
 
