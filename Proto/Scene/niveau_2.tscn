@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c5s13ab6esaxo"]
 
 [ext_resource type="Texture2D" uid="uid://ws7mn66harou" path="res://pierre_test_asset/ASSET/BG_LVL/Underwater_Etroit_BG.webp" id="1_d57yf"]
+[ext_resource type="Script" uid="uid://csr181hki3qx7" path="res://Proto/Scene/niveau_2.gd" id="1_mr2ar"]
 [ext_resource type="PackedScene" uid="uid://dxgagnxjrsaci" path="res://Proto/Scene/Hamecon.tscn" id="2_vb4ll"]
 [ext_resource type="AudioStream" uid="uid://cpnw274e6gjgy" path="res://Proto/SFX/Gold_SFX.mp3" id="3_8epdb"]
 [ext_resource type="Texture2D" uid="uid://b6euwo4qty2w0" path="res://pierre_test_asset/zXqjG3.png" id="3_plrpk"]
@@ -23,7 +24,11 @@ size = Vector2(238, 5289)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d57yf"]
 size = Vector2(1059.5, 166)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mr2ar"]
+size = Vector2(1460, 227.25)
+
 [node name="Niveau 2" type="Node2D" unique_id=966495424]
+script = ExtResource("1_mr2ar")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1055869496]
 position = Vector2(550, 2443.9998)
@@ -423,3 +428,13 @@ waypoints = Array[Vector2]([Vector2(863, 3403)])
 
 [node name="trésor" parent="." unique_id=1833582491 instance=ExtResource("4_8epdb")]
 position = Vector2(650, 5063)
+
+[node name="ZoneVictoire" type="Area2D" parent="." unique_id=69821599]
+position = Vector2(597, 95)
+collision_layer = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ZoneVictoire" unique_id=784067179]
+position = Vector2(0, -15.375)
+shape = SubResource("RectangleShape2D_mr2ar")
+
+[connection signal="area_entered" from="ZoneVictoire" to="." method="_on_zone_victoire_area_entered"]

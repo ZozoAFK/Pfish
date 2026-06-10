@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://b314bml13hm1p" path="res://pierre_test_asset/ASSET/Jelly fish.png" id="3_uukc6"]
 [ext_resource type="Texture2D" uid="uid://dscokor3kdqbs" path="res://pierre_test_asset/ASSET/bubble.webp" id="4_ttork"]
 [ext_resource type="Script" uid="uid://ul4wqmcs42sn" path="res://Proto/Script/retry_btn.gd" id="5_bphml"]
-[ext_resource type="Script" uid="uid://xcd6o5th6n7n" path="res://Proto/Script/main_menu_btn.gd" id="7_0yguy"]
+[ext_resource type="Script" uid="uid://bqjvo75iip1du" path="res://Proto/Scene/main_menu_defeatbtn.gd" id="7_uuhg1"]
 [ext_resource type="AudioStream" uid="uid://dr00vst5f1nus" path="res://Proto/SFX/Button_SFX.wav" id="8_0yguy"]
 [ext_resource type="Texture2D" uid="uid://nunpbtx30t83" path="res://pierre_test_asset/ASSET/Bubble/bubble_sheet.png" id="9_2wow3"]
 [ext_resource type="AudioStream" uid="uid://c1aaimjsemxe5" path="res://Proto/SFX/Lose_SFX.mp3" id="10_gltey"]
@@ -236,7 +236,7 @@ theme_override_fonts/font = ExtResource("1_3njlh")
 theme_override_font_sizes/font_size = 32
 text = "RETRY"
 
-[node name="Main_MenuBtn" type="TextureButton" parent="." unique_id=1389901109 node_paths=PackedStringArray("hover_sfx")]
+[node name="Main_MenuBtn" type="TextureButton" parent="." unique_id=1389901109]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -254,8 +254,7 @@ action_mode = 0
 texture_normal = ExtResource("4_ttork")
 ignore_texture_size = true
 stretch_mode = 5
-script = ExtResource("7_0yguy")
-hover_sfx = NodePath("../Click_SFX")
+script = ExtResource("7_uuhg1")
 
 [node name="Label" type="Label" parent="Main_MenuBtn" unique_id=955574956]
 layout_mode = 1

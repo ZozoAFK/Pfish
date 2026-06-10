@@ -3,7 +3,7 @@ extends Node2D
 # Glisse et dépose le fichier de ta scène de victoire ici depuis le système de fichiers
 @export var scene_victoire: PackedScene 
 func _ready() -> void:
-	GameManager.dernier_niveau_joue = "res://Proto/Scene/Niv1.tscn"
+	GameManager.dernier_niveau_joue = "res://Proto/Scene/niveau_2.tscn"
 	
 func gagner_partie() -> void:
 	print("Victoire ! Le trésor est remonté !")

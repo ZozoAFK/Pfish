@@ -4,15 +4,18 @@ class_name Player
 @export var Speed_down = 100
 @export var Speed_coter = 1000
 @export var Puissance_accoup : int = 5000
+
 @onready var timer_invincibilite: Timer = $TimerInvincibilite
 @onready var chest_catch_sfx: AudioStreamPlayer = $Chest_Catch_SFX
 
-# --- NOUVEAU : Récupération du nœud de bulles ---
+# --- LA SEULE LIGNE AJOUTÉE AU DÉBUT ---
 @onready var bulles_degats: CPUParticles2D = $BullesDegats
 
 # --- NOUVELLES VARIABLES POUR LES DÉCHETS ---
 var dechet_accroche: Node2D = null # Stocke le déchet actuellement attrapé
+# Ajustez ce Vector2 pour définir où le déchet se place par rapport au centre de l'hameçon
 @export var position_accroche: Vector2 = Vector2(0, 20) 
+
 var Time_presse = 0
 var temps_max = 1
 
@@ -21,10 +24,10 @@ signal joueur_touche(degats: float)
 func déclencher_degats() -> void:
 	timer_invincibilite.start()
 	
-	# --- EFFET VISUEL : DÉCLENCHEMENT DES BULLES ---
+	# --- LES DEUX SEULES LIGNES AJOUTÉES ICI ---
 	if bulles_degats:
-		bulles_degats.restart() # Réinitialise l'émetteur pour un nouveau burst
-		bulles_degats.emitting = true # Active l'expulsion des bulles
+		bulles_degats.restart()
+		bulles_degats.emitting = true
 		
 	joueur_touche.emit(10.0)
 
@@ -56,7 +59,6 @@ func down (delta):
 	if Input.is_action_just_pressed("SPACE"):
 		Time_presse = 0 
 
-
 func deplacement (delta):
 	if Input.is_action_pressed("SPACE"):
 		Time_presse += delta 
@@ -85,11 +87,7 @@ func _on_zone_accroche_area_entered(area: Area2D) -> void:
 		area.set_deferred("monitoring", false)
 		area.set_deferred("monitorable", false)
 		
-		# Optionnel : Désactiver complètement son traitement si besoin
-		#area.process_mode = PROCESS_MODE_DISABLED 
-		
 		print("Déchet accroché !")
-
 
 func test_ferrage (delta):
 	pass

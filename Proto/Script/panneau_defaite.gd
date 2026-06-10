@@ -14,8 +14,8 @@ func _on_retry_btn_pressed() -> void:
 	# On attend 1 seconde pour entendre le son
 	await get_tree().create_timer(1.0).timeout
 	
-	# SOLUTION DIRECTE : On charge le fichier directement par son chemin texte
-	get_tree().change_scene_to_file("res://Proto/Scene/Niv1.tscn")
+	# SOLUTION DYNAMIQUE : On charge le dernier niveau enregistré dans le GameManager
+	get_tree().change_scene_to_file(GameManager.dernier_niveau_joue)
 
 func _on_main_menu_btn_pressed() -> void:
 	# On lance le bruitage de clic
@@ -24,5 +24,5 @@ func _on_main_menu_btn_pressed() -> void:
 	# On attend 1 seconde pour entendre le son
 	await get_tree().create_timer(1.0).timeout
 	
-	# SOLUTION DIRECTE : On charge le fichier directement par son chemin texte
+	# Solution directe pour le menu principal
 	get_tree().change_scene_to_file("res://Proto/Scene/menu_principal.tscn")
