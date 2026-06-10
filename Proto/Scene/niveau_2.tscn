@@ -394,7 +394,7 @@ waypoints = Array[Vector2]([Vector2(130, 2035), Vector2(130, 2055)])
 speed = 11.0
 
 [node name="Cannette10" parent="." unique_id=55258643 instance=ExtResource("10_h38jt")]
-position = Vector2(142, 2094)
+position = Vector2(132.99998, 2075.9998)
 rotation = 1.4713125
 waypoints = Array[Vector2]([Vector2(113, 2099), Vector2(113, 2119)])
 speed = 12.0
