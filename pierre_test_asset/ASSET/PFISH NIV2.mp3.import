@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c88071lmjfn56"
+path="res://.godot/imported/PFISH NIV2.mp3-33101788265be728fa2beaa85f948783.mp3str"
+
+[deps]
+
+source_file="res://pierre_test_asset/ASSET/PFISH NIV2.mp3"
+dest_files=["res://.godot/imported/PFISH NIV2.mp3-33101788265be728fa2beaa85f948783.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
