@@ -81,6 +81,7 @@ texture = ExtResource("3_2r8ex")
 [node name="Chest_Catch_SFX" type="AudioStreamPlayer" parent="." unique_id=1802662328]
 stream = ExtResource("5_ouwh4")
 
+[connection signal="joueur_touche" from="." to="." method="_on_joueur_touche"]
 [connection signal="joueur_touche" from="." to="Camera2D/BarreHP" method="_on_hamecon_joueur_touche"]
 [connection signal="area_entered" from="ZoneAccroche" to="." method="_on_zone_accroche_area_entered"]
 [connection signal="body_entered" from="ZoneAccroche" to="." method="_on_zone_accroche_body_entered"]

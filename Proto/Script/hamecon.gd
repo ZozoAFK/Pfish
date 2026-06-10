@@ -23,12 +23,8 @@ signal joueur_touche(degats: float)
 
 func déclencher_degats() -> void:
 	timer_invincibilite.start()
-	
-	# --- LES DEUX SEULES LIGNES AJOUTÉES ICI ---
-	if bulles_degats:
-		bulles_degats.restart()
-		bulles_degats.emitting = true
-		
+	# On émet le signal. On retire l'effet de bulles d'ici, 
+	# car il va maintenant être géré de manière centrale juste en dessous.
 	joueur_touche.emit(10.0)
 
 func _process(delta: float) -> void:
@@ -40,11 +36,9 @@ func _physics_process(delta: float) -> void:
 	down(delta)
 	deplacement(delta)
 	move_and_slide()
-
 	for i in get_slide_collision_count():
 		var collision = get_slide_collision(i)
 		var collider = collision.get_collider()
-		
 		if collider.is_in_group("dechet"):
 			if timer_invincibilite.is_stopped():
 				déclencher_degats()
@@ -93,4 +87,7 @@ func test_ferrage (delta):
 	pass
 
 func _on_joueur_touche(degats: float) -> void:
-	pass
+
+	bulles_degats.restart()
+	bulles_degats.emitting = true
+	print("Le joueur a pris un tick de dégâts : ", degats)
