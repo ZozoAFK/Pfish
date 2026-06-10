@@ -8,8 +8,10 @@ class_name Player
 @onready var timer_invincibilite: Timer = $TimerInvincibilite
 @onready var chest_catch_sfx: AudioStreamPlayer = $Chest_Catch_SFX
 
-# --- LA SEULE LIGNE AJOUTÉE AU DÉBUT ---
+# --- RÉFÉRENCES VISUELLES ---
 @onready var bulles_degats: CPUParticles2D = $BullesDegats
+# AJOUT ICI : Récupère ton nœud Sprite2D (adapte le nom si besoin)
+@onready var sprite: Sprite2D = $ZoneAccroche/Sprite2D
 
 # --- NOUVELLES VARIABLES POUR LES DÉCHETS ---
 var dechet_accroche: Node2D = null # Stocke le déchet actuellement attrapé
@@ -19,14 +21,14 @@ var dechet_accroche: Node2D = null # Stocke le déchet actuellement attrapé
 var Time_presse = 0
 var temps_max = 1
 
-
+# Variable pour stocker le Tween de couleur (pour éviter les conflits si on reprend des dégâts)
+var tween_couleur: Tween
 
 signal joueur_touche(degats: float)
 
 func déclencher_degats() -> void:
 	timer_invincibilite.start()
-	# On émet le signal. On retire l'effet de bulles d'ici, 
-	# car il va maintenant être géré de manière centrale juste en dessous.
+	# On émet le signal.
 	joueur_touche.emit(10.0)
 
 func _process(delta: float) -> void:
@@ -50,7 +52,8 @@ func down (delta):
 		Time_presse += delta 
 		if Time_presse > temps_max : 
 			Time_presse = temps_max
-		velocity.y = lerp(0,Speed_down,  temps_max ) * delta 
+		# CORRECTION LÉGÈRE : J'ai remis lerp(0,...) car lerp(0,...) n'a pas de sens si on n'utilise pas Time_presse/temps_max
+		velocity.y = lerp(0.0, float(Speed_down), Time_presse / temps_max) * delta 
 	if Input.is_action_just_pressed("SPACE"):
 		Time_presse = 0 
 
@@ -59,7 +62,7 @@ func deplacement (delta):
 		Time_presse += delta 
 		if Time_presse > temps_max : 
 			Time_presse = temps_max
-		velocity.y = -lerp(0,Puissance_accoup, temps_max ) * delta 
+		velocity.y = -lerp(0.0, float(Puissance_accoup), Time_presse / temps_max) * delta 
 	if Input.is_action_just_released("SPACE"):
 		Time_presse = 0 
 		
@@ -79,7 +82,6 @@ func _on_zone_accroche_area_entered(area: Area2D) -> void:
 		dechet_accroche = area
 		chest_catch_sfx.play()
 		# On désactive la détection de la zone pour qu'elle ne déclenche plus d'événements
-		# NOUVELLE ÉCRITURE (sécurisée pour Godot) :
 		area.set_deferred("monitoring", false)
 		area.set_deferred("monitorable", false)
 		
@@ -88,8 +90,30 @@ func _on_zone_accroche_area_entered(area: Area2D) -> void:
 func test_ferrage (delta):
 	pass
 
+# --- FONCTION DE FEEDBACK DE DÉGÂTS MODIFIÉE ---
 func _on_joueur_touche(degats: float) -> void:
-
-	bulles_degats.restart()
-	bulles_degats.emitting = true
-	print("Le joueur a pris un tick de dégâts : ", degats)
+	# 1. Feedback Particules (déjà là)
+	if bulles_degats:
+		bulles_degats.restart()
+		bulles_degats.emitting = true
+	
+	# 2. Feedback Couleur (AJOUT ICI)
+	if sprite:
+		# SÉCURITÉ : Si un Tween de couleur tournait déjà (dégâts rapides), on le tue
+		if tween_couleur and tween_couleur.is_running():
+			tween_couleur.kill()
+		
+		# On crée un nouveau Tween
+		tween_couleur = create_tween()
+		
+		# ÉTAPE A : On applique immédiatement la couleur rouge (Color.RED)
+		sprite.modulate = Color.RED
+		
+		# ÉTAPE B : On attend 1 seconde (create_timer est parfait ici car il ne bloque pas le code)
+		# et après cette seconde, on transitionne doucement vers la couleur normale (Color.WHITE)
+		tween_couleur.tween_property(sprite, "modulate", Color.WHITE, 1.0)\
+			.set_trans(Tween.TRANS_SINE)\
+			.set_ease(Tween.EASE_IN_OUT)\
+			.set_delay(0.1) # Un mini délai optionnel pour que le rouge "claque" bien avant de fondre
+			
+	print("Le joueur a pris un tick de dégâts : ", degats, " -> Flash rouge !")
