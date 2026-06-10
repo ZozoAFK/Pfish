@@ -604,7 +604,9 @@ shape = SubResource("RectangleShape2D_mr2ar")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="ZoneVictoire/CollisionShape2D" unique_id=387507158]
 stream = ExtResource("15_loa3g")
+volume_db = -20.871
 autoplay = true
+parameters/looping = false
 
 [node name="Chaussure9" parent="." unique_id=337217828 instance=ExtResource("12_loa3g")]
 position = Vector2(891.00006, 4779)
