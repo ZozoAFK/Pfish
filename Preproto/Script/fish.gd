@@ -2,11 +2,13 @@ extends CharacterBody2D
 
 
 signal joueur_touche(degats: float)
+@onready var detection : Area2D = $Area2D
 
 enum State { RONDE, POURSUITE, PAUSE }
 var etat_actuel = State.RONDE
 var joueur : Node2D = null
 var player : Player = null
+
 
 @export var waypoints: Array[Vector2] = []
 @export var speed: float = 80.0
@@ -99,9 +101,12 @@ func _on_area_2d_body_exited(body: Node2D) -> void:
 func _on_hitbox_body_entered(body: Node2D) -> void:
 	print("Hitbox touché par : ", body.name)
 	if body == joueur:
-		
 		print(" Dégâts : ", DEGATS)
-		body.emit_signal("joueur_touche", DEGATS)
+		emit_signal("joueur_touche", DEGATS)
 		etat_actuel = State.PAUSE
 		_pause_timer = PAUSE_DUREE
 		velocity = Vector2.ZERO
+
+
+func _on_joueur_touche(degats: float) -> void:
+	pass # Replace with function body.
