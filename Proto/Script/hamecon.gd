@@ -55,7 +55,6 @@ func down (delta):
 		if Time_presse > temps_max : 
 			Time_presse = temps_max
 		velocity.y = lerp(-15000,Speed_down, Time_presse/ temps_max ) * delta 
-		print ("CA DESCEND LA")
 	if Input.is_action_just_pressed("SPACE"):
 		Time_presse = 0 
 
@@ -68,8 +67,9 @@ func deplacement (delta):
 	if Input.is_action_just_released("SPACE"):
 		Time_presse = 0 
 		
-	var direction := Input.get_axis("LEFT", "RIGHT")
-	if direction:
+	var direction := Input.get_axis("LEFT", "RIGHT")+ Input.get_axis("Fleche_Gauche", "Fleche_droite")
+	direction = clamp(direction, -1.0, 1.0)
+	if direction :
 		velocity.x = direction * Speed_coter
 	else:
 		velocity.x = move_toward(velocity.x, 0, Speed_coter)

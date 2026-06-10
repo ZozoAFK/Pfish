@@ -5,6 +5,10 @@ extends Node2D
 func _ready() -> void:
 	GameManager.dernier_niveau_joue = "res://Proto/Scene/niveau_2.tscn"
 	
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("reload_niv2"):
+		get_tree().reload_current_scene()
+
 func gagner_partie() -> void:
 	print("Victoire ! Le trésor est remonté !")
 	await get_tree().create_timer(1).timeout
