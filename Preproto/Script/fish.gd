@@ -3,12 +3,14 @@ extends CharacterBody2D
 
 signal joueur_touche(degats: float)
 @onready var detection : Area2D = $Area2D
+@onready var sprite = $Sprite2D
 
 enum State { RONDE, POURSUITE, PAUSE }
 var etat_actuel = State.RONDE
 var joueur : Node2D = null
 var player : Player = null
-
+var flip_direction = 1 
+var _last_flip = 1  # variable de classe
 
 @export var waypoints: Array[Vector2] = []
 @export var speed: float = 80.0
@@ -49,6 +51,7 @@ func _physics_process(delta: float) -> void:
 		State.PAUSE:
 			_attendre(delta)
 
+
 func _ronde(delta) -> void:
 	if waypoints.is_empty():
 		return
@@ -57,11 +60,18 @@ func _ronde(delta) -> void:
 	if diff.length() < 4.0:
 		_advance_waypoint()
 		return
+
+	
 	velocity = diff.normalized() * speed
 	look_at(waypoints[_current_wp])
+	detection.look_at(waypoints[_current_wp])
 	move_and_slide()
 
+
+
 func _advance_waypoint() -> void:
+	var precedent = waypoints[_current_wp]
+	
 	if ping_pong:
 		_current_wp += _direction
 		if _current_wp >= waypoints.size() or _current_wp < 0:
@@ -70,6 +80,18 @@ func _advance_waypoint() -> void:
 			_current_wp = clamp(_current_wp, 0, waypoints.size() - 1)
 	else:
 		_current_wp = (_current_wp + 1) % waypoints.size()
+	
+	var prochain = waypoints[_current_wp]
+	
+	if prochain.x < precedent.x:
+		flip_direction = -1
+	else:
+		flip_direction = 1
+	
+	# applique le scale seulement si la direction a changé
+	if flip_direction != _last_flip:
+		scale.x *= -1
+		_last_flip = flip_direction
 
 func _poursuivre(delta) -> void:
 	look_at(joueur.position)
