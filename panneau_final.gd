@@ -6,7 +6,7 @@ extends Control
 @onready var sfx_player: AudioStreamPlayer = $Bouttons
 
 
-func _on_main_menu_btn_button_down() -> void:
+func _on_main_menu_button_down() -> void:
 	# On lance le bruitage de clic
 	sfx_player.play()
 	

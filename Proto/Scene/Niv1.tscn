@@ -28,7 +28,7 @@ size = Vector2(374, 3971)
 size = Vector2(1059.5, 166)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v3r6r"]
-size = Vector2(1460, 227.25)
+size = Vector2(1494, 227.25)
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_kl6dn"]
 shader = ExtResource("14_k211y")
@@ -293,7 +293,7 @@ position = Vector2(597, 95)
 collision_layer = 3
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ZoneVictoire" unique_id=178161715]
-position = Vector2(0, -15.375)
+position = Vector2(17, -15.375)
 shape = SubResource("RectangleShape2D_v3r6r")
 
 [node name="Sprite2D2" type="Sprite2D" parent="." unique_id=24232987]

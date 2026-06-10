@@ -14,16 +14,14 @@ var base_color : Color
 
 func _ready() -> void:
 	# --- CODE AJOUTÉ : Génération automatique du masque de collision ---
-	var texture_bouton = texture_normal
 	base_scale = scale
-	base_color = self.modulate
+
 
 # Quand la souris passe sur la barque
 func _on_mouse_entered() -> void:
 	# On applique le grossissement
 	scale = hover_scale
 	# On change la couleur (modulate). 
-	self.modulate = hover_color
 	
 	# --- JOUE LE SON ICI ---
 	if hover_sfx: # On vérifie d'ici que le son a bien été assigné pour éviter les crashs
@@ -33,4 +31,3 @@ func _on_mouse_entered() -> void:
 func _on_mouse_exited() -> void:
 	# On remet tout comme au début
 	scale = base_scale
-	self.modulate = base_color
