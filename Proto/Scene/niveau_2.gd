@@ -12,7 +12,7 @@ func _process(delta: float) -> void:
 func gagner_partie() -> void:
 	print("Victoire ! Le trésor est remonté !")
 	await get_tree().create_timer(1).timeout
-	get_tree().change_scene_to_file("res://Proto/Scene/Panneau_VICTOIRE.tscn")
+	get_tree().change_scene_to_file("res://PANNEAU_Final.tscn")
 
 
 func _on_zone_victoire_area_entered(area: Area2D) -> void:
