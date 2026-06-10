@@ -7,6 +7,14 @@
 radius = 44.0
 height = 223.0
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7uqmo"]
+radius = 13.0
+height = 38.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p1uu8"]
+radius = 13.029886
+height = 41.171154
+
 [node name="Moto" type="CharacterBody2D" unique_id=417816095 groups=["dechet"]]
 script = ExtResource("1_keabl")
 
@@ -18,3 +26,12 @@ texture = ExtResource("1_uq3ux")
 position = Vector2(2, 22)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_keabl")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=1047592453]
+position = Vector2(31, -21)
+shape = SubResource("CapsuleShape2D_7uqmo")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=2111434379]
+position = Vector2(31.999998, -48.000004)
+rotation = 1.0402162
+shape = SubResource("CapsuleShape2D_p1uu8")

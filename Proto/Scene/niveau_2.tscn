@@ -383,7 +383,7 @@ speed = 8.0
 
 [node name="Moto2" parent="." unique_id=1715126375 instance=ExtResource("13_5ks8r")]
 position = Vector2(707.00006, 2131)
-rotation = -0.43807763
+rotation = -0.75398225
 waypoints = Array[Vector2]([Vector2(707, 2131), Vector2(707, 2151)])
 speed = 8.0
 
@@ -425,7 +425,7 @@ waypoints = Array[Vector2]([Vector2(103, 2149), Vector2(103, 2169)])
 speed = 12.0
 
 [node name="Cannette12" parent="." unique_id=2027130601 instance=ExtResource("10_h38jt")]
-position = Vector2(338, 2178)
+position = Vector2(375, 2081)
 rotation = 0.9145525
 waypoints = Array[Vector2]([Vector2(338, 2178), Vector2(338, 2198)])
 speed = 12.0
@@ -437,7 +437,7 @@ waypoints = Array[Vector2]([Vector2(431, 2196), Vector2(431, 2216)])
 speed = 11.0
 
 [node name="Chaussure5" parent="." unique_id=2016217262 instance=ExtResource("12_loa3g")]
-position = Vector2(374.0001, 2236)
+position = Vector2(458.00006, 2276.9998)
 rotation = -2.0280726
 scale = Vector2(0.5, 0.526)
 waypoints = Array[Vector2]([Vector2(374, 2236), Vector2(374, 2256)])
@@ -450,7 +450,7 @@ waypoints = Array[Vector2]([Vector2(703, 1909), Vector2(703, 1929)])
 speed = 12.0
 
 [node name="Cannette14" parent="." unique_id=1334182615 instance=ExtResource("10_h38jt")]
-position = Vector2(596.00006, 1911.0002)
+position = Vector2(615.00006, 1902.0001)
 rotation = -0.5969026
 waypoints = Array[Vector2]([Vector2(596, 1911), Vector2(596, 1921)])
 speed = 8.0
