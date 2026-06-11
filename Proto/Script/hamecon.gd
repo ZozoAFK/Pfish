@@ -30,6 +30,8 @@ func déclencher_degats() -> void:
 	timer_invincibilite.start()
 	# On émet le signal.
 	joueur_touche.emit(10.0)
+# AJOUT : On incrémente le compteur de dégâts global
+	ScoreManager.enregistrer_degat()
 
 func _process(delta: float) -> void:
 	# Si un déchet est accroché, on force sa position à suivre l'hameçon
