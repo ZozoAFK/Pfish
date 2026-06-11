@@ -38,7 +38,7 @@ size = Vector2(231.28986, 487.5)
 size = Vector2(353.14954, 104.72852)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mr2ar"]
-size = Vector2(1808, 227.25)
+size = Vector2(1808, 256.625)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1aq54"]
 size = Vector2(330.95605, 1032.9436)
@@ -189,7 +189,7 @@ rotation = 1.3456489
 shape = SubResource("RectangleShape2D_31xy0")
 
 [node name="CollisionShape2D16" type="CollisionShape2D" parent="StaticBody2D" unique_id=35076081]
-position = Vector2(560, -329)
+position = Vector2(560, -343.6875)
 shape = SubResource("RectangleShape2D_mr2ar")
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D" unique_id=1946546551]
@@ -663,7 +663,7 @@ shape = SubResource("RectangleShape2D_mr2ar")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="ZoneVictoire/CollisionShape2D" unique_id=387507158]
 stream = ExtResource("15_loa3g")
-volume_db = -20.871
+volume_db = -8.0
 autoplay = true
 parameters/looping = false
 
