@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dleex1aqhy5s1"]
 
 [ext_resource type="Script" uid="uid://cu5vicu1ek55a" path="res://Proto/Script/barre_hp.gd" id="1_o22lk"]
+[ext_resource type="Texture2D" uid="uid://dgrdegk13npv2" path="res://pierre_test_asset/ASSET/Health-Bar.png" id="2_c37or"]
 [ext_resource type="Texture2D" uid="uid://bbfxt556vpc0f" path="res://Proto/Scene/HP_Sprite.png" id="2_q7nm8"]
 [ext_resource type="Texture2D" uid="uid://dxdu261jkwurt" path="res://pierre_test_asset/ASSET/Starfish.webp" id="3_0ieda"]
 [ext_resource type="AudioStream" uid="uid://cde7owy4qgswo" path="res://Proto/SFX/Damage_SFX.mp3" id="3_cmmyg"]
@@ -16,6 +17,16 @@ size = Vector2(20, 2)
 script = ExtResource("1_o22lk")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1003244368]
+
+[node name="Asset_BARREHP" type="TextureRect" parent="CanvasLayer" unique_id=1209130326]
+offset_left = 584.0
+offset_top = -176.0
+offset_right = 1467.4408
+offset_bottom = 1134.7347
+rotation = 1.5707964
+texture = ExtResource("2_c37or")
+expand_mode = 1
+stretch_mode = 5
 
 [node name="HPGris" type="TextureProgressBar" parent="CanvasLayer" unique_id=375072032]
 modulate = Color(0.52156866, 0.52156866, 0.52156866, 1)
@@ -55,7 +66,6 @@ step = 0.01
 texture_progress = ExtResource("2_q7nm8")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="CanvasLayer" unique_id=1985565826]
-modulate = Color(0, 0, 0, 1)
 material = SubResource("CanvasItemMaterial_cmmyg")
 position = Vector2(49, 202)
 scale = Vector2(36, 1)
@@ -66,7 +76,6 @@ scale = Vector2(1e-05, 1e-05)
 shape = SubResource("RectangleShape2D_c37or")
 
 [node name="MeshInstance2D2" type="MeshInstance2D" parent="CanvasLayer" unique_id=1824788279]
-modulate = Color(0, 0, 0, 1)
 material = SubResource("CanvasItemMaterial_cmmyg")
 position = Vector2(49, 93)
 scale = Vector2(36, 1)
@@ -77,7 +86,6 @@ scale = Vector2(1e-05, 1e-05)
 shape = SubResource("RectangleShape2D_c37or")
 
 [node name="MeshInstance2D3" type="MeshInstance2D" parent="CanvasLayer" unique_id=1130054897]
-modulate = Color(0, 0, 0, 1)
 material = SubResource("CanvasItemMaterial_cmmyg")
 position = Vector2(49, 20)
 scale = Vector2(36, 1)
@@ -89,9 +97,9 @@ shape = SubResource("RectangleShape2D_c37or")
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=2024154276]
 modulate = Color(1.847, 1.549, 0, 1)
-offset_left = 36.0
+offset_left = 65.0
 offset_top = 4.0
-offset_right = 396.0
+offset_right = 425.0
 offset_bottom = 364.0
 scale = Vector2(0.08, 0.08)
 texture = ExtResource("3_0ieda")
@@ -100,9 +108,9 @@ stretch_mode = 5
 [node name="TextureRect2" type="TextureRect" parent="CanvasLayer" unique_id=1541368257]
 modulate = Color(1.0100168, 1.5696106, 1.6095817, 1)
 self_modulate = Color(0.97, 1.19425, 1.555, 1)
-offset_left = 36.0
+offset_left = 65.0
 offset_top = 77.0
-offset_right = 396.0
+offset_right = 425.0
 offset_bottom = 437.0
 scale = Vector2(0.08, 0.08)
 texture = ExtResource("3_0ieda")
@@ -111,9 +119,9 @@ stretch_mode = 5
 [node name="TextureRect3" type="TextureRect" parent="CanvasLayer" unique_id=1479787395]
 modulate = Color(0.78, 0.78, 0.78, 1)
 self_modulate = Color(1.2742168, 1.2742168, 1.2742168, 1)
-offset_left = 36.0
+offset_left = 65.0
 offset_top = 186.0
-offset_right = 396.0
+offset_right = 425.0
 offset_bottom = 546.0
 scale = Vector2(0.08, 0.08)
 texture = ExtResource("3_0ieda")
