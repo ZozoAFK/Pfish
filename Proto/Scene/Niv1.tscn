@@ -19,13 +19,16 @@
 [ext_resource type="AudioStream" uid="uid://dtalvvmy2slaa" path="res://Proto/SFX/PFISH NIV1.mp3" id="18_xas2t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_p2rxa"]
-size = Vector2(233.5, 3976)
+size = Vector2(284.5, 4389)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7otel"]
-size = Vector2(374, 3971)
+size = Vector2(374, 4381)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wkuin"]
 size = Vector2(1059.5, 166)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a4myk"]
+size = Vector2(1609, 262)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v3r6r"]
 size = Vector2(1494, 227.25)
@@ -51,16 +54,20 @@ stream = ExtResource("5_a4myk")
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=442094473]
-position = Vector2(-40.25, 1985)
+position = Vector2(-65.75, 1778.5)
 shape = SubResource("RectangleShape2D_p2rxa")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=215324722]
-position = Vector2(1232, 1989.5)
+position = Vector2(1232, 1784.5)
 shape = SubResource("RectangleShape2D_7otel")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1656575703]
 position = Vector2(572, 3889)
 shape = SubResource("RectangleShape2D_wkuin")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=820058013]
+position = Vector2(600.5, -283)
+shape = SubResource("RectangleShape2D_a4myk")
 
 [node name="Poisson_bleu4" parent="." unique_id=52399432 instance=ExtResource("3_7otel")]
 position = Vector2(286, 1113)
