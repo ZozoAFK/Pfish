@@ -22,8 +22,9 @@ ScoreManager="*uid://ck1b263knlfyj"
 
 [display]
 
-window/size/viewport_width=1156
-window/size/mode=3
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/stretch/mode="viewport"
 
 [file_customization]
 

@@ -1,0 +1,75 @@
+[gd_scene format=3 uid="uid://1snotih53kry"]
+
+[ext_resource type="Script" uid="uid://b7p1cvqi6lhm6" path="res://panneau_tuto.gd" id="1_4axkg"]
+[ext_resource type="Texture2D" uid="uid://d31w7jxcgrs6o" path="res://pierre_test_asset/ASSET/BG_LVL/Tuto_BG.png" id="1_oej8l"]
+[ext_resource type="Texture2D" uid="uid://dfe6vryf3cwh6" path="res://pierre_test_asset/ASSET/Touches.png" id="2_pp55v"]
+[ext_resource type="Texture2D" uid="uid://brmss1tb0ffd5" path="res://pierre_test_asset/ASSET/Space_Bar.png" id="3_vy5di"]
+[ext_resource type="FontFile" uid="uid://cqm6krhuletbc" path="res://Proto/Font/pixel.ttf" id="4_vy5di"]
+[ext_resource type="AudioStream" uid="uid://c4vtox6eovj0c" path="res://Proto/SFX/SFX_Tuto.mp3" id="6_2ah3h"]
+
+[node name="Control" type="Control" unique_id=1929941002]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4axkg")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=2123854028]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -383.0
+offset_top = -217.0
+offset_right = 383.0
+offset_bottom = 217.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_oej8l")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=601770905]
+layout_mode = 1
+offset_left = 172.0
+offset_top = -31.0
+offset_right = 651.0
+offset_bottom = 402.0
+texture = ExtResource("2_pp55v")
+
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=297772139]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -653.0
+offset_right = -233.0
+offset_bottom = 360.0
+grow_horizontal = 0
+texture = ExtResource("3_vy5di")
+
+[node name="Label" type="Label" parent="." unique_id=49583013]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -408.0
+offset_top = -128.0
+offset_right = 409.0
+offset_bottom = -94.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 3
+theme_override_constants/shadow_offset_y = 3
+theme_override_constants/shadow_outline_size = 2
+theme_override_fonts/font = ExtResource("4_vy5di")
+theme_override_font_sizes/font_size = 32
+text = "RECUPEREZ LE COFFRE AU FOND DE L'OCEAN !"
+
+[node name="Tuto_sfx" type="AudioStreamPlayer" parent="." unique_id=1480500946]
+stream = ExtResource("6_2ah3h")
