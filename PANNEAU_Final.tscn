@@ -121,11 +121,71 @@ texture = ExtResource("8_o73ug")
 expand_mode = 1
 stretch_mode = 5
 
-[node name="Etoile_Or" type="TextureRect" parent="." unique_id=112851170]
+[node name="Etoile_Or1" type="TextureRect" parent="." unique_id=112851170]
+modulate = Color(1.8247963, 1.5278301, 0, 1)
 layout_mode = 0
 offset_left = 930.0
 offset_top = 110.0
 offset_right = 968.0
+offset_bottom = 152.0
+texture = ExtResource("9_auk8i")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Etoile_Argent1" type="TextureRect" parent="." unique_id=1541031840]
+modulate = Color(1.0100168, 1.5696106, 1.6095817, 1)
+self_modulate = Color(0.975225, 1.1975499, 1.5552034, 1)
+layout_mode = 0
+offset_left = 930.0
+offset_top = 110.0
+offset_right = 968.0
+offset_bottom = 152.0
+texture = ExtResource("9_auk8i")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Etoile_Bronze1" type="TextureRect" parent="." unique_id=1036162435]
+modulate = Color(0.78, 0.78, 0.78, 1)
+self_modulate = Color(1.2742168, 1.2742168, 1.2742168, 1)
+layout_mode = 0
+offset_left = 930.0
+offset_top = 110.0
+offset_right = 968.0
+offset_bottom = 152.0
+texture = ExtResource("9_auk8i")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Etoile_Or2" type="TextureRect" parent="." unique_id=1401193288]
+modulate = Color(1.8247963, 1.5278301, 0, 1)
+layout_mode = 0
+offset_left = 975.0
+offset_top = 110.0
+offset_right = 1013.0
+offset_bottom = 152.0
+texture = ExtResource("9_auk8i")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Etoile_Argent2" type="TextureRect" parent="." unique_id=1633502858]
+modulate = Color(1.0100168, 1.5696106, 1.6095817, 1)
+self_modulate = Color(0.975225, 1.1975499, 1.5552034, 1)
+layout_mode = 0
+offset_left = 975.0
+offset_top = 110.0
+offset_right = 1013.0
+offset_bottom = 152.0
+texture = ExtResource("9_auk8i")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Etoile_Bronze2" type="TextureRect" parent="." unique_id=1887395448]
+modulate = Color(0.78, 0.78, 0.78, 1)
+self_modulate = Color(1.2742168, 1.2742168, 1.2742168, 1)
+layout_mode = 0
+offset_left = 975.0
+offset_top = 110.0
+offset_right = 1013.0
 offset_bottom = 152.0
 texture = ExtResource("9_auk8i")
 expand_mode = 1

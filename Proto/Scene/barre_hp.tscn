@@ -88,7 +88,7 @@ scale = Vector2(1e-05, 1e-05)
 shape = SubResource("RectangleShape2D_c37or")
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=2024154276]
-modulate = Color(1.8466613, 1.548769, 0, 1)
+modulate = Color(1.847, 1.549, 0, 1)
 offset_left = 36.0
 offset_top = 4.0
 offset_right = 396.0
@@ -109,7 +109,8 @@ texture = ExtResource("3_0ieda")
 stretch_mode = 5
 
 [node name="TextureRect3" type="TextureRect" parent="CanvasLayer" unique_id=1479787395]
-modulate = Color(0.78, 0.3276, 0.33513987, 1)
+modulate = Color(0.78, 0.78, 0.78, 1)
+self_modulate = Color(1.2742168, 1.2742168, 1.2742168, 1)
 offset_left = 36.0
 offset_top = 186.0
 offset_right = 396.0
