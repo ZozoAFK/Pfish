@@ -823,4 +823,21 @@ scale = Vector2(0.94686323, 0.7866)
 texture = ExtResource("5_x41my")
 flip_h = true
 
+[node name="Cannette36" parent="." unique_id=821505319 instance=ExtResource("10_h38jt")]
+position = Vector2(1090, 423.99994)
+rotation = 2.120575
+waypoints = Array[Vector2]([Vector2(1090, 424), Vector2(1090, 444)])
+speed = 9.0
+
+[node name="Cannette37" parent="." unique_id=970899464 instance=ExtResource("10_h38jt")]
+position = Vector2(1035, 372)
+waypoints = Array[Vector2]([Vector2(1035, 372), Vector2(1035, 372)])
+speed = 12.0
+
+[node name="Bouteille23" parent="." unique_id=2037323195 instance=ExtResource("11_mr2ar")]
+position = Vector2(85.00001, 165)
+rotation = 2.3614304
+waypoints = Array[Vector2]([Vector2(85, 165), Vector2(85, 185)])
+speed = 11.0
+
 [connection signal="area_entered" from="ZoneVictoire" to="." method="_on_zone_victoire_area_entered"]
