@@ -23,6 +23,7 @@ ScoreManager="*uid://ck1b263knlfyj"
 [display]
 
 window/size/viewport_width=1156
+window/size/mode=3
 
 [file_customization]
 
