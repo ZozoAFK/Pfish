@@ -21,10 +21,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -383.0
-offset_top = -217.0
-offset_right = 383.0
-offset_bottom = 217.0
+offset_left = -421.0
+offset_top = -255.0
+offset_right = 421.0
+offset_bottom = 255.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_oej8l")
@@ -32,6 +32,7 @@ expand_mode = 1
 stretch_mode = 5
 
 [node name="TextureRect2" type="TextureRect" parent="." unique_id=601770905]
+modulate = Color(0.8, 0.8, 0.8, 1)
 layout_mode = 1
 offset_left = 172.0
 offset_top = -31.0
@@ -40,6 +41,7 @@ offset_bottom = 402.0
 texture = ExtResource("2_pp55v")
 
 [node name="TextureRect3" type="TextureRect" parent="." unique_id=297772139]
+modulate = Color(0.8, 0.8, 0.8, 1)
 layout_mode = 1
 anchors_preset = 1
 anchor_left = 1.0
