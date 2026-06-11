@@ -23,7 +23,7 @@
 size = Vector2(522, 5723)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0urrq"]
-size = Vector2(409, 5786.25)
+size = Vector2(409, 5854)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d57yf"]
 size = Vector2(1059.5, 166)
@@ -71,6 +71,11 @@ size = Vector2(88.975586, 158.62866)
 [node name="Niveau 2" type="Node2D" unique_id=966495424]
 script = ExtResource("1_mr2ar")
 
+[node name="background2" type="Sprite2D" parent="." unique_id=1029665176]
+position = Vector2(1022.06726, 1783)
+scale = Vector2(16.63792, 6.9496202)
+texture = ExtResource("3_plrpk")
+
 [node name="background" type="Sprite2D" parent="." unique_id=2098583244]
 position = Vector2(550.99994, 1522.2496)
 scale = Vector2(3.6124997, 7.4655)
@@ -82,6 +87,18 @@ rotation = 1.7540135
 scale = Vector2(0.82257044, 1.3757821)
 skew = -0.024055958
 texture = ExtResource("4_5ks8r")
+flip_h = true
+
+[node name="FondNiv11" type="Sprite2D" parent="." unique_id=1388017853]
+position = Vector2(1352.1425, 4641.855)
+rotation = 1.5707963
+scale = Vector2(1.2060146, 1.5277582)
+texture = ExtResource("4_5ks8r")
+
+[node name="LevelDesign(8)Photoroom6" type="Sprite2D" parent="." unique_id=606470990]
+position = Vector2(-177.32985, 2430.7085)
+scale = Vector2(1.2927002, 0.70065737)
+texture = ExtResource("19_rf5wy")
 flip_h = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=175548118]
@@ -96,6 +113,11 @@ scale = Vector2(1.359562, 1.073621)
 texture = ExtResource("4_5ks8r")
 flip_h = true
 flip_v = true
+
+[node name="FondNiv9" type="Sprite2D" parent="FondNiv9" unique_id=95514056]
+position = Vector2(-917.9426, -410.68613)
+scale = Vector2(1.0721035, 1.3185083)
+texture = ExtResource("4_5ks8r")
 
 [node name="FondNiv3" type="Sprite2D" parent="." unique_id=1740173668]
 position = Vector2(243.00003, 4226.676)
@@ -125,6 +147,19 @@ rotation = -1.5707961
 scale = Vector2(1.152772, 0.8130975)
 texture = ExtResource("4_5ks8r")
 
+[node name="FondNiv6" type="Sprite2D" parent="FondNiv6" unique_id=1289549417]
+position = Vector2(-132.83234, 507.86432)
+rotation = -3.1415927
+scale = Vector2(1.2693561, 1.7186716)
+texture = ExtResource("4_5ks8r")
+
+[node name="FondNiv6" type="Sprite2D" parent="FondNiv6/FondNiv6" unique_id=1672744510]
+position = Vector2(870.922, 37.26199)
+rotation = -3.1415927
+scale = Vector2(0.7049222, 0.78762364)
+texture = ExtResource("4_5ks8r")
+flip_v = true
+
 [node name="FondNiv4" type="Sprite2D" parent="." unique_id=460034786]
 position = Vector2(118, 2900)
 rotation = 1.5707964
@@ -144,9 +179,16 @@ rotation = 1.5707964
 scale = Vector2(1.3105551, 0.83460194)
 texture = ExtResource("5_x41my")
 
+[node name="FondNiv10" type="Sprite2D" parent="." unique_id=502162492]
+position = Vector2(-282.59476, 5798.0005)
+rotation = -1.5707964
+scale = Vector2(1.5626886, 1.5872722)
+texture = ExtResource("4_5ks8r")
+flip_h = true
+
 [node name="FondNiv2" type="Sprite2D" parent="." unique_id=1828933818]
-position = Vector2(553.5, 5039.75)
-scale = Vector2(1.1194445, 1.1760424)
+position = Vector2(535, 5039.75)
+scale = Vector2(1.2148149, 1.1760424)
 texture = ExtResource("4_5ks8r")
 
 [node name="Hamecon" parent="." unique_id=689676632 instance=ExtResource("2_vb4ll")]
@@ -161,11 +203,11 @@ stream = ExtResource("3_8epdb")
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1128564496]
-position = Vector2(-210, 2389.5)
+position = Vector2(-211, 2415)
 shape = SubResource("RectangleShape2D_vb4ll")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1543316551]
-position = Vector2(1272.5, 2396.125)
+position = Vector2(1265, 2400)
 shape = SubResource("RectangleShape2D_0urrq")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1775675711]
@@ -429,9 +471,9 @@ waypoints = Array[Vector2]([Vector2(472, 929), Vector2(472, 949)])
 speed = 10.0
 
 [node name="Cannette9" parent="." unique_id=170350428 instance=ExtResource("10_h38jt")]
-position = Vector2(1002.99994, 1102)
+position = Vector2(1018, 1103)
 rotation = 1.7889625
-waypoints = Array[Vector2]([Vector2(1003, 1102), Vector2(1003, 1122)])
+waypoints = Array[Vector2]([Vector2(1018, 1102), Vector2(1018, 1122)])
 speed = 12.0
 
 [node name="Moto" parent="." unique_id=466753134 instance=ExtResource("13_5ks8r")]
@@ -447,9 +489,9 @@ waypoints = Array[Vector2]([Vector2(707, 2131), Vector2(707, 2151)])
 speed = 8.0
 
 [node name="Bouteille7" parent="." unique_id=2050168432 instance=ExtResource("11_mr2ar")]
-position = Vector2(112.99994, 1999)
+position = Vector2(100, 2023.9999)
 rotation = -0.9145525
-waypoints = Array[Vector2]([Vector2(130, 2035), Vector2(130, 2055)])
+waypoints = Array[Vector2]([Vector2(100, 2024), Vector2(100, 2044)])
 speed = 11.0
 
 [node name="Cannette10" parent="." unique_id=55258643 instance=ExtResource("10_h38jt")]
@@ -466,10 +508,10 @@ waypoints = Array[Vector2]([Vector2(192, 2087), Vector2(192, 2107)])
 speed = 9.0
 
 [node name="Chaussure4" parent="." unique_id=457537453 instance=ExtResource("12_loa3g")]
-position = Vector2(992.0001, 1967.9999)
+position = Vector2(1013, 1967.9999)
 rotation = 3.4592426
 scale = Vector2(0.5, 0.526)
-waypoints = Array[Vector2]([Vector2(992, 1968), Vector2(992, 1988)])
+waypoints = Array[Vector2]([Vector2(1013, 1968), Vector2(1013, 1988)])
 speed = 12.0
 
 [node name="Bouteille8" parent="." unique_id=250400363 instance=ExtResource("11_mr2ar")]
@@ -532,9 +574,9 @@ waypoints = Array[Vector2]([Vector2(960, 2232), Vector2(960, 2252)])
 speed = 9.0
 
 [node name="Bouteille10" parent="." unique_id=1237708080 instance=ExtResource("11_mr2ar")]
-position = Vector2(1004, 2217)
+position = Vector2(1014.9999, 2219)
 rotation = 0.9145525
-waypoints = Array[Vector2]([Vector2(1004, 2217), Vector2(1004, 2237)])
+waypoints = Array[Vector2]([Vector2(1015, 2217), Vector2(1015, 2237)])
 speed = 10.0
 
 [node name="Bouteille11" parent="." unique_id=1663457578 instance=ExtResource("11_mr2ar")]
@@ -581,9 +623,9 @@ waypoints = Array[Vector2]([Vector2(948, 2005), Vector2(948, 2025)])
 speed = 10.0
 
 [node name="Bouteille12" parent="." unique_id=1047189691 instance=ExtResource("11_mr2ar")]
-position = Vector2(139.99997, 3214.0005)
+position = Vector2(99.99994, 3266.0002)
 rotation = 1.9477874
-waypoints = Array[Vector2]([Vector2(114, 3270), Vector2(114, 3290)])
+waypoints = Array[Vector2]([Vector2(100, 3266), Vector2(100, 3286)])
 speed = 9.0
 
 [node name="Cannette22" parent="." unique_id=1637650858 instance=ExtResource("10_h38jt")]
@@ -804,6 +846,59 @@ position = Vector2(52, 142.99998)
 scale = Vector2(0.6694916, 0.529029)
 texture = ExtResource("19_rf5wy")
 
+[node name="LevelDesign(8)Photoroom" type="Sprite2D" parent="LevelDesign(8)Photoroom" unique_id=1295020304]
+position = Vector2(-282.30374, 4.7257085)
+scale = Vector2(1.405063, 1.0085148)
+texture = ExtResource("19_rf5wy")
+flip_h = true
+
+[node name="LevelDesign(8)Photoroom" type="Sprite2D" parent="LevelDesign(8)Photoroom/LevelDesign(8)Photoroom" unique_id=1157520513]
+position = Vector2(-47.228928, 971.56647)
+scale = Vector2(1.3912362, 1.0098938)
+texture = ExtResource("19_rf5wy")
+flip_h = true
+
+[node name="LevelDesign(8)Photoroom" type="Sprite2D" parent="LevelDesign(8)Photoroom/LevelDesign(8)Photoroom/LevelDesign(8)Photoroom" unique_id=1317095986]
+position = Vector2(-5.368712, 1001.6954)
+scale = Vector2(1.0439264, 1.0104069)
+texture = ExtResource("19_rf5wy")
+flip_h = true
+
+[node name="LevelDesign(8)Photoroom" type="Sprite2D" parent="LevelDesign(8)Photoroom/LevelDesign(8)Photoroom/LevelDesign(8)Photoroom/LevelDesign(8)Photoroom" unique_id=2044890366]
+position = Vector2(4.1272197, 1056.0071)
+scale = Vector2(0.9727317, 1.1344516)
+texture = ExtResource("19_rf5wy")
+flip_h = true
+
+[node name="LevelDesign(8)Photoroom2" type="Sprite2D" parent="LevelDesign(8)Photoroom/LevelDesign(8)Photoroom" unique_id=697002419]
+position = Vector2(1513.8221, -62.788986)
+scale = Vector2(1.4322612, 0.91557217)
+texture = ExtResource("19_rf5wy")
+
+[node name="LevelDesign(8)Photoroom4" type="Sprite2D" parent="LevelDesign(8)Photoroom/LevelDesign(8)Photoroom" unique_id=1247189657]
+position = Vector2(1611.0721, 2683.9922)
+scale = Vector2(2.2657654, 0.9174485)
+texture = ExtResource("19_rf5wy")
+
+[node name="LevelDesign(9)Photoroom3" type="Sprite2D" parent="LevelDesign(8)Photoroom/LevelDesign(8)Photoroom" unique_id=2034155981]
+position = Vector2(1507.154, 7806.5605)
+rotation = 1.8327198
+scale = Vector2(0.40174595, 0.1543113)
+skew = 0.29045928
+texture = ExtResource("5_x41my")
+flip_h = true
+flip_v = true
+
+[node name="LevelDesign(8)Photoroom5" type="Sprite2D" parent="LevelDesign(8)Photoroom/LevelDesign(8)Photoroom" unique_id=2053353493]
+position = Vector2(1514.3335, 1763.7126)
+scale = Vector2(1.4369366, 0.92870533)
+texture = ExtResource("19_rf5wy")
+
+[node name="LevelDesign(8)Photoroom3" type="Sprite2D" parent="LevelDesign(8)Photoroom/LevelDesign(8)Photoroom" unique_id=303798851]
+position = Vector2(1508.7577, 843.7012)
+scale = Vector2(1.4031072, 0.9206643)
+texture = ExtResource("19_rf5wy")
+
 [node name="LevelDesign(8)Photoroom2" type="Sprite2D" parent="." unique_id=1811692533]
 position = Vector2(51, 669)
 scale = Vector2(0.6694916, 0.529029)
@@ -834,6 +929,134 @@ scale = Vector2(0.94686323, 0.7866)
 texture = ExtResource("5_x41my")
 flip_h = true
 
+[node name="LevelDesign(9)Photoroom" type="Sprite2D" parent="LevelDesign(9)Photoroom/LevelDesign(9)Photoroom" unique_id=1946611953]
+position = Vector2(627.49786, -137.33028)
+rotation = 1.5707964
+scale = Vector2(1.0729163, 0.8617315)
+texture = ExtResource("5_x41my")
+flip_h = true
+flip_v = true
+
+[node name="LevelDesign(9)Photoroom" type="Sprite2D" parent="LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom" unique_id=588664051]
+position = Vector2(821.2192, -268.87137)
+rotation = 1.5707964
+scale = Vector2(1.0729163, 0.8617315)
+texture = ExtResource("5_x41my")
+flip_h = true
+flip_v = true
+
+[node name="LevelDesign(9)Photoroom2" type="Sprite2D" parent="LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom" unique_id=1510269040]
+position = Vector2(282.08545, -245.65527)
+scale = Vector2(1.2084273, 1.0862403)
+texture = ExtResource("5_x41my")
+flip_v = true
+
+[node name="LevelDesign(9)Photoroom2" type="Sprite2D" parent="LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom2" unique_id=1549652907]
+position = Vector2(-419.07184, -4720.2305)
+scale = Vector2(1.3312376, 1.2918165)
+texture = ExtResource("5_x41my")
+flip_h = true
+flip_v = true
+
+[node name="LevelDesign(9)Photoroom2" type="Sprite2D" parent="LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2" unique_id=218808488]
+position = Vector2(6.8842163, -2269.2866)
+scale = Vector2(1.0600914, 1.0986315)
+texture = ExtResource("5_x41my")
+flip_h = true
+
+[node name="LevelDesign(9)Photoroom2" type="Sprite2D" parent="LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2" unique_id=180914062]
+position = Vector2(-57.21216, -2810.621)
+scale = Vector2(1.0600914, 1.0986315)
+texture = ExtResource("5_x41my")
+flip_h = true
+flip_v = true
+
+[node name="LevelDesign(9)Photoroom2" type="Sprite2D" parent="LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2" unique_id=1882056378]
+position = Vector2(403.2818, 126.44092)
+scale = Vector2(1.0600914, 1.0986315)
+texture = ExtResource("5_x41my")
+flip_v = true
+
+[node name="LevelDesign(9)Photoroom2" type="Sprite2D" parent="LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2" unique_id=591248011]
+position = Vector2(67.15468, 2513.3838)
+scale = Vector2(1.0600914, 1.0986315)
+texture = ExtResource("5_x41my")
+
+[node name="LevelDesign(9)Photoroom3" type="Sprite2D" parent="LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2" unique_id=1619762791]
+position = Vector2(-254.35242, -1901.304)
+scale = Vector2(0.73565125, 0.71125513)
+texture = ExtResource("5_x41my")
+flip_h = true
+flip_v = true
+
+[node name="LevelDesign(9)Photoroom2" type="Sprite2D" parent="LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom3" unique_id=1639075781]
+position = Vector2(67.15468, 2513.3838)
+scale = Vector2(1.0600914, 1.0986315)
+texture = ExtResource("5_x41my")
+
+[node name="LevelDesign(9)Photoroom2" type="Sprite2D" parent="LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom3/LevelDesign(9)Photoroom2" unique_id=677805350]
+position = Vector2(5286.035, -97.533966)
+rotation = 1.5707964
+scale = Vector2(1.2016032, 0.7484023)
+texture = ExtResource("5_x41my")
+
+[node name="LevelDesign(9)Photoroom2" type="Sprite2D" parent="LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom3/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2" unique_id=1743172763]
+position = Vector2(-1852.557, 9.926449)
+rotation = 1.5707964
+scale = Vector2(1.3567171, 0.6712148)
+texture = ExtResource("5_x41my")
+flip_h = true
+
+[node name="LevelDesign(9)Photoroom2" type="Sprite2D" parent="LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom3/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2" unique_id=1467493704]
+position = Vector2(-128.25291, 1051.93)
+rotation = 1.5707964
+scale = Vector2(2.0231361, 0.8397074)
+texture = ExtResource("5_x41my")
+flip_h = true
+flip_v = true
+
+[node name="LevelDesign(9)Photoroom2" type="Sprite2D" parent="LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom3/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2" unique_id=1692099364]
+position = Vector2(1005.80005, 160.48671)
+scale = Vector2(1.2837082, 1.5822306)
+texture = ExtResource("5_x41my")
+flip_h = true
+flip_v = true
+
+[node name="LevelDesign(9)Photoroom3" type="Sprite2D" parent="LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom3/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2" unique_id=1201468590]
+position = Vector2(-2500.4138, -563.60846)
+rotation = 1.5707964
+scale = Vector2(1.0233954, 0.4549901)
+texture = ExtResource("5_x41my")
+flip_h = true
+flip_v = true
+
+[node name="LevelDesign(9)Photoroom5" type="Sprite2D" parent="LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom3/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2" unique_id=741238132]
+position = Vector2(898.31714, -5560.069)
+rotation = 1.5707966
+scale = Vector2(1.4593456, 0.58109766)
+texture = ExtResource("5_x41my")
+
+[node name="LevelDesign(9)Photoroom4" type="Sprite2D" parent="LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom3/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2" unique_id=1922417781]
+position = Vector2(593.96545, -8128.8037)
+rotation = 1.5707965
+scale = Vector2(1.3306798, 0.57323515)
+texture = ExtResource("5_x41my")
+flip_v = true
+
+[node name="LevelDesign(9)Photoroom3" type="Sprite2D" parent="LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom2/LevelDesign(9)Photoroom3" unique_id=477851661]
+position = Vector2(19.47834, -1329.4624)
+scale = Vector2(1.0966918, 1.013716)
+texture = ExtResource("5_x41my")
+flip_h = true
+flip_v = true
+
+[node name="LevelDesign(9)Photoroom" type="Sprite2D" parent="LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom/LevelDesign(9)Photoroom2" unique_id=82047902]
+position = Vector2(-356.09094, -2107.512)
+rotation = 3.1415927
+scale = Vector2(1.1263016, 1.260532)
+texture = ExtResource("5_x41my")
+flip_v = true
+
 [node name="Cannette36" parent="." unique_id=821505319 instance=ExtResource("10_h38jt")]
 position = Vector2(1090, 423.99994)
 rotation = 2.120575
@@ -850,5 +1073,17 @@ position = Vector2(85.00001, 165)
 rotation = 2.3614304
 waypoints = Array[Vector2]([Vector2(85, 165), Vector2(85, 185)])
 speed = 11.0
+
+[node name="Cannette38" parent="." unique_id=103280850 instance=ExtResource("10_h38jt")]
+position = Vector2(85, 981)
+rotation = -1.0314896
+waypoints = Array[Vector2]([Vector2(85, 981), Vector2(85, 1001)])
+speed = 9.0
+
+[node name="Cannette39" parent="." unique_id=625325617 instance=ExtResource("10_h38jt")]
+position = Vector2(63, 265)
+rotation = 2.8274333
+waypoints = Array[Vector2]([Vector2(63, 265), Vector2(63, 285)])
+speed = 12.0
 
 [connection signal="area_entered" from="ZoneVictoire" to="." method="_on_zone_victoire_area_entered"]

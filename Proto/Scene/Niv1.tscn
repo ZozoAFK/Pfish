@@ -309,6 +309,13 @@ position = Vector2(612.00006, 3579.0005)
 scale = Vector2(2.4742587, 1.9613167)
 texture = ExtResource("15_a4myk")
 
+[node name="Sprite2D2" type="Sprite2D" parent="Sprite2D2" unique_id=1396345897]
+material = SubResource("ShaderMaterial_kl6dn")
+position = Vector2(-3.2333186, 591.43933)
+scale = Vector2(0.9931192, 1.3721766)
+texture = ExtResource("15_a4myk")
+flip_v = true
+
 [node name="Sprite2D3" type="Sprite2D" parent="." unique_id=769830461]
 position = Vector2(1143.0001, 3765.9998)
 scale = Vector2(0.3485716, 0.31857142)
