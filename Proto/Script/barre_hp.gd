@@ -1,5 +1,9 @@
 extends Node2D
 
+# Dans le script A
+@onready var hamecon = $"../../"
+
+
 @onready var hp_gris: TextureProgressBar = $CanvasLayer/HPGris
 @onready var hp_clair: TextureProgressBar = $CanvasLayer/HPClair
 @onready var hp_vert: TextureProgressBar = $CanvasLayer/HPVert
@@ -62,6 +66,9 @@ func verifier_mort() -> void:
 		declencher_defaite()
 
 func declencher_defaite() -> void:
+	hamecon.Speed_down =0
+	hamecon.Speed_coter =0
+	hamecon.Puissance_accoup =0
 	print("Plus de PV ! Défaite dans 2 secondes...")
 	
 	# Désactive les collisions de la barre de vie pour éviter les signaux en boucle
