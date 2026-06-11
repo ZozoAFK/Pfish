@@ -20,10 +20,10 @@
 [ext_resource type="Texture2D" uid="uid://c16rgoexdb8ig" path="res://pierre_test_asset/ASSET/LEVEL DESIGN (8)-Photoroom.png" id="19_rf5wy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vb4ll"]
-size = Vector2(211, 5371)
+size = Vector2(522, 5723)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0urrq"]
-size = Vector2(231.5, 5414.5)
+size = Vector2(409, 5786.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d57yf"]
 size = Vector2(1059.5, 166)
@@ -34,9 +34,11 @@ size = Vector2(382.2652, 514.07043)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_owubv"]
 size = Vector2(231.28986, 487.5)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ytg4r"]
-radius = 90.0
-height = 334.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_31xy0"]
+size = Vector2(353.14954, 104.72852)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mr2ar"]
+size = Vector2(1808, 227.25)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1aq54"]
 size = Vector2(330.95605, 1032.9436)
@@ -63,8 +65,8 @@ size = Vector2(210, 453.36523)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ytg4r"]
 size = Vector2(271.43884, 111.64581)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_mr2ar"]
-size = Vector2(1460, 227.25)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5yk50"]
+size = Vector2(88.975586, 158.62866)
 
 [node name="Niveau 2" type="Node2D" unique_id=966495424]
 script = ExtResource("1_mr2ar")
@@ -159,11 +161,11 @@ stream = ExtResource("3_8epdb")
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1128564496]
-position = Vector2(-54.5, 2565.5)
+position = Vector2(-210, 2389.5)
 shape = SubResource("RectangleShape2D_vb4ll")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1543316551]
-position = Vector2(1183.75, 2582)
+position = Vector2(1272.5, 2396.125)
 shape = SubResource("RectangleShape2D_0urrq")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1775675711]
@@ -182,9 +184,13 @@ rotation = 0.78365284
 shape = SubResource("RectangleShape2D_owubv")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" unique_id=1778548166]
-position = Vector2(44, 3556)
-rotation = 1.5707964
-shape = SubResource("CapsuleShape2D_ytg4r")
+position = Vector2(37.536972, 3476.572)
+rotation = 1.3456489
+shape = SubResource("RectangleShape2D_31xy0")
+
+[node name="CollisionShape2D16" type="CollisionShape2D" parent="StaticBody2D" unique_id=35076081]
+position = Vector2(560, -329)
+shape = SubResource("RectangleShape2D_mr2ar")
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D" unique_id=1946546551]
 position = Vector2(73.14995, 4789.002)
@@ -222,6 +228,11 @@ position = Vector2(1002.42004, 3080.2444)
 rotation = 0.81332344
 scale = Vector2(0.9999999, 0.9999999)
 shape = SubResource("RectangleShape2D_ytg4r")
+
+[node name="CollisionShape2D15" type="CollisionShape2D" parent="StaticBody2D" unique_id=86596819]
+position = Vector2(1051.0983, 3921.8499)
+rotation = 0.7679449
+shape = SubResource("RectangleShape2D_5yk50")
 
 [node name="Poisson_bleu" parent="." unique_id=52399432 instance=ExtResource("5_8epdb")]
 position = Vector2(150, 500)
