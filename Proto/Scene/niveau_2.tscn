@@ -20,16 +20,16 @@
 [ext_resource type="Texture2D" uid="uid://c16rgoexdb8ig" path="res://pierre_test_asset/ASSET/LEVEL DESIGN (8)-Photoroom.png" id="19_rf5wy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vb4ll"]
-size = Vector2(210.75, 5371)
+size = Vector2(211, 5371)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0urrq"]
-size = Vector2(263, 5414.5)
+size = Vector2(231.5, 5414.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d57yf"]
 size = Vector2(1059.5, 166)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jmwuw"]
-size = Vector2(380.5995, 512.4771)
+size = Vector2(382.2652, 514.07043)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_owubv"]
 size = Vector2(231.28986, 487.5)
@@ -39,14 +39,29 @@ radius = 90.0
 height = 334.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1aq54"]
-size = Vector2(290, 1032.9436)
+size = Vector2(330.95605, 1032.9436)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r4svf"]
-size = Vector2(199, 1252.5)
+size = Vector2(196.5, 1252.5)
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_31xy0"]
-radius = 90.0
-height = 426.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lq4lh"]
+size = Vector2(463, 74)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pmn4t"]
+radius = 124.168945
+height = 318.3418
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_x41my"]
+size = Vector2(142, 902)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rf5wy"]
+size = Vector2(155, 904.75)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pmn4t"]
+size = Vector2(210, 453.36523)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ytg4r"]
+size = Vector2(271.43884, 111.64581)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mr2ar"]
 size = Vector2(1460, 227.25)
@@ -72,38 +87,47 @@ position = Vector2(554, 4911)
 scale = Vector2(2.4229167, 4.260162)
 texture = ExtResource("3_5ks8r")
 
+[node name="FondNiv9" type="Sprite2D" parent="." unique_id=1216199023]
+position = Vector2(144.92117, 2972)
+rotation = -1.5707964
+scale = Vector2(1.359562, 1.073621)
+texture = ExtResource("4_5ks8r")
+flip_h = true
+flip_v = true
+
 [node name="FondNiv3" type="Sprite2D" parent="." unique_id=1740173668]
-position = Vector2(243.00003, 4232)
+position = Vector2(243.00003, 4226.676)
 rotation = -1.5707961
-scale = Vector2(1.4770182, 1.4628706)
+scale = Vector2(1.4868778, 1.4628706)
 texture = ExtResource("4_5ks8r")
 flip_v = true
 
+[node name="FondNiv7" type="Sprite2D" parent="." unique_id=418777259]
+position = Vector2(854.0001, 4719)
+rotation = -1.4380488
+scale = Vector2(0.9674083, 1.4516994)
+skew = 0.0068610907
+texture = ExtResource("4_5ks8r")
+flip_h = true
+
+[node name="FondNiv8" type="Sprite2D" parent="." unique_id=1918310097]
+position = Vector2(938.51904, 3495)
+rotation = 1.5707965
+scale = Vector2(1.0506685, 1.0242035)
+texture = ExtResource("4_5ks8r")
+flip_v = true
+
+[node name="FondNiv6" type="Sprite2D" parent="." unique_id=1892700659]
+position = Vector2(976.0568, 2415.8745)
+rotation = -1.5707961
+scale = Vector2(1.152772, 0.8130975)
+texture = ExtResource("4_5ks8r")
+
 [node name="FondNiv4" type="Sprite2D" parent="." unique_id=460034786]
-position = Vector2(231.16908, 2954.5857)
+position = Vector2(118, 2900)
 rotation = 1.5707964
 scale = Vector2(1.3175987, 1.3975791)
 texture = ExtResource("4_5ks8r")
-
-[node name="FondNiv4" type="Sprite2D" parent="FondNiv4" unique_id=1892700659]
-position = Vector2(-385.23572, -533.6592)
-rotation = 3.1415927
-scale = Vector2(0.83115834, 0.58460194)
-texture = ExtResource("4_5ks8r")
-
-[node name="FondNiv4" type="Sprite2D" parent="FondNiv4/FondNiv4" unique_id=1918310097]
-position = Vector2(-956.96155, -47.098534)
-rotation = 3.1415927
-scale = Vector2(0.95939785, 1.253573)
-texture = ExtResource("4_5ks8r")
-flip_v = true
-
-[node name="FondNiv4" type="Sprite2D" parent="FondNiv4/FondNiv4/FondNiv4" unique_id=418777259]
-position = Vector2(1164.9727, 82.5214)
-rotation = 3.2777283
-scale = Vector2(0.92117715, 1.4167105)
-texture = ExtResource("4_5ks8r")
-flip_h = true
 
 [node name="LevelDesign(9)Photoroom3" type="Sprite2D" parent="." unique_id=1197109505]
 position = Vector2(163, 4995)
@@ -135,11 +159,11 @@ stream = ExtResource("3_8epdb")
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1128564496]
-position = Vector2(-29.375, 2565.5)
+position = Vector2(-54.5, 2565.5)
 shape = SubResource("RectangleShape2D_vb4ll")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1543316551]
-position = Vector2(1168, 2582)
+position = Vector2(1183.75, 2582)
 shape = SubResource("RectangleShape2D_0urrq")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1775675711]
@@ -147,13 +171,14 @@ position = Vector2(549, 5235)
 shape = SubResource("RectangleShape2D_d57yf")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1382316159]
-position = Vector2(11.0000305, 2300)
-rotation = -0.7766715
+position = Vector2(-90.856064, 2207.141)
+rotation = -0.64053583
+scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_jmwuw")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=1244890331]
-position = Vector2(48.847973, 2580.4753)
-rotation = 0.33161256
+position = Vector2(-38.00009, 2464)
+rotation = 0.78365284
 shape = SubResource("RectangleShape2D_owubv")
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" unique_id=1778548166]
@@ -162,18 +187,41 @@ rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_ytg4r")
 
 [node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D" unique_id=1946546551]
-position = Vector2(92.00007, 4781.0005)
+position = Vector2(73.14995, 4789.002)
 rotation = -0.40142572
 shape = SubResource("RectangleShape2D_1aq54")
 
 [node name="CollisionShape2D8" type="CollisionShape2D" parent="StaticBody2D" unique_id=911180582]
-position = Vector2(1061, 4574)
+position = Vector2(1062.25, 4574)
 shape = SubResource("RectangleShape2D_r4svf")
 
-[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D" unique_id=1171671577]
-position = Vector2(1008, 4314)
-rotation = -1.5707964
-shape = SubResource("CapsuleShape2D_31xy0")
+[node name="CollisionShape2D10" type="CollisionShape2D" parent="StaticBody2D" unique_id=999578964]
+position = Vector2(-15.5, 2336)
+shape = SubResource("RectangleShape2D_lq4lh")
+
+[node name="CollisionShape2D11" type="CollisionShape2D" parent="StaticBody2D" unique_id=216272759]
+position = Vector2(-13, 2586)
+rotation = 0.13613568
+shape = SubResource("CapsuleShape2D_pmn4t")
+
+[node name="CollisionShape2D12" type="CollisionShape2D" parent="StaticBody2D" unique_id=95479843]
+position = Vector2(57, 4088)
+shape = SubResource("RectangleShape2D_x41my")
+
+[node name="CollisionShape2D13" type="CollisionShape2D" parent="StaticBody2D" unique_id=906538563]
+position = Vector2(1107, 3516.625)
+shape = SubResource("RectangleShape2D_rf5wy")
+
+[node name="CollisionShape2D14" type="CollisionShape2D" parent="StaticBody2D" unique_id=479822493]
+position = Vector2(1076.0573, 2863.658)
+rotation = 0.4956735
+shape = SubResource("RectangleShape2D_pmn4t")
+
+[node name="CollisionShape2D9" type="CollisionShape2D" parent="StaticBody2D" unique_id=1581289320]
+position = Vector2(1002.42004, 3080.2444)
+rotation = 0.81332344
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_ytg4r")
 
 [node name="Poisson_bleu" parent="." unique_id=52399432 instance=ExtResource("5_8epdb")]
 position = Vector2(150, 500)
@@ -437,7 +485,7 @@ waypoints = Array[Vector2]([Vector2(431, 2196), Vector2(431, 2216)])
 speed = 11.0
 
 [node name="Chaussure5" parent="." unique_id=2016217262 instance=ExtResource("12_loa3g")]
-position = Vector2(458.00006, 2276.9998)
+position = Vector2(464.99997, 2253.9998)
 rotation = -2.0280726
 scale = Vector2(0.5, 0.526)
 waypoints = Array[Vector2]([Vector2(374, 2236), Vector2(374, 2256)])
@@ -756,19 +804,21 @@ scale = Vector2(0.6663135, 0.61492735)
 texture = ExtResource("19_rf5wy")
 
 [node name="LevelDesign(9)Photoroom2" type="Sprite2D" parent="." unique_id=214762359]
-position = Vector2(70.63923, 2172)
+position = Vector2(-25.000002, 2125)
 rotation = -1.5707964
 scale = Vector2(0.27220732, 0.22853114)
 texture = ExtResource("5_x41my")
 flip_v = true
 
 [node name="LevelDesign(9)Photoroom" type="Sprite2D" parent="." unique_id=1882770326]
-position = Vector2(58, 2161)
+position = Vector2(48.000015, 2194)
+rotation = -0.13613568
 scale = Vector2(0.1997096, 0.21603347)
 texture = ExtResource("5_x41my")
 
 [node name="LevelDesign(9)Photoroom" type="Sprite2D" parent="LevelDesign(9)Photoroom" unique_id=185598335]
-position = Vector2(4974.9126, -1476.623)
+position = Vector2(5207.8267, -1344.8684)
+rotation = 0.13613568
 scale = Vector2(0.94686323, 0.7866)
 texture = ExtResource("5_x41my")
 flip_h = true
