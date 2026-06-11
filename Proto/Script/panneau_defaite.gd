@@ -10,7 +10,7 @@ func _ready() -> void:
 func _on_retry_btn_pressed() -> void:
 	# On lance le bruitage de clic
 	sfx_player.play()
-	
+	ScoreManager.reinitialiser_niveau_actuel()
 	# On attend 1 seconde pour entendre le son
 	await get_tree().create_timer(1.0).timeout
 	

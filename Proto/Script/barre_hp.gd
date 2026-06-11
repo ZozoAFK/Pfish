@@ -64,9 +64,15 @@ func verifier_mort() -> void:
 func declencher_defaite() -> void:
 	print("Plus de PV ! Défaite dans 2 secondes...")
 	
-	# AJOUT : On réinitialise les dégâts du niveau actuel avant de changer de scène
+	# Désactive les collisions de la barre de vie pour éviter les signaux en boucle
+	if has_node("CanvasLayer"):
+		$CanvasLayer.hide()
+	
+	# On attend les 2 secondes pendant que l'animation ou le feedback se joue
+	await get_tree().create_timer(2.0).timeout
+	
+	# --- C'EST ICI QU'ON RÉINITIALISE, JUSTE AVANT DE QUITTER ---
 	if ScoreManager.has_method("reinitialiser_niveau_actuel"):
 		ScoreManager.reinitialiser_niveau_actuel()
 		
-	await get_tree().create_timer(2.0).timeout
 	get_tree().change_scene_to_packed(scene_defaite)
