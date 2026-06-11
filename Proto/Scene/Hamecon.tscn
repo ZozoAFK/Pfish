@@ -29,7 +29,6 @@ Speed_coter = 650
 Puissance_accoup = 12500
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1858886676]
-zoom = Vector2(1.45, 1.45)
 limit_left = 550
 limit_top = 0
 limit_right = 550
