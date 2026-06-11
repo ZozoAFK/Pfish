@@ -7,6 +7,8 @@
 [ext_resource type="Script" uid="uid://1pwawi16gx43" path="res://Proto/Script/main_menuFINALEbtn.gd" id="5_5218v"]
 [ext_resource type="AudioStream" uid="uid://dr00vst5f1nus" path="res://Proto/SFX/Button_SFX.wav" id="6_3dkwh"]
 [ext_resource type="AudioStream" uid="uid://cn42qjwbaj20q" path="res://Proto/SFX/SRB2 OST - Deep Sea Zone 1.mp3" id="7_krj2r"]
+[ext_resource type="Texture2D" uid="uid://bvpd52rkkah65" path="res://pierre_test_asset/ASSET/Panneau_Etoile.png" id="8_o73ug"]
+[ext_resource type="Texture2D" uid="uid://dxdu261jkwurt" path="res://pierre_test_asset/ASSET/Starfish.webp" id="9_auk8i"]
 
 [node name="Control" type="Control" unique_id=1757011394]
 layout_mode = 3
@@ -108,6 +110,26 @@ stream = ExtResource("6_3dkwh")
 stream = ExtResource("7_krj2r")
 autoplay = true
 parameters/looping = true
+
+[node name="Panneau_Etoile" type="TextureRect" parent="." unique_id=56413295]
+layout_mode = 0
+offset_left = 855.0
+offset_top = -40.0
+offset_right = 1105.0
+offset_bottom = 198.0
+texture = ExtResource("8_o73ug")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Etoile_Or" type="TextureRect" parent="." unique_id=112851170]
+layout_mode = 0
+offset_left = 930.0
+offset_top = 110.0
+offset_right = 968.0
+offset_bottom = 152.0
+texture = ExtResource("9_auk8i")
+expand_mode = 1
+stretch_mode = 5
 
 [connection signal="button_down" from="MainMenu" to="." method="_on_main_menu_button_down"]
 [connection signal="mouse_entered" from="MainMenu" to="MainMenu" method="_on_mouse_entered"]
