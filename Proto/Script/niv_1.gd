@@ -4,7 +4,7 @@ extends Node2D
 @export var scene_victoire: PackedScene 
 func _ready() -> void:
 	GameManager.dernier_niveau_joue = "res://Proto/Scene/Niv1.tscn"
-
+	ScoreManager.niveau_actuel = "Niveau_1"
 func _process(delta: float) -> void:
 	if Input.is_action_just_pressed("reload_niv1"):
 		get_tree().reload_current_scene()

@@ -18,9 +18,9 @@ func enregistrer_degat() -> void:
 func obtenir_etoile_pour_niveau(nom_niveau: String) -> String:
 	var nb_degats = degats_par_niveau.get(nom_niveau, 0)
 	
-	if nb_degats <= 1:
+	if nb_degats <= 2:
 		return "Or"
-	elif nb_degats >1 and nb_degats <= 4: # 2 ticks + 3 ticks supplémentaires = 5 max pour l'argent
+	elif nb_degats >2 and nb_degats <= 5: # 2 ticks + 3 ticks supplémentaires = 5 max pour l'argent
 		return "Argent"
 	else:
 		return "Bronze"

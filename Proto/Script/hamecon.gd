@@ -31,7 +31,7 @@ func déclencher_degats() -> void:
 	# On émet le signal.
 	joueur_touche.emit(10.0)
 # AJOUT : On incrémente le compteur de dégâts global
-	ScoreManager.enregistrer_degat()
+	
 
 func _process(delta: float) -> void:
 	# Si un déchet est accroché, on force sa position à suivre l'hameçon
@@ -94,6 +94,7 @@ func test_ferrage (delta):
 
 # --- FONCTION DE FEEDBACK DE DÉGÂTS MODIFIÉE ---
 func _on_joueur_touche(degats: float) -> void:
+	ScoreManager.enregistrer_degat()
 	# 1. Feedback Particules (déjà là)
 	if bulles_degats:
 		bulles_degats.restart()
