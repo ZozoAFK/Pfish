@@ -63,5 +63,10 @@ func verifier_mort() -> void:
 
 func declencher_defaite() -> void:
 	print("Plus de PV ! Défaite dans 2 secondes...")
+	
+	# AJOUT : On réinitialise les dégâts du niveau actuel avant de changer de scène
+	if ScoreManager.has_method("reinitialiser_niveau_actuel"):
+		ScoreManager.reinitialiser_niveau_actuel()
+		
 	await get_tree().create_timer(2.0).timeout
 	get_tree().change_scene_to_packed(scene_defaite)

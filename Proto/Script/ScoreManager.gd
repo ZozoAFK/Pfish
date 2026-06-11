@@ -24,3 +24,9 @@ func obtenir_etoile_pour_niveau(nom_niveau: String) -> String:
 		return "Argent"
 	else:
 		return "Bronze"
+		
+# --- NOUVELLE FONCTION : RÉINITIALISATION SUR DÉFAITE ---
+func reinitialiser_niveau_actuel() -> void:
+	if degats_par_niveau.has(niveau_actuel):
+		degats_par_niveau[niveau_actuel] = 0
+		print("Défaite ! Le score du ", niveau_actuel, " a été réinitialisé à 0.")
