@@ -273,7 +273,7 @@ position_start = Vector2(500, 4600)
 [node name="Saumon3" parent="." unique_id=1309749267 instance=ExtResource("6_d57yf")]
 position = Vector2(379, 3485)
 waypoints = Array[Vector2]([Vector2(150, 3481), Vector2(1000, 3481)])
-position_start = Vector2(3481, 0)
+position_start = Vector2(150, 3481)
 
 [node name="Cannette" parent="." unique_id=1827421931 instance=ExtResource("10_h38jt")]
 position = Vector2(143, 126.00001)
